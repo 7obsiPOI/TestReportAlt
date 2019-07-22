@@ -22,4 +22,8 @@ public class CucumberReportApplication extends SpringBootServletInitializer
     {
         return application.sources(CucumberReportApplication.class);
     }
+
+    public void testFunction(){
+        System.out.println("Hallo");
+    }
 }
