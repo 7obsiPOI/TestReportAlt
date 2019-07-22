@@ -31,9 +31,9 @@
 			<div class="containter">
 				<ul class="nav navbar-nav">
 					<li ng-click="featuresOverview(date)">Dashboard</li> <br /> <!-- reports.html as dashboard site? -->
-					<li ng-click="">Error History</li> <br />
-					<li ng-click="getStatistics(feature)">Statistics</li> <br />
 					<li ng-click="openChart(product, type, limit)">Charts</li> <br />
+					<li ng-click="">Features</li> <br />
+					<li ng-click="">Error History</li> <br />
 					<li ng-click="openRanking(product)">Rankings</li>
 				</ul>
 			</div>
@@ -52,7 +52,6 @@
 				<div class="navbar-collapse collapse">
 
 					<ul class="nav navbar-nav">
-						<li><a href="#" class="active">Home</a></li>
 						<li ng-show="databaseMode" class="dropdown" ng-controller="Menu">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Acceptance Tests <b class="caret"></b></a>
 							<ul class="dropdown-menu">

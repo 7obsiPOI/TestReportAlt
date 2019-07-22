@@ -130,12 +130,13 @@ div.navbar-left {
 	border: 1px solid #345578;
 	background: #3e648d;
 }
-@media screen and (max-width: 1217px) {
+@media screen and (max-width: 1219px) {
 	div.navbar-left {
 		margin-top: 25px;
 	}
 }
-@media screen and (max-width: 867px) {
+
+@media screen and (max-width: 853px) {
 	div.navbar-left {
 		margin-top: 70px;
 	}
@@ -163,9 +164,24 @@ div#view {
 	width: 1450px!important;
 }
 
-@media screen and (max-width: 1217px) {
+@media screen and (max-width: 1219px) {
 	div#view {
 		margin-top: 50px;
+		width: 1000px!important;
+	}
+}
+
+@media screen and (max-width: 853px) {
+	div#view {
+		margin-top: 90px;
+		width: 600px!important;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	div#view {
+		margin-top: 35px;
+		width: 500px!important;
 	}
 }
 
