@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="cucumber-report-web" />
+        <module name="cucumber-formatter" />
+        <module name="silk-bdd-result-plugin" />
+        <module name="cucumber-mongodb-rest" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="cucumber-formatter" target="1.6" />
+      <module name="cucumber-mongodb-rest" target="1.6" />
+      <module name="cucumber-report-db-parent" target="1.6" />
+      <module name="cucumber-report-web" target="1.6" />
+      <module name="silk-bdd-result-plugin" target="1.6" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

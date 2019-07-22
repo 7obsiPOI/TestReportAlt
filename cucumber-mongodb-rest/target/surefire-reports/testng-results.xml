@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="11" passed="11">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Command line suite" duration-ms="350" started-at="2019-07-22T08:49:34Z" finished-at="2019-07-22T08:49:34Z">
+    <groups>
+    </groups>
+    <test name="Command line test" duration-ms="350" started-at="2019-07-22T08:49:34Z" finished-at="2019-07-22T08:49:34Z">
+      <class name="at.porscheinformatik.cucumber.mongodb.rest.controller.QueryControllerTest">
+        <test-method status="PASS" signature="last_ten_with_list_nine(int, int, int)[pri:0, instance:at.porscheinformatik.cucumber.mongodb.rest.controller.QueryControllerTest@2acf57e3]" name="last_ten_with_list_nine" duration-ms="3" started-at="2019-07-22T10:49:34Z" data-provider="computeNumberOfSkips" finished-at="2019-07-22T10:49:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[9]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[10]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- last_ten_with_list_nine -->
+        <test-method status="PASS" signature="last_ten_with_list_nine(int, int, int)[pri:0, instance:at.porscheinformatik.cucumber.mongodb.rest.controller.QueryControllerTest@2acf57e3]" name="last_ten_with_list_nine" duration-ms="0" started-at="2019-07-22T10:49:34Z" data-provider="computeNumberOfSkips" finished-at="2019-07-22T10:49:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[30]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[10]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[20]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- last_ten_with_list_nine -->
+        <test-method status="PASS" signature="last_ten_with_list_nine(int, int, int)[pri:0, instance:at.porscheinformatik.cucumber.mongodb.rest.controller.QueryControllerTest@2acf57e3]" name="last_ten_with_list_nine" duration-ms="0" started-at="2019-07-22T10:49:34Z" data-provider="computeNumberOfSkips" finished-at="2019-07-22T10:49:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[11]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[10]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- last_ten_with_list_nine -->
+      </class> <!-- at.porscheinformatik.cucumber.mongodb.rest.controller.QueryControllerTest -->
+      <class name="at.porscheinformatik.cucumber.mongodb.rest.controller.CollectionControllerTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:at.porscheinformatik.cucumber.mongodb.rest.controller.CollectionControllerTest@340f438e]" name="setUp" is-config="true" duration-ms="247" started-at="2019-07-22T10:49:34Z" finished-at="2019-07-22T10:49:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="getCollections_returns_products_and_versions(java.util.Set, java.util.Set)[pri:0, instance:at.porscheinformatik.cucumber.mongodb.rest.controller.CollectionControllerTest@340f438e]" name="getCollections_returns_products_and_versions" duration-ms="62" started-at="2019-07-22T10:49:34Z" data-provider="collections_products_and_version" finished-at="2019-07-22T10:49:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[product_version]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[product_version]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getCollections_returns_products_and_versions -->
+        <test-method status="PASS" signature="getCollections_returns_products_and_versions(java.util.Set, java.util.Set)[pri:0, instance:at.porscheinformatik.cucumber.mongodb.rest.controller.CollectionControllerTest@340f438e]" name="getCollections_returns_products_and_versions" duration-ms="1" started-at="2019-07-22T10:49:34Z" data-provider="collections_products_and_version" finished-at="2019-07-22T10:49:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[productWithoutVersion]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getCollections_returns_products_and_versions -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:at.porscheinformatik.cucumber.mongodb.rest.controller.CollectionControllerTest@340f438e]" name="setUp" is-config="true" duration-ms="0" started-at="2019-07-22T10:49:34Z" finished-at="2019-07-22T10:49:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="getCollections_returns_products_and_versions(java.util.Set, java.util.Set)[pri:0, instance:at.porscheinformatik.cucumber.mongodb.rest.controller.CollectionControllerTest@340f438e]" name="getCollections_returns_products_and_versions" duration-ms="0" started-at="2019-07-22T10:49:34Z" data-provider="collections_products_and_version" finished-at="2019-07-22T10:49:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[system.indexes]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getCollections_returns_products_and_versions -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:at.porscheinformatik.cucumber.mongodb.rest.controller.CollectionControllerTest@340f438e]" name="setUp" is-config="true" duration-ms="0" started-at="2019-07-22T10:49:34Z" finished-at="2019-07-22T10:49:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="getCollections_returns_products_and_versions(java.util.Set, java.util.Set)[pri:0, instance:at.porscheinformatik.cucumber.mongodb.rest.controller.CollectionControllerTest@340f438e]" name="getCollections_returns_products_and_versions" duration-ms="0" started-at="2019-07-22T10:49:34Z" data-provider="collections_products_and_version" finished-at="2019-07-22T10:49:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[product_version.chunks]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getCollections_returns_products_and_versions -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:at.porscheinformatik.cucumber.mongodb.rest.controller.CollectionControllerTest@340f438e]" name="setUp" is-config="true" duration-ms="0" started-at="2019-07-22T10:49:34Z" finished-at="2019-07-22T10:49:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="getCollections_returns_products_and_versions(java.util.Set, java.util.Set)[pri:0, instance:at.porscheinformatik.cucumber.mongodb.rest.controller.CollectionControllerTest@340f438e]" name="getCollections_returns_products_and_versions" duration-ms="0" started-at="2019-07-22T10:49:34Z" data-provider="collections_products_and_version" finished-at="2019-07-22T10:49:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[product_version.files]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getCollections_returns_products_and_versions -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:at.porscheinformatik.cucumber.mongodb.rest.controller.CollectionControllerTest@340f438e]" name="setUp" is-config="true" duration-ms="0" started-at="2019-07-22T10:49:34Z" finished-at="2019-07-22T10:49:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:at.porscheinformatik.cucumber.mongodb.rest.controller.CollectionControllerTest@340f438e]" name="setUp" is-config="true" duration-ms="1" started-at="2019-07-22T10:49:34Z" finished-at="2019-07-22T10:49:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="getProducts(java.util.Set, java.util.Set)[pri:0, instance:at.porscheinformatik.cucumber.mongodb.rest.controller.CollectionControllerTest@340f438e]" name="getProducts" duration-ms="9" started-at="2019-07-22T10:49:34Z" data-provider="products_products_and_version" finished-at="2019-07-22T10:49:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[productA_version]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[productA]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getProducts -->
+        <test-method status="PASS" signature="getProducts(java.util.Set, java.util.Set)[pri:0, instance:at.porscheinformatik.cucumber.mongodb.rest.controller.CollectionControllerTest@340f438e]" name="getProducts" duration-ms="2" started-at="2019-07-22T10:49:34Z" data-provider="products_products_and_version" finished-at="2019-07-22T10:49:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[productB_version, productA_version]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[productB, productA]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getProducts -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:at.porscheinformatik.cucumber.mongodb.rest.controller.CollectionControllerTest@340f438e]" name="setUp" is-config="true" duration-ms="0" started-at="2019-07-22T10:49:34Z" finished-at="2019-07-22T10:49:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:at.porscheinformatik.cucumber.mongodb.rest.controller.CollectionControllerTest@340f438e]" name="setUp" is-config="true" duration-ms="0" started-at="2019-07-22T10:49:34Z" finished-at="2019-07-22T10:49:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="getProducts(java.util.Set, java.util.Set)[pri:0, instance:at.porscheinformatik.cucumber.mongodb.rest.controller.CollectionControllerTest@340f438e]" name="getProducts" duration-ms="1" started-at="2019-07-22T10:49:34Z" data-provider="products_products_and_version" finished-at="2019-07-22T10:49:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[productA_version2, productA_version1, productB_version]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[productB, productA]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getProducts -->
+      </class> <!-- at.porscheinformatik.cucumber.mongodb.rest.controller.CollectionControllerTest -->
+    </test> <!-- Command line test -->
+  </suite> <!-- Command line suite -->
+</testng-results>
