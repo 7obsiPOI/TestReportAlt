@@ -191,13 +191,34 @@ h2 {
 	font-weight: bold;
 }
 
-table.tests th {
-	width: 50%;
+table#overview th, td {
+	width: 25%!important;
+}
+
+table tr#graphs td {
+	height: 500px;
+	vertical-align: middle;
 	text-align: center;
 }
 
-table.tests td {
-	width: 50%;
-	height: 200px;
-	vertical-align: middle!important;
+div#dashboardChart {
+	display: block;
+	width: 50%!important;
+	height: 350px;
+	margin-left: -25px;
+	float: left;
+}
+
+div#timelineChart {
+	display: block;
+	width: 50%!important;
+	height: 350px;
+	margin-left: 650px;
+}
+
+div#features {
+	display: block;
+	width: 50% !important;
+	height: 350px;
+	margin-left: -25px;
 }

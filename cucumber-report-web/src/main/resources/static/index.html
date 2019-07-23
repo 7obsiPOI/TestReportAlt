@@ -6,6 +6,8 @@
 
 		<link rel="stylesheet" href="webjars/bootswatch-spacelab/3.2.0/css/bootstrap.min.css" >
 		<link rel="stylesheet" href="css/style.css" />
+
+		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 	</head>
 
 	<body ng-app="cucumber">
@@ -30,7 +32,7 @@
 		<div class="navbar navbar-inverse navbar-left" role="navigation"> <!-- show only if a Test & version was selected & not on home -->
 			<div class="containter">
 				<ul class="nav navbar-nav">
-					<li ng-click="featuresOverview(date)">Dashboard</li> <br /> <!-- reports.html as dashboard site? -->
+					<li ng-click="goToDashboard(product)" id="dashboard">Dashboard</li> <br />
 					<li ng-click="openChart(product, type, limit)">Charts</li> <br />
 					<li ng-click="">Features</li> <br />
 					<li ng-click="">Error History</li> <br />
@@ -47,7 +49,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="#">Test Report</a>
+					<a class="navbar-brand" href="/#/products/" id="home">Test Report</a>
 				</div>
 				<div class="navbar-collapse collapse">
 
@@ -150,6 +152,10 @@
 		<script type="text/javascript" src="js/charts.js"></script>
 		<script type="text/javascript" src="js/lightbox.js"></script>
 		<script type="text/javascript" src="js/utils.js"></script>
+		<script type="text/javascript" src="js/doughnutChart.js"></script>
+		<script type="text/javascript" src="js/areaChart.js"></script>
+		<script type="text/javascript" src="js/barChart.js"></script>
+		<script type="text/javascript" src="js/colChart.js"></script>
 
 	</body>
 </html>

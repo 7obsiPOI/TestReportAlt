@@ -27,18 +27,50 @@
 </table>
 -->
 
+
+
 <h2>Overview</h2>
 
-<table class="table table-striped table-hover table-bordered tests">
+<table class="table table-hover" id="overview">
+	<tr id="graphs">
+		<td>
+			<div id="colChart"></div>
+		</td>
+
+		<td>[Graph]</td>
+
+		<td>[Graph]</td>
+
+		<td>[Graph]</td>
+
+	</tr>
+
+	<tr>
+		<th>Acceptance Tests</th>
+		<th>Integration Tests</th>
+		<th>Webservice Tests</th>
+		<th>Webclient Tests</th>
+	</tr>
+
+</table>
+
+<!--
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<h2>Overview (DesignIdea)</h2>
+
+<table class="table table-striped table-hover table-bordered tests" onload="drawChart()">
 	<h3>Acceptance Tests</h3>
 	<tr>
 		<th>19.4_SNAPSHOT</th>
 		<th>19.3_SNAPSHOT</th>
 	</tr>
 	<tr>
-		<td>[Graph]</td>
-		<td>[Graph]</td>
-	</tr>
+		<td>
+			<div id="donutchart"></div> TODO: wird nur beim neuladen angezeigt
+</td>
+<td>[Graph]</td>
+</tr>
 </table>
 
 <table class="table table-striped table-hover table-bordered tests">
@@ -76,3 +108,7 @@
 		<td>[Graph]</td>
 	</tr>
 </table>
+
+<script src="//www.google.com/jsapi"></script>
+<script type="text/javascript" src="js/doughnutChart.js"></script>
+-->

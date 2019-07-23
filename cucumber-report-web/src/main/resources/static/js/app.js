@@ -167,6 +167,11 @@ function setName(name) {
 				controller : 'RankingsCtrl',
 				resolve : loader
 			})
+			.when('/:product/dashboard/', {
+				templateUrl : 'pages/dashboard.html',
+				controller : 'RankingsCtrl', //TODO: create controller
+				resolve : loader
+			})
 			.when('/products/', {
 				templateUrl : 'pages/products.html',
 				controller : 'ProductListCtrl',
@@ -213,6 +218,8 @@ function setName(name) {
 			$rootScope.deletionMode = !$rootScope.deletionMode;
 		};
 
+		//TODO: functions for charts on Home/Overview
+
 		$rootScope.openChart = function(product, type, limit) {
 			product = testName;
 			if(typeof type === 'undefined'){
@@ -236,9 +243,20 @@ function setName(name) {
 			product = testName;
 			if(testName === '') {
 				alert('No Test was picked.');
-				$location.path('/products/');
 			}
-			$location.path('/statistics/rankings/' + product);
+			else {
+				$location.path('/statistics/rankings/' + product);
+			}
+		};
+
+		$rootScope.goToDashboard = function(product) {
+			product = testName;
+			if(product === ''){
+				alert('No Test selected!');
+			}
+			else {
+				$location.path('/' + product + '/dashboard/');
+			}
 		};
 
 		$rootScope.bulkDelete = function(product){
@@ -541,6 +559,11 @@ function setName(name) {
 					});
 			});
 	});
+
+	/*
+	* TODO: Dashboard Controller anlegen
+	* */
+	//app.controller()
 
 	/**
 	 * Feature Controller (see feature.html)
