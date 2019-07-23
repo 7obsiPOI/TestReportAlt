@@ -58,9 +58,8 @@ public class StatisticsController
     public void findMostFailed(
         HttpServletRequest request,
         @PathVariable(value = "collection") String collection,
-        HttpServletResponse response) throws IOException
-    {
-    	mapReduce(collection, MAP_MOST_FAILED_STEPS, REDUCE_CUMULATED_STEP_DURATIONS, response);
+        HttpServletResponse response) throws IOException {
+        mapReduce(collection, MAP_MOST_FAILED_STEPS, REDUCE_CUMULATED_STEP_DURATIONS, response);
     }
     
     @RequestMapping(value = "/{collection}/mostExecutedStepsRanking", method = RequestMethod.GET)
