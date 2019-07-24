@@ -1,23 +1,29 @@
 /* global window, document */
 /* global serverUrl, fileBaseUrl, queryBaseUrl, collectionBaseUrl, reportFileName */
 
+var testName = '';
+
+function setName(name) {
+	testName = name;
+}
+
 (function (angular, google, $, undefined) {
 	'use strict';
 
 	var app = angular.module('cucumber', ['ngRoute', 'ui.bootstrap', 'LocalStorageModule'])
-        .directive('ngReallyClick', [function() {
-        return {
-            restrict: 'A',
-            link: function(scope, element, attrs) {
-                element.bind('click', function() {
-                    var message = attrs.ngReallyMessage;
-                    if (message && confirm(message)) {
-                        scope.$apply(attrs.ngReallyClick);
-                    }
-                });
-            }
-        }
-    }]);
+		.directive('ngReallyClick', [function() {
+			return {
+				restrict: 'A',
+				link: function(scope, element, attrs) {
+					element.bind('click', function() {
+						var message = attrs.ngReallyMessage;
+						if (message && confirm(message)) {
+							scope.$apply(attrs.ngReallyClick);
+						}
+					});
+				}
+			}
+		}]);
 
 	var prepareReportData = function(reports) {
 
@@ -47,19 +53,19 @@
 			data.featureNames = '';
 
 			angular.forEach(data.features, function(feature, index){
-                if(feature.scenarios === undefined || feature.scenarios.length === 0)
-                {
-                    feature.result = {};
-                    feature.result.failedScenarioCount = 0;
-                    feature.result.unknownScenarioCount = 0;
-                    feature.result.passedScenarioCount = 0;
-                    feature.result.duration = 0;
-                }
+				if(feature.scenarios === undefined || feature.scenarios.length === 0)
+				{
+					feature.result = {};
+					feature.result.failedScenarioCount = 0;
+					feature.result.unknownScenarioCount = 0;
+					feature.result.passedScenarioCount = 0;
+					feature.result.duration = 0;
+				}
 				else {
-                    var res = feature.result;
-                    res.failedScenarioCount = getFailedScenarioCount(feature);
-                    res.unknownScenarioCount = getUnknownScenarioCount(feature);
-                    res.passedScenarioCount = res.scenarioCount - res.failedScenarioCount - res.unknownScenarioCount;
+					var res = feature.result;
+					res.failedScenarioCount = getFailedScenarioCount(feature);
+					res.unknownScenarioCount = getUnknownScenarioCount(feature);
+					res.passedScenarioCount = res.scenarioCount - res.failedScenarioCount - res.unknownScenarioCount;
 				}
 
 				feature.status = feature.result.failedScenarioCount ? "failed" : "ok";
@@ -81,7 +87,7 @@
 					if (scenario.result.failedStepCount || scenario.result.stepCount === scenario.result.skippedStepCount) {
 						scenario.status = "failed";
 					} else if (scenario.result.unknownStepCount) {
-							scenario.status = 'unknown';
+						scenario.status = 'unknown';
 					} else {
 						scenario.status = 'passed';
 					}
@@ -120,11 +126,11 @@
 					value = (value / 1000000).toFixed()*1;
 					var timeSpan = new TimeSpan(new Date(value) - new Date(0));
 					return (timeSpan.days>0 ?
-								' (' + timeSpan.toString('d') + ' Day' +
-									(timeSpan.days>1 ? 's' : '') +
-								')'  + ':' : ''
-							) +
-							timeSpan.toString('HH:mm:ss');
+							' (' + timeSpan.toString('d') + ' Day' +
+							(timeSpan.days>1 ? 's' : '') +
+							')'  + ':' : ''
+						) +
+						timeSpan.toString('HH:mm:ss');
 				}
 			};
 		});
@@ -144,46 +150,51 @@
 			};
 		}]
 	};
-    app.config([ '$routeProvider', function($routeProvider) {
+	app.config([ '$routeProvider', function($routeProvider) {
 		$routeProvider
-		.when('/help/', {
-			templateUrl : 'pages/help.html',
-			controller : 'HelpCtrl',
-			resolve : loader
-		})
-		.when('/statistics/:product/type/:type/limit/:limit', {
-			templateUrl : 'pages/statistics.html',
-			controller : 'StatisticsCtrl',
-			resolve : loader
-		})
-		.when('/statistics/rankings/:product', {
-			templateUrl : 'pages/rankings.html',
-			controller : 'RankingsCtrl',
-			resolve : loader
-		})
-		.when('/products/', {
-			templateUrl : 'pages/products.html',
-			controller : 'ProductListCtrl',
-			resolve : loader
-		})
-		.when('/reports/:colName', {
-			templateUrl : 'pages/reports.html',
-			controller : 'ReportListCtrl',
-			resolve : loader
-		})
-		.when('/reports/:colName/features/:date', {
-			templateUrl : 'pages/features.html',
-			controller : 'FeatureListCtrl',
-			resolve : loader
-		})
-		.when('/reports/:colName/features/:date/feature/:featureId', {
-			templateUrl : 'pages/feature.html',
-			controller : 'FeatureCtrl',
-			resolve : loader
-		})
-		.otherwise({
-			redirectTo : '/products/'
-		});
+			.when('/help/', {
+				templateUrl : 'pages/help.html',
+				controller : 'HelpCtrl',
+				resolve : loader
+			})
+			.when('/statistics/:product/:type/:limit', {
+				templateUrl : 'pages/statistics.html',
+				controller : 'StatisticsCtrl',
+				resolve : loader
+			})
+			.when('/statistics/rankings/:product', {
+				templateUrl : 'pages/rankings.html',
+				controller : 'RankingsCtrl',
+				resolve : loader
+			})
+			.when('/:product/dashboard/', {
+				templateUrl : 'pages/dashboard.html',
+				controller : 'DashboardCtrl',
+				resolve : loader
+			})
+			.when('/products/', {
+				templateUrl : 'pages/products.html',
+				controller : 'ProductListCtrl',
+				resolve : loader
+			})
+			.when('/reports/:product', {
+				templateUrl : 'pages/dashboard.html',
+				controller : 'DashboardCtrl',
+				resolve : loader
+			})
+			.when('/reports/:colName/features/:date', {
+				templateUrl : 'pages/features.html',
+				controller : 'FeatureListCtrl',
+				resolve : loader
+			})
+			.when('/reports/:colName/features/:date/feature/:featureId', {
+				templateUrl : 'pages/feature.html',
+				controller : 'FeatureCtrl',
+				resolve : loader
+			})
+			.otherwise({
+				redirectTo : '/products/'
+			});
 	} ]);
 
 	app.run(function ($rootScope, $location, $routeParams, $sce, $http, localStorageService) {
@@ -207,7 +218,10 @@
 			$rootScope.deletionMode = !$rootScope.deletionMode;
 		};
 
+		//TODO: functions for charts on Home/Overview
+
 		$rootScope.openChart = function(product, type, limit) {
+			product = testName;
 			if(typeof type === 'undefined'){
 				type = localStorageService.get("chartsType");
 				if(type === null){
@@ -222,17 +236,36 @@
 			}
 			localStorageService.add("chartsType", type);
 			localStorageService.add("chartsLimit", limit);
-			$location.path('/statistics/' + product + '/type/' + type + '/limit/' + limit);
+			$location.path('/statistics/' + product + '/' + type + '/' + limit);
 		};
 
 		$rootScope.openRanking = function(product){
-			$location.path('/statistics/rankings/' + product);
+			product = testName;
+			if(testName === '') {
+				alert('No Test was picked.');
+			}
+			else {
+				$location.path('/statistics/rankings/' + product);
+			}
+		};
+
+		$rootScope.goToDashboard = function(product, limit) {
+			product = testName;
+			if(typeof limit === 'undefined'){
+				limit = localStorageService.get("chartsLimit");
+				if(limit === null){
+					limit = 10;
+				}
+			}
+
+			localStorageService.add("chartsLimit", limit);
+			$location.path('/' + product + '/dashboard/')
 		};
 
 		$rootScope.bulkDelete = function(product){
 			$http.delete(queryBaseUrl + product+'/_ALL');
-            $location.path('/#');
-        };
+			$location.path('/#');
+		};
 
 		$rootScope.storageType = 'Local storage';
 		if (!localStorageService.isSupported()) {
@@ -305,6 +338,7 @@
 		addSearchAndSortHandlers($scope, $filter, $scope.report.features);
 
 		$rootScope.loading = false;
+
 	}
 
 	function prepareFeature(data, $rootScope, $scope, $routeParams, $filter)
@@ -337,11 +371,11 @@
 		$rootScope.loading = false;
 	}
 
-    app.controller('Menu', function($scope, $http) {
-        $http.get(productsUrl).success(function (res) {
-            $scope.products = res;
-        });
-    });
+	app.controller('Menu', function($scope, $http) {
+		$http.get(productsUrl).success(function (res) {
+			$scope.products = res;
+		});
+	});
 
 	/**
 	 * ProductList Controller (see products.html)
@@ -351,14 +385,13 @@
 		$scope.orderPredicate = "";
 		$scope.orderReverse = true;
 		$rootScope.searchText = "";
-		$rootScope.backBtnEnabled = false;
 
 		$scope.productFilter = function (category) {
 			return function (product) {
-				if (category == '') {
+				if (category === '') {
 					for (var i in $scope.categories) {
 						var cat = $scope.categories[i];
-						if (cat != '' && product.indexOf(cat) >= 0) {
+						if (cat !== '' && product.indexOf(cat) >= 0) {
 							return false;
 						}
 					}
@@ -375,36 +408,36 @@
 			$location.path('/reports/features/');
 		})
 		// else: load the data from the mongo database
-		.error(function() {
-			$rootScope.databaseMode = true;
-            $scope.productCondition = function(input)
-            {
-                if(input.indexOf($routeParams.product) !== -1 || $routeParams.product === undefined){
-                    return input;
-                }
-                return false;
-            };
-			$scope.reportsOverview = function(product) {
-				$location.path('/reports/' + product);
-			};
-
-			restApiQueryRequest(categoriesUrl).success(function (res) {
-				$scope.categories = res;
-			});
-
-			restApiQueryRequest(collectionBaseUrl).success(function (data) {
-				$rootScope.showDBError = false;
-				$rootScope.showJSONFileError = false;
-				$scope.products = data.slice().reverse();
-
-				$scope[$scope.searchArrayName] = $scope.products;
-				addSearchAndSortHandlers($scope, $filter, $scope.products);
-			})
 			.error(function() {
-				$rootScope.showJSONFileError = true;
-				$rootScope.showDBError = true;
+				$rootScope.databaseMode = true;
+				$scope.productCondition = function(input)
+				{
+					if(input.indexOf($routeParams.product) !== -1 || $routeParams.product === undefined){
+						return input;
+					}
+					return false;
+				};
+				$scope.reportsOverview = function(product) {
+					$location.path('/reports/' + product);
+				};
+
+				restApiQueryRequest(categoriesUrl).success(function (res) {
+					$scope.categories = res;
+				});
+
+				restApiQueryRequest(collectionBaseUrl).success(function (data) {
+					$rootScope.showDBError = false;
+					$rootScope.showJSONFileError = false;
+					$scope.products = data.slice().reverse();
+
+					$scope[$scope.searchArrayName] = $scope.products;
+					addSearchAndSortHandlers($scope, $filter, $scope.products);
+				})
+					.error(function() {
+						$rootScope.showJSONFileError = true;
+						$rootScope.showDBError = true;
+					});
 			});
-		});
 
 	});
 
@@ -418,85 +451,82 @@
 
 		$scope.$routeParams = $routeParams;
 
-		$rootScope.goBack = function() {
-			$location.path('/products/');
-		};
-		$rootScope.backBtnEnabled = true;
-
 		$scope.featuresOverview = function(date) {
 			$location.path('/reports/' + $routeParams.colName + '/features/' + date);
 		};
-        $scope.deleteDocument = function (id) {
-            $http.delete(queryBaseUrl + $routeParams.colName + '/' + id);
-            load();
-        };
+		$scope.deleteDocument = function (id) {
+			$http.delete(queryBaseUrl + $routeParams.colName + '/' + id);
+			load();
+		};
 
-        $http.get(rolesBaseUrl).success(function (data) {
-            $scope.isAdmin = $.inArray("ROLE_ADMIN", data) === 0;
-        });
+		$http.get(rolesBaseUrl).success(function (data) {
+			$scope.isAdmin = $.inArray("ROLE_ADMIN", data) === 0;
+		});
 
 		$rootScope.loading = true;
-        function load()
-        {
-            restApiCollectionRequest(collectionBaseUrl + $routeParams.colName + "/")
-                .success(function (data)
-                {
-                    $rootScope.databaseMode = true;
+		function load()
+		{
+			restApiCollectionRequest(collectionBaseUrl + $routeParams.colName + "/")
+				.success(function (data)
+				{
+					$rootScope.databaseMode = true;
 
-                    $scope.pageLimit = 10;
-                    $scope.pages = Math.ceil(data.count / $scope.pageLimit);
-                    $scope.page = $routeParams.page === undefined ? 0 : $routeParams.page;
+					$scope.pageLimit = 10;
+					$scope.pages = Math.ceil(data.count / $scope.pageLimit);
+					$scope.page = $routeParams.page === undefined ? 0 : $routeParams.page;
 
-                    restApiQueryRequest(queryBaseUrl + $routeParams.colName + '/?sort=true&limit=' + $scope.pageLimit + '&skip=' + ($scope.pageLimit * $scope.page))
-                        .success(function (data)
-                        {
-                            $scope.reports = data;
+					restApiQueryRequest(queryBaseUrl + $routeParams.colName + '/?sort=true&limit=' + $scope.pageLimit + '&skip=' + ($scope.pageLimit * $scope.page))
+						.success(function (data)
+						{
+							$scope.reports = data;
 
-                            $scope[$scope.searchArrayName] = $scope.reports;
-                            addSearchAndSortHandlers($scope, $filter, $scope.reports);
+							$scope[$scope.searchArrayName] = $scope.reports;
+							addSearchAndSortHandlers($scope, $filter, $scope.reports);
 
-                            $scope.getStatistics = function (features)
-                            {
-                                var statistics = {
-                                    passed: 0,
-                                    failed: 0,
-                                    unknown: 0
-                                };
-                                angular.forEach(features, function (feature)
-                                {
-                                    statistics.passed += feature.result.passedScenarioCount;
-                                    statistics.failed += feature.result.failedScenarioCount;
-                                    statistics.unknown += feature.result.unknownScenarioCount;
-                                });
+							$scope.getStatistics = function (features)
+							{
+								var statistics = {
+									passed: 0,
+									failed: 0,
+									unknown: 0
+								};
+								angular.forEach(features, function (feature)
+								{
+									statistics.passed += feature.result.passedScenarioCount;
+									statistics.failed += feature.result.failedScenarioCount;
+									statistics.unknown += feature.result.unknownScenarioCount;
+								});
 
-                                var sum = (statistics.passed + statistics.failed + statistics.unknown);
+								var sum = (statistics.passed + statistics.failed + statistics.unknown);
 
-                                statistics.passedPercent = (statistics.passed / sum) * 100;
-                                statistics.failedPercent = (statistics.failed / sum) * 100;
-                                statistics.unknownPercent = (statistics.unknown / sum) * 100;
+								statistics.passedPercent = (statistics.passed / sum) * 100;
+								statistics.failedPercent = (statistics.failed / sum) * 100;
+								statistics.unknownPercent = (statistics.unknown / sum) * 100;
 
-                                return statistics;
-                            };
-
-
-                            $rootScope.loading = false;
+								return statistics;
+							};
 
 
-                        })
-                        .error(function ()
-                        {
-                            $rootScope.loading = false;
-                            $location.path('/products/');
-                        });
+							$rootScope.loading = false;
 
-                })
-                .error(function ()
-                {
-                    $rootScope.loading = false;
-                    $location.path('/products/');
-                });
-        }
-        load();
+
+						})
+						.error(function ()
+						{
+							$rootScope.loading = false;
+							testName = '';
+							$location.path('/products/');
+						});
+
+				})
+				.error(function ()
+				{
+					$rootScope.loading = false;
+					testName = '';
+					$location.path('/products/');
+				});
+		}
+		load();
 	});
 
 	/**
@@ -508,34 +538,42 @@
 		// if a local report.json file was found: load the data from the filesystem
 		loadJsonFromFilesystem().success(function(data) {
 			$rootScope.databaseMode = false;
-			$rootScope.backBtnEnabled = false;
 			prepareReport(data, $rootScope, $scope, $routeParams, $filter, $location);
 		})
 		// else: load the data from the mongo database
-		.error(function() {
-			$rootScope.databaseMode = true;
-			$rootScope.backBtnEnabled = true;
-			$rootScope.goBack = function() {
-				$location.path('/reports/' + $routeParams.colName);
-			};
-
-
-			$rootScope.loading = true;
-			restApiQueryRequest(queryBaseUrl + $routeParams.colName + '/?field=date&value=' + $routeParams.date)
-			.success(function (data) {
-				if(!data.length){
-					$rootScope.loading = false;
-					$location.path('/products/');
-					return;
-				}
-				prepareReport(data[0], $rootScope, $scope, $routeParams, $filter, $location);
-			})
 			.error(function() {
-				$rootScope.loading = false;
-				$location.path('/products/');
+				$rootScope.databaseMode = true;
+
+				$rootScope.loading = true;
+				restApiQueryRequest(queryBaseUrl + $routeParams.colName + '/?field=date&value=' + $routeParams.date)
+					.success(function (data) {
+						if(!data.length){
+							$rootScope.loading = false;
+							testName = '';
+							$location.path('/products/');
+							return;
+						}
+						prepareReport(data[0], $rootScope, $scope, $routeParams, $filter, $location);
+					})
+					.error(function() {
+						$rootScope.loading = false;
+						testName = '';
+						$location.path('/products/');
+					});
 			});
-		});
 	});
+
+	/*
+	* TODO: Dashboard Controller anlegen
+	* */
+	app.controller('DashboardCtrl', ['$scope', '$routeParams', '$http', function($scope, $routeParams, $http) {
+
+		var url = queryBaseUrl + $routeParams.product + '/';
+
+		$http.get(url).success(function(reportData) {
+			drawChartOverallTests(reportData);
+		});
+	}]);
 
 	/**
 	 * Feature Controller (see feature.html)
@@ -544,11 +582,6 @@
 
 		$scope.colName = $routeParams.colName;
 		$scope.reportDate = $routeParams.date;
-
-		$rootScope.goBack = function() {
-			$location.path('/reports/' + $routeParams.colName + '/features/' + $routeParams.date);
-		};
-		$rootScope.backBtnEnabled = true;
 
 		$scope.$routeParams = $routeParams;
 
@@ -563,117 +596,107 @@
 			};
 		})
 		// else: load the data from the mongo database
-		.error(function() {
-			$rootScope.databaseMode=true;
-			$rootScope.loading = true;
-			restApiQueryRequest(queryBaseUrl + $routeParams.colName + '/?field=date&value=' + $routeParams.date)
-			.success(function (data) {
-				if(!data.length){
-					$rootScope.loading = false;
-					$location.path('/products/');
-					return;
-				}
-				prepareFeature(data[0], $rootScope, $scope, $routeParams, $filter, $location);
-
-				// return rest api screenshot/video path
-				$scope.getEmbedding = function(embedding) {
-					return fileBaseUrl + $routeParams.colName + '/' + embedding.url + '/';
-				};
-			})
 			.error(function() {
-				$rootScope.loading = false;
-				$location.path('/products/');
+				$rootScope.databaseMode=true;
+				$rootScope.loading = true;
+				restApiQueryRequest(queryBaseUrl + $routeParams.colName + '/?field=date&value=' + $routeParams.date)
+					.success(function (data) {
+						if(!data.length){
+							$rootScope.loading = false;
+							testName = '';
+							$location.path('/products/');
+							return;
+						}
+						prepareFeature(data[0], $rootScope, $scope, $routeParams, $filter, $location);
+
+						// return rest api screenshot/video path
+						$scope.getEmbedding = function(embedding) {
+							return fileBaseUrl + $routeParams.colName + '/' + embedding.url + '/';
+						};
+					})
+					.error(function() {
+						$rootScope.loading = false;
+						testName = '';
+						$location.path('/products/');
+					});
+
 			});
 
-		});
-
 		$scope.errorLogLightbox = function(step) {
-            var featureUri = $scope.feature.uri;
-            var comments = "";
+			var featureUri = $scope.feature.uri;
+			var comments = "";
 
-            if (step.comments)
-            {
-                $.each(step.comments, function (index, comment)
-                {
-                    comments += (comments === "" ? "" : "<br />") + '<dd>' +
-                        comment.value + '</dd>';
-                });
-            }
+			if (step.comments)
+			{
+				$.each(step.comments, function (index, comment)
+				{
+					comments += (comments === "" ? "" : "<br />") + '<dd>' +
+						comment.value + '</dd>';
+				});
+			}
 
-            var template = '<div class="modal-header"><h3>Error Log</h3></div>' +
-                '<div class="modal-body">' +
-                '<button class="btn btn-default btn-xs" type="button" onclick="selectText(\'errorLogCode\')">Select all</button>' +
-                '<pre id="errorLogCode" class="errorLogCode prettyprint lang-java">' +
-                htmlspecialchars(step.result.error_message) +
-                '</pre>' +
-                '<dl><dt>Failed Step:</dt><dd>' +
-                step.keyword +
-                step.name +
-                '</dd>' +
-                (comments !== "" ? '<br /><dt>Comments:</dt>' + comments : '') +
-                '<br /><dt>Feature File:</dt>' + '<dd>' + featureUri + ":" + step.line + '</dd>' + '</dl>' + '</div>' +
-                '<div class="modal-footer"><button class="btn btn-primary" ng-click="$close()">Close</button></div>';
+			var template = '<div class="modal-header"><h3>Error Log</h3></div>' +
+				'<div class="modal-body">' +
+				'<button class="btn btn-default btn-xs" type="button" onclick="selectText(\'errorLogCode\')">Select all</button>' +
+				'<pre id="errorLogCode" class="errorLogCode prettyprint lang-java">' +
+				htmlspecialchars(step.result.error_message) +
+				'</pre>' +
+				'<dl><dt>Failed Step:</dt><dd>' +
+				step.keyword +
+				step.name +
+				'</dd>' +
+				(comments !== "" ? '<br /><dt>Comments:</dt>' + comments : '') +
+				'<br /><dt>Feature File:</dt>' + '<dd>' + featureUri + ":" + step.line + '</dd>' + '</dl>' + '</div>' +
+				'<div class="modal-footer"><button class="btn btn-primary" ng-click="$close()">Close</button></div>';
 
-            $modal.open({
-                template: template,
-                size: 'lg'
-            });
+			$modal.open({
+				template: template,
+				size: 'lg'
+			});
 		};
-        $scope.getHeaderRow = function(step) {
-          return step.rows[0];
-        };
+		$scope.getHeaderRow = function(step) {
+			return step.rows[0];
+		};
 
-        $scope.getDataRows = function(step) {
-          return step.rows.slice().splice(1);
-        };
+		$scope.getDataRows = function(step) {
+			return step.rows.slice().splice(1);
+		};
 
-        $scope.isEmbeddedImage = function (mimeType) {
-            return mimeType === 'image/png' || mimeType === 'image/bmp';
-        };
-        $scope.isEmbeddedVideo = function (mimeType) {
-            return mimeType === 'video/mp4';
-        };
+		$scope.isEmbeddedImage = function (mimeType) {
+			return mimeType === 'image/png' || mimeType === 'image/bmp';
+		};
+		$scope.isEmbeddedVideo = function (mimeType) {
+			return mimeType === 'video/mp4';
+		};
 		$scope.isEmbeddedZIP = function (mimeType) {
 			return mimeType === 'application/zip';
 		};
-        $scope.downloadUrl = function(embedded) {
-            return fileBaseUrl + $routeParams.colName + '/' + embedded.url + '/';
-        };
-        $scope.getFileEnding = function(embedded) {
-            return embedded.url.substr(embedded.url.lastIndexOf(".")+1);
-        };
-        $scope.getFileEndingWithCapitalFirstLetter = function(embedded) {
-            var fileEnding = $scope.getFileEnding(embedded);
-            return fileEnding.charAt(0).toUpperCase() + fileEnding.slice(1);
-        };
-
-
-        $scope.embeddingLightbox = function(embedded) {
-          var scope = $rootScope.$new(true);
-          scope.getEmbedding = $scope.getEmbedding;
-          scope.embedded = embedded;
-          scope.isImage = $scope.isEmbeddedImage(embedded.mime_type);
-          scope.isVideo = $scope.isEmbeddedVideo(embedded.mime_type);
-          $modal.open({
-            templateUrl : 'pages/embedded_lightbox.html',
-            size : 'lg',
-            scope : scope
-          });
-        };
-
-
-
-	});
-
-	/**
-	 * Help Controller (see help.html)
-	 */
-	app.controller('HelpCtrl', function($rootScope, $routeParams, $scope, $location) {
-
-		$rootScope.goBack = function() {
-			$location.path('/products/');
+		$scope.downloadUrl = function(embedded) {
+			return fileBaseUrl + $routeParams.colName + '/' + embedded.url + '/';
 		};
-		$rootScope.backBtnEnabled = true;
+		$scope.getFileEnding = function(embedded) {
+			return embedded.url.substr(embedded.url.lastIndexOf(".")+1);
+		};
+		$scope.getFileEndingWithCapitalFirstLetter = function(embedded) {
+			var fileEnding = $scope.getFileEnding(embedded);
+			return fileEnding.charAt(0).toUpperCase() + fileEnding.slice(1);
+		};
+
+
+		$scope.embeddingLightbox = function(embedded) {
+			var scope = $rootScope.$new(true);
+			scope.getEmbedding = $scope.getEmbedding;
+			scope.embedded = embedded;
+			scope.isImage = $scope.isEmbeddedImage(embedded.mime_type);
+			scope.isVideo = $scope.isEmbeddedVideo(embedded.mime_type);
+			$modal.open({
+				templateUrl : 'pages/embedded_lightbox.html',
+				size : 'lg',
+				scope : scope
+			});
+		};
+
+
 
 	});
 
@@ -683,79 +706,78 @@
 	app.controller('StatisticsCtrl', function($rootScope, $scope, $http, $location, $routeParams){
 		$rootScope.loading = true;
 
-        var url = queryBaseUrl + $routeParams.product + '/';
-        if($routeParams.limit !== '0') {
-            url += '?last=' + $routeParams.limit;
-        }
-        $http.get(url).success(function(reportData) {
+		var url = queryBaseUrl + $routeParams.product + '/';
+		if($routeParams.limit !== '0') {
+			url += '?last=' + $routeParams.limit;
+		}
+		$http.get(url).success(function(reportData) {
 			var options = {
 				title: $routeParams.product,
 				vAxis: {title: 'Scenarios',  titleTextStyle: {color: 'black'}},
 				hAxis: {title: 'Date',  titleTextStyle: {color: 'black'}},
 				isStacked:true,
-				colors:['#5cb85c','#f0ad4e','#d9534f']
+				colors:['#64ff64','#ffff64','#6464FF','#ff5050']
 			};
+
+			console.log(reportData);
 
 			var googleChart = new google.visualization[$routeParams.type](document.getElementById('chart'));
 			googleChart.draw(google.visualization.arrayToDataTable(getResults(reportData)), options);
 
 			$rootScope.loading = false;
 		});
-
-		$rootScope.goBack = function() {
-			$location.path('/products/');
-		};
-		$rootScope.backBtnEnabled = true;
 	});
 
 
 
 
+
+
 	function sortByValue(array, value) {
-	    return array.sort(function(a, b) {
-	        var x = a[value]; var y = b[value];
-	        return ((x < y) ? +1 : ((x > y) ? -1 : 0));
-        });
-    }
-    function durationInMS(durationInNS){
-			var value=0;
+		return array.sort(function(a, b) {
+			var x = a[value]; var y = b[value];
+			return ((x < y) ? +1 : ((x > y) ? -1 : 0));
+		});
+	}
+	function durationInMS(durationInNS){
+		var value=0;
 
-				value = durationInNS;
+		value = durationInNS;
 
-			if(value<1000000000)
+		if(value<1000000000)
+		{
+			var msec=0;
+			if(value%1000000 >= 0)
 			{
-				var msec=0;
-				if(value%1000000 >= 0)
-				{
-					msec=Math.round(value/1000000);
-				}
-				return msec > 0 ? msec+'ms' : '<1ms';
+				msec=Math.round(value/1000000);
 			}
-			else
-			{
-				value = (value / 1000000).toFixed()*1;
-				var timeSpan = new TimeSpan(new Date(value) - new Date(0));
-				return (timeSpan.days>0 ?
-							' (' + timeSpan.toString('d') + ' Day' +
-								(timeSpan.days>1 ? 's' : '') +
-							')'  + ':' : ''
-						) +
-						timeSpan.toString('HH:mm:ss');
-			}
-    }
-    function sumOverAll(array,value){
-			var sum=0;
-			for (var i in array){
-				   sum += array[i].value;
-			}
-			return sum;
-    }
-    /**
+			return msec > 0 ? msec+'ms' : '<1ms';
+		}
+		else
+		{
+			value = (value / 1000000).toFixed()*1;
+			var timeSpan = new TimeSpan(new Date(value) - new Date(0));
+			return (timeSpan.days>0 ?
+					' (' + timeSpan.toString('d') + ' Day' +
+					(timeSpan.days>1 ? 's' : '') +
+					')'  + ':' : ''
+				) +
+				timeSpan.toString('HH:mm:ss');
+		}
+	}
+	function sumOverAll(array,value){
+		var sum=0;
+		for (var i in array){
+			sum += array[i].value;
+		}
+		return sum;
+	}
+	/**
 	 * Rankings Controller (see rankings.html)
 	 */
-    app.controller('RankingsCtrl', function ($rootScope, $scope, $http, $location, $routeParams)
-    {
-        $rootScope.loading = true;
+	app.controller('RankingsCtrl', function ($rootScope, $scope, $http, $location, $routeParams)
+	{
+		$rootScope.loading = true;
 		$scope.durationInMS=durationInMS;
 		$scope.product=$routeParams.product;
 		var rankingsRootPath='rest/statistics/rankings/';
@@ -774,49 +796,44 @@
 		};
 
 		$http.get(rankingsRootPath + $routeParams.product + failedPath)
-		.success(function(steps){
-			$scope.failedSteps=steps;
+			.success(function(steps){
+				$scope.failedSteps=steps;
 
-			var sum=sumOverAll($scope.failedSteps.results,"value");
-			$scope.sumOverAllFailed=sum;
+				var sum=sumOverAll($scope.failedSteps.results,"value");
+				$scope.sumOverAllFailed=sum;
 
-			sortByValue($scope.failedSteps.results, "value");
-			$rootScope.loading = false;});
+				sortByValue($scope.failedSteps.results, "value");
+				$rootScope.loading = false;});
 
 		$http.get(rankingsRootPath + $routeParams.product + executedPath)
-		.success(function(steps){
-			$scope.executedSteps=steps;
+			.success(function(steps){
+				$scope.executedSteps=steps;
 
-			var sum=sumOverAll($scope.executedSteps.results,"value");
-			$scope.sumOverAllExecuted=sum;
+				var sum=sumOverAll($scope.executedSteps.results,"value");
+				$scope.sumOverAllExecuted=sum;
 
-			sortByValue($scope.executedSteps.results, "value");
-			$rootScope.loading = false;});
+				sortByValue($scope.executedSteps.results, "value");
+				$rootScope.loading = false;});
 
 		$http.get(rankingsRootPath + $routeParams.product + singleDurationPath)
-		.success(function(steps){
-			$scope.singleSteps=steps;
+			.success(function(steps){
+				$scope.singleSteps=steps;
 
-			var sum=sumOverAll($scope.singleSteps.results,"value");
-			$scope.sumOverAllSingle=sum;
+				var sum=sumOverAll($scope.singleSteps.results,"value");
+				$scope.sumOverAllSingle=sum;
 
-			sortByValue($scope.singleSteps.results, "value");
-			$rootScope.loading = false;});
+				sortByValue($scope.singleSteps.results, "value");
+				$rootScope.loading = false;});
 
 		$http.get(rankingsRootPath + $routeParams.product + cumulatedDurationPath)
-		.success(function(steps){
-			$scope.cumulatedSteps=steps;
+			.success(function(steps){
+				$scope.cumulatedSteps=steps;
 
-			var sum=sumOverAll($scope.cumulatedSteps.results,"value");
-			$scope.sumOverAllCumulated=sum;
+				var sum=sumOverAll($scope.cumulatedSteps.results,"value");
+				$scope.sumOverAllCumulated=sum;
 
-			sortByValue($scope.cumulatedSteps.results, "value");
-			$rootScope.loading = false;});
-
-		$rootScope.goBack = function() {
-			$location.path('/products/');
-		};
-		$rootScope.backBtnEnabled = true;
+				sortByValue($scope.cumulatedSteps.results, "value");
+				$rootScope.loading = false;});
 	});
 
 	google.load('visualization', '1', {packages: ['corechart']});

@@ -1,12 +1,15 @@
 .btn:focus {
 	outline: 0;
 }
+
 .affix {
 	width: 200px;
 }
+
 body{
 	padding-top: 70px;
 }
+
 .table td , .table th {
 	text-align: center !important;
 }
@@ -14,6 +17,7 @@ body{
 .table .firstTD{
 	text-align: left !important;
 }
+
 .table .noWrap{
 	white-space: nowrap;
 }
@@ -21,12 +25,15 @@ body{
 .table thead > tr > th, .table tbody > tr > th, .table tfoot > tr > th, .table thead > tr > td, .table tbody > tr > td, .table tfoot > tr > td {
 	padding: 6px;
 }
+
 .badge, .label {
 	cursor: default;
 }
+
 .container {
 	width: 95% !important;
 }
+
 .uri{
 	display: inline-block;
 	padding: 0px 6px;
@@ -36,6 +43,7 @@ body{
 	white-space: normal;
 	color: #d14;
 }
+
 .errorLogContent{
 	margin: 10px;
 }
@@ -60,7 +68,7 @@ body{
 .panelHead{
 	color: #ffffff;
 	background-color: #446e9b;
-	border-color: #446e9b;	
+	border-color: #446e9b;
 	padding: 10px 15px;
 	border-bottom: 1px solid transparent;
 	border-top-right-radius: 3px;
@@ -96,11 +104,121 @@ body{
 }
 
 tr.rankings td:nth-child(1) {
-    width:70%;
+	width:70%;
 }
 tr.rankings td:nth-child(2) {
-    width:15%;
+	width:15%;
 }
 tr.rankings td:nth-child(3) {
-    width:15%;
+	width:15%;
+}
+
+div.navbar-header {
+	margin-left: -20px!important;
+	font-weight: bolder!important;
+}
+
+/*Side-Navigation:*/
+div.navbar-left {
+	color: lightgray;
+	margin-top: -20px;
+	position: fixed;
+	height: 100%;
+	width: 150px;
+	display: block;
+	padding-left: 40px;
+	border: 1px solid #345578;
+	background: #3e648d;
+}
+@media screen and (max-width: 1219px) {
+	div.navbar-left {
+		margin-top: 25px;
+	}
+}
+
+@media screen and (max-width: 853px) {
+	div.navbar-left {
+		margin-top: 70px;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	div.navbar-left {
+		margin-top: -20px;
+	}
+}
+
+div.navbar-left ul li {
+	list-style-type: none;
+	padding-top: 15px;
+}
+
+div.navbar-left ul li:hover {
+	color: white;
+	cursor: pointer;
+}
+
+div#view {
+	margin-top:15px;
+	margin-left: 200px;
+	width: 1450px!important;
+}
+
+@media screen and (max-width: 1219px) {
+	div#view {
+		margin-top: 50px;
+		width: 1000px!important;
+	}
+}
+
+@media screen and (max-width: 853px) {
+	div#view {
+		margin-top: 90px;
+		width: 600px!important;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	div#view {
+		margin-top: 35px;
+		width: 500px!important;
+	}
+}
+
+h2 {
+	color: #3e648d;
+	text-align: center;
+	font-weight: bold;
+}
+
+table#overview th, td {
+	width: 25%!important;
+}
+
+table tr#graphs td {
+	height: 500px;
+	vertical-align: middle;
+	text-align: center;
+}
+
+div#dashboardChart {
+	display: block;
+	width: 50%!important;
+	height: 500px;
+	margin-left: -25px;
+	float: left;
+}
+
+div#timelineChart {
+	display: block;
+	width: 50%!important;
+	height: 500px;
+	margin-left: 650px;
+}
+
+div#features {
+	display: block;
+	width: 50% !important;
+	height: 500px;
+	margin-left: -25px;
 }

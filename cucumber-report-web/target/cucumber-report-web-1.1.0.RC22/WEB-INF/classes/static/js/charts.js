@@ -10,6 +10,18 @@ function getFailedScenarioCount(feature) {
     return failedScenarios;
 }
 
+function getSkippedScenarioCount(feature) {
+	var skippedScenarios = 0;
+	if(feature.scenarios !== undefined){
+		feature.scenarios.forEach(function (scenario){
+			if(scenario.result.skippedStepCount){
+				skippedScenarios++;
+			}
+		});
+	}
+	return skippedScenarios;
+}
+
 
 function getUnknownScenarioCount(feature) {
 	var unknownScenarios = 0;
@@ -39,7 +51,7 @@ function getPassedScenarioCount(feature) {
 
 function getResults(reportData){
 	var results = [];
-	results.push(['Date', 'Passed', 'Unknown', 'Failed']);
+	results.push(['Date', 'Passed', 'Skipped', 'Unknown', 'Failed']);
 	$.each( reportData, function( index, report ) {
 		var row=[];
 		var date = new Date(report.date.$date);
@@ -47,16 +59,19 @@ function getResults(reportData){
 		var failedScenariosSum = 0;
 		var unknownScenariosSum = 0;
 		var passedScenariosSum = 0;
+		var skippedScenarioSum = 0;
 		
 		$.each( report.features, function( index, feature) {
 			failedScenariosSum += getFailedScenarioCount(feature);
 			unknownScenariosSum += getUnknownScenarioCount(feature);
+			skippedScenarioSum += getSkippedScenarioCount(feature);
 			passedScenariosSum += getPassedScenarioCount(feature);
 		});
 		
 		row.push(date.toString('dd.MM.yyyy HH:mm:ss'));
 		row.push();
 		row.push(passedScenariosSum);
+		row.push(skippedScenarioSum);
 		row.push(unknownScenariosSum);
 		row.push(failedScenariosSum);
 		results.push(row);
