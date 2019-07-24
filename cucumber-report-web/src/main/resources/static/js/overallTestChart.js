@@ -7,11 +7,13 @@ function drawChartOverallTests(reportData) {
     var failed = 0;
     var unknown = 0;
     var passed = 0;
+    var skipped = 0;
 
     $.each(reportData, function(index, report) {
         $.each(report.features, function(index, feature) {
             failed += getFailedScenarioCount(feature);
             unknown += getUnknownScenarioCount(feature);
+            skipped += getSkippedScenarioCount(feature);
             passed += getPassedScenarioCount(feature);
         });
     });
@@ -22,6 +24,8 @@ function drawChartOverallTests(reportData) {
         result.push(['Unknown', unknown, '#003ec4', unknown]);
     }
     result.push(['Failed', failed, '#940000', failed]);
+    if(skipped !== 0)
+        result.push(['Skipped', skipped, '#ffff50', skipped]);
     result.push(['Passed', passed, '#007502', passed]);
 
     result = google.visualization.arrayToDataTable(result);

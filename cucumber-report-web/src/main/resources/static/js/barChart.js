@@ -6,7 +6,7 @@ google.charts.setOnLoadCallback(drawBarChart);
 
 function drawBarChart() {
     var data = google.visualization.arrayToDataTable([
-        ['Feature', 'Passed', 'Unknown', 'Skipped', 'Failed' ],
+        ['Feature', 'Passed', 'Skipped', 'Unknown', 'Failed' ],
         ['Feature 1', 407, 54, 14, 294],
         ['Feature 2', 509, 30, 37, 137],
         ['Feature 3', 834, 9, 22, 157]
@@ -15,7 +15,8 @@ function drawBarChart() {
     var options = {
         legend: { position: 'top', maxLines: 3 },
         bar: { groupWidth: '75%' },
-        isStacked: true
+        isStacked: true,
+        colors: ['#64ff64', '#ffff64', '#6464ff', '#ff6464']
     };
 
     var chart = new google.visualization.BarChart(document.getElementById("barChart"));

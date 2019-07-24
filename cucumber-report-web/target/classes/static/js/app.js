@@ -157,7 +157,7 @@ function setName(name) {
 				controller : 'HelpCtrl',
 				resolve : loader
 			})
-			.when('/statistics/:product/type/:type/limit/:limit', {
+			.when('/statistics/:product/:type/:limit', {
 				templateUrl : 'pages/statistics.html',
 				controller : 'StatisticsCtrl',
 				resolve : loader
@@ -236,7 +236,7 @@ function setName(name) {
 			}
 			localStorageService.add("chartsType", type);
 			localStorageService.add("chartsLimit", limit);
-			$location.path('/statistics/' + product + '/type/' + type + '/limit/' + limit);
+			$location.path('/statistics/' + product + '/' + type + '/' + limit);
 		};
 
 		$rootScope.openRanking = function(product){
@@ -571,20 +571,7 @@ function setName(name) {
 		var url = queryBaseUrl + $routeParams.product + '/';
 
 		$http.get(url).success(function(reportData) {
-			drawChart(reportData);
-			//var result = google.visualization.arrayToDataTable(drawChart(reportData));
-
-			//console.log(result);
-
-			var options = {
-				title: 'Overall TestResults',
-				pieHole: 0.4,
-				color: ['#007502', '#940000'],
-				pieSliceText: 'value'
-			};
-
-			//var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
-			//chart.draw(result, options);
+			drawChartOverallTests(reportData);
 		});
 	}]);
 
@@ -729,7 +716,7 @@ function setName(name) {
 				vAxis: {title: 'Scenarios',  titleTextStyle: {color: 'black'}},
 				hAxis: {title: 'Date',  titleTextStyle: {color: 'black'}},
 				isStacked:true,
-				colors:['#5cb85c','#f0ad4e','#d9534f']
+				colors:['#64ff64','#ffff64','#6464FF','#ff5050']
 			};
 
 			console.log(reportData);
@@ -740,6 +727,8 @@ function setName(name) {
 			$rootScope.loading = false;
 		});
 	});
+
+
 
 
 
