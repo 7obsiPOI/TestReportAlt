@@ -169,7 +169,7 @@ function setName(name) {
 			})
 			.when('/:product/dashboard/', {
 				templateUrl : 'pages/dashboard.html',
-				controller : 'RankingsCtrl', //TODO: create controller
+				controller : 'DashboardCtrl',
 				resolve : loader
 			})
 			.when('/products/', {
@@ -177,9 +177,9 @@ function setName(name) {
 				controller : 'ProductListCtrl',
 				resolve : loader
 			})
-			.when('/reports/:colName', {
-				templateUrl : 'pages/reports.html',
-				controller : 'ReportListCtrl',
+			.when('/reports/:product', {
+				templateUrl : 'pages/dashboard.html',
+				controller : 'DashboardCtrl',
 				resolve : loader
 			})
 			.when('/reports/:colName/features/:date', {
@@ -249,14 +249,17 @@ function setName(name) {
 			}
 		};
 
-		$rootScope.goToDashboard = function(product) {
+		$rootScope.goToDashboard = function(product, limit) {
 			product = testName;
-			if(product === ''){
-				alert('No Test selected!');
+			if(typeof limit === 'undefined'){
+				limit = localStorageService.get("chartsLimit");
+				if(limit === null){
+					limit = 10;
+				}
 			}
-			else {
-				$location.path('/' + product + '/dashboard/');
-			}
+
+			localStorageService.add("chartsLimit", limit);
+			$location.path('/' + product + '/dashboard/')
 		};
 
 		$rootScope.bulkDelete = function(product){
@@ -385,10 +388,10 @@ function setName(name) {
 
 		$scope.productFilter = function (category) {
 			return function (product) {
-				if (category == '') {
+				if (category === '') {
 					for (var i in $scope.categories) {
 						var cat = $scope.categories[i];
-						if (cat != '' && product.indexOf(cat) >= 0) {
+						if (cat !== '' && product.indexOf(cat) >= 0) {
 							return false;
 						}
 					}
@@ -563,7 +566,14 @@ function setName(name) {
 	/*
 	* TODO: Dashboard Controller anlegen
 	* */
-	//app.controller()
+	app.controller('DashboardCtrl', ['$scope', '$routeParams', '$http', function($scope, $routeParams, $http) {
+
+		var url = queryBaseUrl + $routeParams.product + '/';
+
+		$http.get(url).success(function(reportData) {
+			drawChartOverallTests(reportData);
+		});
+	}]);
 
 	/**
 	 * Feature Controller (see feature.html)
@@ -708,6 +718,8 @@ function setName(name) {
 				isStacked:true,
 				colors:['#5cb85c','#f0ad4e','#d9534f']
 			};
+
+			console.log(reportData);
 
 			var googleChart = new google.visualization[$routeParams.type](document.getElementById('chart'));
 			googleChart.draw(google.visualization.arrayToDataTable(getResults(reportData)), options);

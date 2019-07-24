@@ -204,7 +204,7 @@ table tr#graphs td {
 div#dashboardChart {
 	display: block;
 	width: 50%!important;
-	height: 350px;
+	height: 500px;
 	margin-left: -25px;
 	float: left;
 }
@@ -212,13 +212,13 @@ div#dashboardChart {
 div#timelineChart {
 	display: block;
 	width: 50%!important;
-	height: 350px;
+	height: 500px;
 	margin-left: 650px;
 }
 
 div#features {
 	display: block;
 	width: 50% !important;
-	height: 350px;
+	height: 500px;
 	margin-left: -25px;
 }

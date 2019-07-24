@@ -32,11 +32,11 @@
 		<div class="navbar navbar-inverse navbar-left" role="navigation"> <!-- show only if a Test & version was selected & not on home -->
 			<div class="containter">
 				<ul class="nav navbar-nav">
-					<li ng-click="goToDashboard(product)" id="dashboard">Dashboard</li> <br />
-					<li ng-click="openChart(product, type, limit)">Charts</li> <br />
+					<li ng-click="goToDashboard($routeParams.product, $routeParams.limit)" id="dashboard">Dashboard</li> <br />
+					<li ng-click="openChart($routeParams.product, $routeParams.type, $routeParams.limit)">Charts</li> <br />
 					<li ng-click="">Features</li> <br />
 					<li ng-click="">Error History</li> <br />
-					<li ng-click="openRanking(product)">Rankings</li>
+					<li ng-click="openRanking($routeParams.product)">Rankings</li>
 				</ul>
 			</div>
 		</div>
@@ -152,7 +152,7 @@
 		<script type="text/javascript" src="js/charts.js"></script>
 		<script type="text/javascript" src="js/lightbox.js"></script>
 		<script type="text/javascript" src="js/utils.js"></script>
-		<script type="text/javascript" src="js/doughnutChart.js"></script>
+		<script type="text/javascript" src="js/overallTestChart.js"></script>
 		<script type="text/javascript" src="js/areaChart.js"></script>
 		<script type="text/javascript" src="js/barChart.js"></script>
 		<script type="text/javascript" src="js/colChart.js"></script>
