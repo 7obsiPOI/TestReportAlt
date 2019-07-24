@@ -32,41 +32,11 @@ function drawChartOverallTests(reportData) {
 
     var options = {
         title: 'Overall Results (' + sum + ' Tests/Scenarios)',
-        legend: 'none'
+        legend: 'none',
+        height: 350,
+        width: 750
     };
 
     var chart = new google.visualization.BarChart(document.getElementById('overallTests'));
     chart.draw(result, options);
-
-    //return result;
-
-
-
-    /*
-    var results = [];
-    results.push(['Date', 'Passed', 'Unknown', 'Failed']);
-    $.each( reportData, function( index, report ) {
-        var row=[];
-        var date = new Date(report.date.$date);
-
-        var failedScenariosSum = 0;
-        var unknownScenariosSum = 0;
-        var passedScenariosSum = 0;
-
-        $.each( report.features, function( index, feature) {
-            failedScenariosSum += getFailedScenarioCount(feature);
-            unknownScenariosSum += getUnknownScenarioCount(feature);
-            passedScenariosSum += getPassedScenarioCount(feature);
-        });
-
-        row.push(date.toString('dd.MM.yyyy HH:mm:ss'));
-        row.push();
-        row.push(passedScenariosSum);
-        row.push(unknownScenariosSum);
-        row.push(failedScenariosSum);
-        results.push(row);
-    });
-
-    return results;
-     */
 }

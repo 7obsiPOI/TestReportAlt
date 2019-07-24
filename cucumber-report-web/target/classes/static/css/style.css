@@ -185,7 +185,7 @@ div#view {
 	}
 }
 
-h2 {
+h1, h2 {
 	color: #3e648d;
 	text-align: center;
 	font-weight: bold;
@@ -204,7 +204,7 @@ table tr#graphs td {
 div#dashboardChart {
 	display: block;
 	width: 50%!important;
-	height: 500px;
+	height: 350px;
 	margin-left: -25px;
 	float: left;
 }
@@ -212,13 +212,19 @@ div#dashboardChart {
 div#timelineChart {
 	display: block;
 	width: 50%!important;
-	height: 500px;
+	height: 350px;
 	margin-left: 650px;
 }
 
-div#features {
+div#tests {
+	vertical-align: middle;
 	display: block;
-	width: 50% !important;
-	height: 500px;
-	margin-left: -25px;
+	width: 80%!important;
+	height: 350px;
+}
+
+div#testOverview#errorOverview#overallTests {
+	align-content: center;
+	width: 100%;
+	height: 350px;
 }

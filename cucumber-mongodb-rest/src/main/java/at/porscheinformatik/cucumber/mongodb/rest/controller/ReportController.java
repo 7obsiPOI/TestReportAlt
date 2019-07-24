@@ -116,9 +116,9 @@ public class ReportController
      * @param report
      * @param scenario
      */
-    private ResponseEntity<String> passedScenarioFound(ReportDTO report, ScenarioDTO scenario, String idtentifier)
+    private ResponseEntity<String> passedScenarioFound(ReportDTO report, ScenarioDTO scenario, String identifier)
     {
-        String passedMessage = "Test passed: (" + report.getDateDTO().get$date() + ") identifier: \"" + idtentifier + "\" - name: \""
+        String passedMessage = "Test passed: (" + report.getDateDTO().get$date() + ") identifier: \"" + identifier + "\" - name: \""
                 + scenario.getName()
                 + "\" ("
                 + scenario.getDescription() + ")";
@@ -126,12 +126,12 @@ public class ReportController
         return new ResponseEntity<String>(passedMessage, HttpStatus.OK);
     }
 
-    private ResponseEntity<String> failedScenarioFound(ReportDTO report, ScenarioDTO scenario, String idtentifier,
+    private ResponseEntity<String> failedScenarioFound(ReportDTO report, ScenarioDTO scenario, String identifier,
             final String collection, final String requestURI)
     {
         StringBuilder error = new StringBuilder();
 
-        error.append("Test failed: (" + report.getDateDTO().get$date() + ") identifier: \"" + idtentifier
+        error.append("Test failed: (" + report.getDateDTO().get$date() + ") identifier: \"" + identifier
                 + "\" - name: \""
                 + scenario.getName()
                 + " (" + scenario.getDescription() + ")" + NL + NL);

@@ -572,6 +572,8 @@ function setName(name) {
 
 		$http.get(url).success(function(reportData) {
 			drawChartOverallTests(reportData);
+			drawChartErrorOverview(reportData);
+			drawChartTestOverview(reportData);
 		});
 	}]);
 

@@ -33,19 +33,21 @@
 
 <table class="table table-hover" id="overview">
 	<tr id="graphs">
-		<td>
-			<div id="colChart"></div> <!-- TODO: load graphs with for each -->
+		<td>[Graph]</td><!-- TODO: ng-reapeat -->
+
+		<td>[Graph]</td>
+
+		<td>[Graph]
+			<!-- <div id="colChart"></div> TODO: load graphs with for each -->
 		</td>
-
-		<td>[Graph]</td>
-
-		<td>[Graph]</td>
 
 		<td>[Graph]</td>
 
 	</tr>
 
 	<tr>
+		<!-- <th ng-repeat="category in categories">{{category.length == 0 ? 'Product / Version' : category+' Tests'}}</th> -->
+
 		<th>Acceptance Tests</th>
 		<th>Integration Tests</th>
 		<th>Webservice Tests</th>
@@ -53,6 +55,9 @@
 	</tr>
 
 </table>
+
+<script type="text/javascript" src="../js/colChart.js"></script>
+
 
 <!--
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -67,7 +72,7 @@
 	</tr>
 	<tr>
 		<td>
-			<div id="donutchart"></div> TODO: wird nur beim neuladen angezeigt
+			<div id="donutchart"></div>
 </td>
 <td>[Graph]</td>
 </tr>

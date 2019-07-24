@@ -1,24 +1,19 @@
 
-<h2>{{$routeParams.product}}</h2>
+<h1>{{$routeParams.product}}</h1>
 
 <div class="container" id="dashboardChart">
     <div id="overallTests"></div>
 </div>
 
-<!--
 <div class="container" id="timelineChart">
-    <h2>Error Timeline</h2>
-    <p>Another chart (doesn't have to be error timeline): <br /></p>
-    <div id="timeline"></div>
+    <div id="errorOverview"></div>
 </div>
 
-<div class="container" id="features">
-    <h2>Features</h2>
-    <p>Shows Results of Features from this Test</p>
-    <div id="barChart"></div>
+<div class="container" id="tests">
+    <h2>Tests</h2>
+    <div id="testOverview"></div>
 </div>
--->
 
 <script type="text/javascript" src="../js/overallTestChart.js"></script>
 <script type="text/javascript" src="../js/errorOverview.js"></script>
-<script type="text/javascript" src="../js/barChart.js"></script>
+<script type="text/javascript" src="../js/testOverview.js"></script>
