@@ -1,0 +1,105 @@
+<!-- Topbar -->
+<nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+    <!-- Sidebar Toggle (Topbar) -->
+    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+        <i class="fa fa-bars"></i>
+    </button>
+
+    <!-- Topbar Navbar -->
+    <ul class="navbar-nav">
+
+        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+        <li class="nav-item dropdown no-arrow d-sm-none">
+
+            <!-- Nav Item - Alerts -->
+        <li class="nav-item dropdown no-arrow mx-1" ng-click="goToDashboard($routeParams.product, $routeParams.limit)" id="dashboard">
+            <a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-envelope fa-fw"></i>
+                DASHBOARD
+                <!-- Counter - Alerts -->
+                <!-- <span class="badge badge-danger badge-counter">3+</span> -->
+            </a>
+        </li>
+
+
+        <!-- Nav Item - Messages -->
+        <li class="nav-item dropdown no-arrow mx-1" ng-click="">
+            <a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-envelope fa-fw"></i>
+                FEATURES
+                <!-- Counter - Messages -->
+            </a>
+        </li>
+
+        <!-- Nav Item - Messages -->
+        <li class="nav-item dropdown no-arrow mx-1" ng-click="openChart($routeParams.product, $routeParams.type, $routeParams.limit)">
+            <a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-envelope fa-fw"></i>
+                CHARTS
+                <!-- Counter - Messages -->
+            </a>
+        </li>
+
+        <!-- Nav Item - Messages -->
+        <li class="nav-item dropdown no-arrow mx-1" ng-click="openRanking($routeParams.product)">
+            <a class="nav-link dropdown-toggle"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-envelope fa-fw"></i>
+                RANKINGS
+                <!-- Counter - Messages -->
+            </a>
+        </li>
+
+        <!-- Nav Item - Messages -->
+        <li class="nav-item dropdown no-arrow mx-1" ng-click="">
+            <a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-envelope fa-fw"></i>
+                <!-- Counter - Messages -->
+                ERROR HISTORY
+                <span class="badge badge-danger badge-counter">not yet</span>
+            </a>
+        </li>
+    </ul>
+</nav>
+<!-- End of Topbar -->
+
+<h2>{{$routeParams.product}}</h2>
+
+<div class="container" id="dashboardChart">
+    <div id="overallTests"></div>
+</div>
+
+
+<!--
+<div class="container" id="timelineChart">
+    <h2>Error Timeline</h2>
+    <p>Another chart (doesn't have to be error timeline): <br /></p>
+    <div id="timeline"></div>
+</div>
+
+<div class="container" id="features">
+    <h2>Features</h2>
+    <p>Shows Results of Features from this Test</p>
+    <div id="barChart"></div>
+</div>
+-->
+
+<script type="text/javascript" src="../js/overallTestChart.js"></script>
+<script type="text/javascript" src="../js/errorOverview.js"></script>
+<script type="text/javascript" src="../js/barChart.js"></script>
+<!-- Bootstrap core JavaScript-->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Core plugin JavaScript-->
+<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+<!-- Custom scripts for all pages-->
+<script src="js/sb-admin-2.min.js"></script>
+
+<!-- Page level plugins -->
+<script src="vendor/chart.js/Chart.min.js"></script>
+
+<!-- Page level custom scripts -->
+<script src="js/demo/chart-area-demo.js"></script>
+<script src="js/demo/chart-pie-demo.js"></script>
