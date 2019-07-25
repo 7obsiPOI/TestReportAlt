@@ -1,4 +1,6 @@
-function drawChartTestOverview(reportData) {
+google.charts.load('current', {'packages':['line']});
+
+function drawChartTestOverview(reportData, test) {
 
     var result = [];
     var sum = 0;
@@ -19,12 +21,7 @@ function drawChartTestOverview(reportData) {
             failed += getFailedScenarioCount(feature);
             unknown += getUnknownScenarioCount(feature);
             passed += getPassedScenarioCount(feature);
-            if(feature.result.skippedStepCount !== undefined) {
-                skipped += feature.result.skippedStepCount; //-> doesn't work result is NAN
-            }
-            else {
-                skipped = 0;
-            }
+            skipped += getSkippedScenarioCount(feature);
         });
         var row = [];
 
@@ -39,19 +36,39 @@ function drawChartTestOverview(reportData) {
         sum += passed + failed + unknown + skipped;
     });
 
-    console.log(result);
-
     result = google.visualization.arrayToDataTable(result);
 
     var options = {
         height: 350,
         width: 1000,
         legend: { position: 'top', maxLines: 4 },
-        bar: { groupWidth: '75%' },
+        bar: { groupWidth: '80%' },
         isStacked: true,
-        colors: ['#007502', '#d18f00', '#003ec4', '#940000']
+        colors: ['#007502', '#d18f00', '#003ec4', '#940000'],
+        backgroundColor: { fill: 'transparent' }
     };
 
     var chart = new google.visualization.BarChart(document.getElementById('testOverview'));
+
+    function selectHandler() {
+        var row = chart.getSelection()[0].row;
+
+        var selectedDate = result.getValue(row, 0);
+
+        $.each(reportData, function(index, report) {
+            var compareDate = new Date(report.date.$date);
+
+            if(selectedDate === compareDate.toString('dd.MM.yyyy (HH:mm:ss)')) {
+                selectedDate = report.date.$date;
+            }
+        });
+
+        location.href = '/#/' + test + '/features/' + selectedDate + '/';
+    }
+
+    // Listen for the 'select' event, and call my function selectHandler() when
+    // the user selects something on the chart.
+    google.visualization.events.addListener(chart, 'select', selectHandler);
+
     chart.draw(result, options);
 }

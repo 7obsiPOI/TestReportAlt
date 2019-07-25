@@ -2,7 +2,7 @@ function drawChartOverallTests(reportData) {
 
     var result = [];
 
-    result.push(['Result', 'Sum', {role: 'style'}, {role: 'annotation'}]);
+    result.push(['Result', 'Sum', {role: 'style'}, {type: 'string', role: 'annotation', textAlign: 'left'}]);
 
     var failed = 0;
     var unknown = 0;
@@ -34,7 +34,19 @@ function drawChartOverallTests(reportData) {
         title: 'Overall Results (' + sum + ' Tests/Scenarios)',
         legend: 'none',
         height: 350,
-        width: 750
+        width: 750,
+        /*
+        hAxis: {
+            viewWindow: {
+                max: (failed+10+passed/10)
+            }
+        },
+        annotations: {
+            textStyle: { color: 'black' },
+            alwaysOutside: true
+        },
+         */
+        backgroundColor: { fill: 'transparent' } //-> so it doesn't block view of other elements (e.g. dropdown menu)
     };
 
     var chart = new google.visualization.BarChart(document.getElementById('overallTests'));
