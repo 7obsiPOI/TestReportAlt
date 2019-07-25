@@ -7,7 +7,6 @@
 }
 
 body{
-	padding-top: 70px;
 }
 
 .table td , .table th {
@@ -246,4 +245,17 @@ ul#loadDates li a {
 
 div#navLeft {
 	display: none;
+}
+
+
+body, html {
+	width: 100%;
+	height: 100%;
+}
+
+.full { height: 100%;}
+
+
+.overCur{
+	cursor:pointer;
 }

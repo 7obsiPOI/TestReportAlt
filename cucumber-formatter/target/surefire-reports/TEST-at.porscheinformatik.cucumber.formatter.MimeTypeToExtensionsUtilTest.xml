@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="4" failures="0" name="at.porscheinformatik.cucumber.formatter.MimeTypeToExtensionsUtilTest" time="0.003" errors="0" skipped="0">
+<testsuite tests="4" failures="0" name="at.porscheinformatik.cucumber.formatter.MimeTypeToExtensionsUtilTest" time="0.005" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\scoop\apps\ojdkbuild8\current\jre\bin"/>
     <property name="java.vm.version" value="25.212-b04"/>
     <property name="java.vm.vendor" value=""/>
-    <property name="maven.multiModuleProjectDirectory" value="D:\workspace\ProjektTeamPraktikanten_v1.1\cucumber-report-db-1.1.0.RC22"/>
+    <property name="maven.multiModuleProjectDirectory" value="D:\workspace\TestReportAlt"/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
     <property name="path.separator" value=";"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
     <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
     <property name="file.encoding.pkg" value="sun.io"/>
     <property name="user.script" value=""/>
-    <property name="user.country" value="AT"/>
+    <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value=""/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="D:\workspace\ProjektTeamPraktikanten_v1.1\cucumber-report-db-1.1.0.RC22"/>
+    <property name="user.dir" value="D:\workspace\TestReportAlt"/>
     <property name="java.runtime.version" value="1.8.0_212-1-ojdkbuild-b04"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
     <property name="java.endorsed.dirs" value="C:\scoop\apps\ojdkbuild8\current\jre\lib\endorsed"/>
@@ -48,7 +48,7 @@
     <property name="java.home" value="C:\scoop\apps\ojdkbuild8\current\jre"/>
     <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean install"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
-    <property name="user.language" value="de"/>
+    <property name="user.language" value="en"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
     <property name="java.vm.info" value="mixed mode"/>
     <property name="java.version" value="1.8.0_212-1-ojdkbuild"/>
@@ -65,8 +65,8 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="at.porscheinformatik.cucumber.formatter.MimeTypeToExtensionsUtilTest" name="mapApplicationZipToZip" time="0.002"/>
+  <testcase classname="at.porscheinformatik.cucumber.formatter.MimeTypeToExtensionsUtilTest" name="mapApplicationZipToZip" time="0.004"/>
   <testcase classname="at.porscheinformatik.cucumber.formatter.MimeTypeToExtensionsUtilTest" name="mapTextPlainToLog" time="0"/>
-  <testcase classname="at.porscheinformatik.cucumber.formatter.MimeTypeToExtensionsUtilTest" name="mapImageJpegToJpg" time="0"/>
-  <testcase classname="at.porscheinformatik.cucumber.formatter.MimeTypeToExtensionsUtilTest" name="mapImagePngToPng" time="0.001"/>
+  <testcase classname="at.porscheinformatik.cucumber.formatter.MimeTypeToExtensionsUtilTest" name="mapImageJpegToJpg" time="0.001"/>
+  <testcase classname="at.porscheinformatik.cucumber.formatter.MimeTypeToExtensionsUtilTest" name="mapImagePngToPng" time="0"/>
 </testsuite>

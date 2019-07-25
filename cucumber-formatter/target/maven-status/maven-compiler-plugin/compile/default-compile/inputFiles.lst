@@ -1,4 +1,4 @@
-D:\workspace\ProjektTeamPraktikanten_v1.1\cucumber-report-db-1.1.0.RC22\cucumber-formatter\src\main\java\at\porscheinformatik\cucumber\formatter\MimeTypeToExtensionsUtil.java
-D:\workspace\ProjektTeamPraktikanten_v1.1\cucumber-report-db-1.1.0.RC22\cucumber-formatter\src\main\java\at\porscheinformatik\cucumber\formatter\AbstractJsonFormatter.java
-D:\workspace\ProjektTeamPraktikanten_v1.1\cucumber-report-db-1.1.0.RC22\cucumber-formatter\src\main\java\at\porscheinformatik\cucumber\formatter\MongoDbFormatter.java
-D:\workspace\ProjektTeamPraktikanten_v1.1\cucumber-report-db-1.1.0.RC22\cucumber-formatter\src\main\java\at\porscheinformatik\cucumber\formatter\HtmlFormatter.java
+D:\workspace\TestReportAlt\cucumber-formatter\src\main\java\at\porscheinformatik\cucumber\formatter\AbstractJsonFormatter.java
+D:\workspace\TestReportAlt\cucumber-formatter\src\main\java\at\porscheinformatik\cucumber\formatter\MimeTypeToExtensionsUtil.java
+D:\workspace\TestReportAlt\cucumber-formatter\src\main\java\at\porscheinformatik\cucumber\formatter\MongoDbFormatter.java
+D:\workspace\TestReportAlt\cucumber-formatter\src\main\java\at\porscheinformatik\cucumber\formatter\HtmlFormatter.java

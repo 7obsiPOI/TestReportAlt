@@ -1,5 +1,5 @@
-D:\workspace\ProjektTeamPraktikanten_v1.1\cucumber-report-db-1.1.0.RC22\cucumber-formatter\src\test\java\at\porscheinformatik\cucumber\formatter\MongoFormatIT.java
-D:\workspace\ProjektTeamPraktikanten_v1.1\cucumber-report-db-1.1.0.RC22\cucumber-formatter\src\test\java\at\porscheinformatik\cucumber\formatter\HtmlFormatIT.java
-D:\workspace\ProjektTeamPraktikanten_v1.1\cucumber-report-db-1.1.0.RC22\cucumber-formatter\src\test\java\at\porscheinformatik\cucumber\formatter\RpnCalculatorStepdefs.java
-D:\workspace\ProjektTeamPraktikanten_v1.1\cucumber-report-db-1.1.0.RC22\cucumber-formatter\src\test\java\at\porscheinformatik\cucumber\formatter\MimeTypeToExtensionsUtilTest.java
-D:\workspace\ProjektTeamPraktikanten_v1.1\cucumber-report-db-1.1.0.RC22\cucumber-formatter\src\test\java\at\porscheinformatik\cucumber\formatter\RpnCalculator.java
+D:\workspace\TestReportAlt\cucumber-formatter\src\test\java\at\porscheinformatik\cucumber\formatter\HtmlFormatIT.java
+D:\workspace\TestReportAlt\cucumber-formatter\src\test\java\at\porscheinformatik\cucumber\formatter\MimeTypeToExtensionsUtilTest.java
+D:\workspace\TestReportAlt\cucumber-formatter\src\test\java\at\porscheinformatik\cucumber\formatter\MongoFormatIT.java
+D:\workspace\TestReportAlt\cucumber-formatter\src\test\java\at\porscheinformatik\cucumber\formatter\RpnCalculator.java
+D:\workspace\TestReportAlt\cucumber-formatter\src\test\java\at\porscheinformatik\cucumber\formatter\RpnCalculatorStepdefs.java

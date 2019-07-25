@@ -1,3 +1,70 @@
+<!-- Topbar -->
+<nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+	<!-- Sidebar Toggle (Topbar) -->
+	<button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+		<i class="fa fa-bars"></i>
+	</button>
+
+	<!-- Topbar Navbar -->
+	<ul class="navbar-nav overCur">
+
+		<!-- Nav Item - Search Dropdown (Visible Only XS) -->
+		<li class="nav-item dropdown no-arrow d-sm-none">
+
+			<!-- Nav Item - Alerts -->
+		<li class="nav-item dropdown no-arrow mx-1" ng-click="goToDashboard($routeParams.product, $routeParams.limit)" id="dashboard">
+			<a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<i class="fas fa-envelope fa-fw"></i>
+				DASHBOARD
+				<!-- Counter - Alerts -->
+				<!-- <span class="badge badge-danger badge-counter">3+</span> -->
+			</a>
+		</li>
+
+
+		<!-- Nav Item - Messages -->
+		<li class="nav-item dropdown no-arrow mx-1" ng-click="">
+			<a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<i class="fas fa-envelope fa-fw"></i>
+				FEATURES
+				<!-- Counter - Messages -->
+			</a>
+		</li>
+
+		<!-- Nav Item - Messages -->
+		<li class="nav-item dropdown no-arrow mx-1" ng-click="openChart($routeParams.product, $routeParams.type, $routeParams.limit)">
+			<a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<i class="fas fa-envelope fa-fw"></i>
+				CHARTS
+				<!-- Counter - Messages -->
+			</a>
+		</li>
+
+		<!-- Nav Item - Messages -->
+		<li class="nav-item dropdown no-arrow mx-1" ng-click="openRanking($routeParams.product)">
+			<a class="nav-link dropdown-toggle"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<i class="fas fa-envelope fa-fw"></i>
+				RANKINGS
+				<!-- Counter - Messages -->
+			</a>
+		</li>
+
+		<!-- Nav Item - Messages -->
+		<li class="nav-item dropdown no-arrow mx-1" ng-click="">
+			<a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<i class="fas fa-envelope fa-fw"></i>
+				<!-- Counter - Messages -->
+				ERROR HISTORY
+				<span class="badge badge-danger badge-counter">not yet</span>
+			</a>
+		</li>
+	</ul>
+</nav>
+<!-- End of Topbar -->
+
+
+
 <ol class="breadcrumb">
   <li><a href="#">Home</a></li>
   <li><a href="#/products/">Products</a></li>

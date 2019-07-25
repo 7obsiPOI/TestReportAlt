@@ -5,7 +5,6 @@ var testName = '';
 
 function setName(name) {
 	testName = name;
-	document.getElementById('navLeft').style.display = "block";
 }
 
 (function (angular, google, $, undefined) {
@@ -163,7 +162,7 @@ function setName(name) {
 				controller : 'StatisticsCtrl',
 				resolve : loader
 			})
-			.when('/rankings/:product', {
+			.when('/statistics/rankings/:product', {
 				templateUrl : 'pages/rankings.html',
 				controller : 'RankingsCtrl',
 				resolve : loader
@@ -178,12 +177,17 @@ function setName(name) {
 				controller : 'ProductListCtrl',
 				resolve : loader
 			})
-			.when('/:colName/features/:date/', {
+			.when('/reports/:product', {
+				templateUrl : 'pages/dashboard.html',
+				controller : 'DashboardCtrl',
+				resolve : loader
+			})
+			.when('/reports/:colName/features/:date', {
 				templateUrl : 'pages/features.html',
 				controller : 'FeatureListCtrl',
 				resolve : loader
 			})
-			.when('/:colName/features/:date/feature/:featureId', {
+			.when('/reports/:colName/features/:date/feature/:featureId', {
 				templateUrl : 'pages/feature.html',
 				controller : 'FeatureCtrl',
 				resolve : loader
@@ -214,6 +218,8 @@ function setName(name) {
 			$rootScope.deletionMode = !$rootScope.deletionMode;
 		};
 
+		//TODO: functions for charts on Home/Overview
+
 		$rootScope.openChart = function(product, type, limit) {
 			product = testName;
 			if(typeof type === 'undefined'){
@@ -235,12 +241,24 @@ function setName(name) {
 
 		$rootScope.openRanking = function(product){
 			product = testName;
-			$location.path('/rankings/' + product);
+			if(testName === '') {
+				alert('No Test was picked.');
+			}
+			else {
+				$location.path('/statistics/rankings/' + product);
+			}
 		};
 
-		$rootScope.goToDashboard = function(product) {
+		$rootScope.goToDashboard = function(product, limit) {
 			product = testName;
+			if(typeof limit === 'undefined'){
+				limit = localStorageService.get("chartsLimit");
+				if(limit === null){
+					limit = 10;
+				}
+			}
 
+			localStorageService.add("chartsLimit", limit);
 			$location.path('/' + product + '/dashboard/')
 		};
 
@@ -305,7 +323,7 @@ function setName(name) {
 		$scope.duration = $scope.report.duration;
 
 		$scope.featureDetails = function(feature) {
-			$location.path($routeParams.colName + '/features/' + $routeParams.date + '/feature/' + feature.id);
+			$location.path('/reports/' + $routeParams.colName + '/features/' + $routeParams.date + '/feature/' + feature.id);
 		};
 
 		$scope.sum = function(features, field) {
@@ -362,24 +380,11 @@ function setName(name) {
 	/**
 	 * ProductList Controller (see products.html)
 	 */
-	app.controller('ProductListCtrl', function($rootScope, $routeParams, $scope, $location, $filter, $http, restApiQueryRequest, loadJsonFromFilesystem) {
-		document.getElementById("navLeft").style.display = "none";
-		testName = '';
-
+	app.controller('ProductListCtrl', function($rootScope, $routeParams, $scope, $location, $filter, restApiQueryRequest, loadJsonFromFilesystem) {
 		$scope.searchArrayName = 'filteredProducts';
 		$scope.orderPredicate = "";
 		$scope.orderReverse = true;
 		$rootScope.searchText = "";
-
-
-
-		var url = queryBaseUrl +  'NADIN_19.4-SNAPSHOT Webservice/';
-
-		$http.get(url).success(function(reportData){
-			drawChartLastTestResults(reportData);
-			drawChartLastTestErrors(reportData);
-
-		});
 
 		$scope.productFilter = function (category) {
 			return function (product) {
@@ -400,7 +405,7 @@ function setName(name) {
 			$rootScope.databaseMode = false;
 			$rootScope.showDBError = false;
 			$rootScope.showJSONFileError = false;
-			$location.path('/' + product + '/dashboard/');
+			$location.path('/reports/features/');
 		})
 		// else: load the data from the mongo database
 			.error(function() {
@@ -412,8 +417,8 @@ function setName(name) {
 					}
 					return false;
 				};
-				$scope.goToDashboard = function(product) {
-					$location.path('/' + product + '/dashboard/');
+				$scope.reportsOverview = function(product) {
+					$location.path('/reports/' + product);
 				};
 
 				restApiQueryRequest(categoriesUrl).success(function (res) {
@@ -426,7 +431,6 @@ function setName(name) {
 					$scope.products = data.slice().reverse();
 
 					$scope[$scope.searchArrayName] = $scope.products;
-
 					addSearchAndSortHandlers($scope, $filter, $scope.products);
 				})
 					.error(function() {
@@ -434,6 +438,7 @@ function setName(name) {
 						$rootScope.showDBError = true;
 					});
 			});
+
 	});
 
 	/**
@@ -447,7 +452,7 @@ function setName(name) {
 		$scope.$routeParams = $routeParams;
 
 		$scope.featuresOverview = function(date) {
-			$location.path($routeParams.colName + '/features/' + date + '/');
+			$location.path('/reports/' + $routeParams.colName + '/features/' + date);
 		};
 		$scope.deleteDocument = function (id) {
 			$http.delete(queryBaseUrl + $routeParams.colName + '/' + id);
@@ -509,6 +514,7 @@ function setName(name) {
 						.error(function ()
 						{
 							$rootScope.loading = false;
+							testName = '';
 							$location.path('/products/');
 						});
 
@@ -516,6 +522,7 @@ function setName(name) {
 				.error(function ()
 				{
 					$rootScope.loading = false;
+					testName = '';
 					$location.path('/products/');
 				});
 		}
@@ -542,6 +549,7 @@ function setName(name) {
 					.success(function (data) {
 						if(!data.length){
 							$rootScope.loading = false;
+							testName = '';
 							$location.path('/products/');
 							return;
 						}
@@ -549,38 +557,21 @@ function setName(name) {
 					})
 					.error(function() {
 						$rootScope.loading = false;
+						testName = '';
 						$location.path('/products/');
 					});
 			});
 	});
 
-	app.controller('DashboardCtrl', ['$scope', '$routeParams', '$http', '$location', function($scope, $routeParams, $http, $location) {
+	/*
+	* TODO: Dashboard Controller anlegen
+	* */
+	app.controller('DashboardCtrl', ['$scope', '$routeParams', '$http', function($scope, $routeParams, $http) {
 
 		var url = queryBaseUrl + $routeParams.product + '/';
 
 		$http.get(url).success(function(reportData) {
 			drawChartOverallTests(reportData);
-			drawChartErrorOverview(reportData);
-			drawChartTestOverview(reportData, $routeParams.product);
-
-			document.getElementById("loadDates").innerHTML = '';
-			reportData.forEach(function(report) {
-				var li = document.createElement('li');
-				var date = report.date.$date;
-				var content = document.createTextNode(date);
-				var url = "/#/" + $routeParams.product + "/features/" + date + "/";
-				var a = document.createElement('a');
-				a.href = url;
-
-				a.onclick = function() {
-					$location.path('/' + testName + '/features/' + date + '/');
-				};
-
-				a.appendChild(content);
-				li.appendChild(a);
-
-				document.getElementById("loadDates").appendChild(li);
-			});
 		});
 	}]);
 
@@ -612,6 +603,7 @@ function setName(name) {
 					.success(function (data) {
 						if(!data.length){
 							$rootScope.loading = false;
+							testName = '';
 							$location.path('/products/');
 							return;
 						}
@@ -624,6 +616,7 @@ function setName(name) {
 					})
 					.error(function() {
 						$rootScope.loading = false;
+						testName = '';
 						$location.path('/products/');
 					});
 
@@ -725,6 +718,8 @@ function setName(name) {
 				isStacked:true,
 				colors:['#64ff64','#ffff64','#6464FF','#ff5050']
 			};
+
+			console.log(reportData);
 
 			var googleChart = new google.visualization[$routeParams.type](document.getElementById('chart'));
 			googleChart.draw(google.visualization.arrayToDataTable(getResults(reportData)), options);
