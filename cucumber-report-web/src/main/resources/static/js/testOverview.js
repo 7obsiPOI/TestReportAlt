@@ -37,10 +37,10 @@ function drawChartTestOverview(reportData, test) {
     result = google.visualization.arrayToDataTable(result);
 
     var options = {
-        height: 350,
+        height: 450,
         width: 1000,
         legend: { position: 'top', maxLines: 4 },
-        bar: { groupWidth: '80%' },
+        bar: { groupWidth: '70%' },
         isStacked: true,
         colors: ['#007502', '#d18f00', '#003ec4', '#940000'],
         backgroundColor: { fill: 'transparent' }

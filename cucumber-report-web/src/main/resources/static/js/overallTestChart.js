@@ -35,17 +35,6 @@ function drawChartOverallTests(reportData) {
         legend: 'none',
         height: 450,
         width: 600,
-        /*
-        hAxis: {
-            viewWindow: {
-                max: (failed+10+passed/10)
-            }
-        },
-        annotations: {
-            textStyle: { color: 'black' },
-            alwaysOutside: true
-        },
-         */
         backgroundColor: { fill: 'transparent' } //-> so it doesn't block view of other elements (e.g. dropdown menu)
     };
 

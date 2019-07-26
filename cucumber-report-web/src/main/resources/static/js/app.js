@@ -358,7 +358,7 @@
 		$rootScope.searchText = "";
 
 		var getGraphs = function(snapshot, test, count) {
-			$http.get((queryBaseUrl+snapshot+test+'/')).success(function(reportData) { //if $http.get needed in loop -> definition in another function
+			$http.get((queryBaseUrl+snapshot+test+'/')).success(function(reportData) { //if $http.get() needed in loop -> definition in another function
 				drawChartLastTestResults(reportData, count);
 			});
 		};
@@ -697,9 +697,6 @@
 				scope : scope
 			});
 		};
-
-
-
 	});
 
 	/**

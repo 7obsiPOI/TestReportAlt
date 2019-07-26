@@ -199,6 +199,11 @@ h1, h2 {
     font-weight: bold;
 }
 
+h5 {
+    color: #5c5c5c;
+    text-align: center;
+}
+
 table#overview, h2#headingOverview {
     margin-left: 10px;
 }
@@ -215,25 +220,18 @@ table tr.graphs td {
 
 div#dashboardChart {
     display: block;
-    width: 50% !important;
-    height: 350px;
-    margin-left: -25px;
     float: left;
 }
 
 div#timelineChart {
-    background-color: transparent !important;
     display: block;
-    width: 50% !important;
-    height: 350px;
-    margin-left: 650px;
+    padding-left: 500px;
 }
 
 div#tests {
-    background-color: transparent !important;
     vertical-align: middle;
     display: block;
-    width: 80% !important;
+    width: 80%!important;
     height: 350px;
 }
 
@@ -247,10 +245,6 @@ div#testOverview#errorOverview#overallTests {
     text-align: center;
 }
 
-#testHeading {
-    text-align: center;
-}
-
 a:hover{
     cursor: pointer;
 }
@@ -258,6 +252,11 @@ a:hover{
 ul#loadDates li a {
     color: black;
     text-align: center;
+}
+
+div.lastTestErrors {
+    float: right;
+    padding-top: 95px;
 }
 
 div#navLeft {
@@ -287,4 +286,24 @@ dopdonw-menu.show.li{
     border: 3px;
     border: black;
     width:80px;
+}
+
+ul#loadDates {
+    width: 250px!important;
+}
+
+ul#loadDates li {
+    margin: 2.5px;
+}
+
+ul#loadDates li:hover {
+    background: lightgray;
+}
+
+a.active {
+    color: darkgray!important;
+}
+
+#accordionSidebar, #topNav a, table.overview th {
+    cursor: pointer;
 }

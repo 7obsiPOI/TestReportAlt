@@ -199,6 +199,11 @@ h1, h2 {
     font-weight: bold;
 }
 
+h5 {
+    color: #5c5c5c;
+    text-align: center;
+}
+
 table#overview, h2#headingOverview {
     margin-left: 10px;
 }
