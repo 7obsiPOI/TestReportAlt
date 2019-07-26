@@ -1,261 +1,278 @@
 .btn:focus {
-	outline: 0;
+    outline: 0;
 }
 
 .affix {
-	width: 200px;
+    width: 200px;
 }
 
-body{
+body {
 }
 
-.table td , .table th {
-	text-align: center !important;
+.table td, .table th {
+    text-align: center !important;
 }
 
-.table .firstTD{
-	text-align: left !important;
+.table .firstTD {
+    text-align: left !important;
 }
 
-.table .noWrap{
-	white-space: nowrap;
+.table .noWrap {
+    white-space: nowrap;
 }
 
 .table thead > tr > th, .table tbody > tr > th, .table tfoot > tr > th, .table thead > tr > td, .table tbody > tr > td, .table tfoot > tr > td {
-	padding: 6px;
+    padding: 6px;
 }
 
 .badge, .label {
-	cursor: default;
+    cursor: default;
 }
 
 .container {
-	width: 95% !important;
+    width: 95% !important;
 }
 
-.uri{
-	display: inline-block;
-	padding: 0px 6px;
-	margin: 0px;
-	/*word-wrap: normal;*/
-	word-break: normal;
-	white-space: normal;
-	color: #d14;
+.uri {
+    display: inline-block;
+    padding: 0px 6px;
+    margin: 0px;
+    /*word-wrap: normal;*/
+    word-break: normal;
+    white-space: normal;
+    color: #d14;
 }
 
-.errorLogContent{
-	margin: 10px;
+.errorLogContent {
+    margin: 10px;
 }
 
-.errorLogContent .btn{
-	position: absolute;
+.errorLogContent .btn {
+    position: absolute;
 }
 
-.errorLogContent dl{
-	word-wrap: break-word;
+.errorLogContent dl {
+    word-wrap: break-word;
 }
 
-.errorLogCode{
-	padding-top: 22px;
-	word-break: normal;
-	word-wrap: normal;
-	white-space: pre;
-	overflow: auto;
-	max-height: 250px;
+.errorLogCode {
+    padding-top: 22px;
+    word-break: normal;
+    word-wrap: normal;
+    white-space: pre;
+    overflow: auto;
+    max-height: 250px;
 }
 
-.panelHead{
-	color: #ffffff;
-	background-color: #446e9b;
-	border-color: #446e9b;
-	padding: 10px 15px;
-	border-bottom: 1px solid transparent;
-	border-top-right-radius: 3px;
-	border-top-left-radius: 3px;
-}
-.panelTitle{
-	display: inline;
-	color: #fff;
-	margin-top: 0;
-	margin-bottom: 0;
-	font-size: 16px;
+.panelHead {
+    color: #ffffff;
+    background-color: #446e9b;
+    border-color: #446e9b;
+    padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
 }
 
-.panelBody img{
-	max-width:100%;
-	cursor: pointer;
-	cursor: -webkit-zoom-in;
-	cursor: -moz-zoom-in;
+.panelTitle {
+    display: inline;
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 16px;
 }
 
-.sortToggle span{
-	cursor: pointer;
+.panelBody img {
+    max-width: 100%;
+    cursor: pointer;
+    cursor: -webkit-zoom-in;
+    cursor: -moz-zoom-in;
+}
+
+.sortToggle span {
+    cursor: pointer;
 }
 
 .tdCollapse {
-	max-height: 20px;
-	overflow: hidden;
-	cursor: pointer;
+    max-height: 20px;
+    overflow: hidden;
+    cursor: pointer;
 }
 
 .tdUncollapse {
-	max-height: none;
+    max-height: none;
 }
 
 tr.rankings td:nth-child(1) {
-	width:70%;
+    width: 70%;
 }
+
 tr.rankings td:nth-child(2) {
-	width:15%;
+    width: 15%;
 }
+
 tr.rankings td:nth-child(3) {
-	width:15%;
+    width: 15%;
 }
 
 div.navbar-header {
-	margin-left: -20px!important;
-	font-weight: bolder!important;
+    margin-left: -20px !important;
+    font-weight: bolder !important;
 }
 
 /*Side-Navigation:*/
 div.navbar-left {
-	color: lightgray;
-	margin-top: -20px;
-	position: fixed;
-	height: 100%;
-	width: 150px;
-	display: block;
-	padding-left: 40px;
-	border: 1px solid #345578;
-	background: #3e648d;
+    color: lightgray;
+    margin-top: -20px;
+    position: fixed;
+    height: 100%;
+    width: 150px;
+    display: block;
+    padding-left: 40px;
+    border: 1px solid #345578;
+    background: #3e648d;
 }
+
 @media screen and (max-width: 1219px) {
-	div.navbar-left {
-		margin-top: 25px;
-	}
+    div.navbar-left {
+        margin-top: 25px;
+    }
 }
 
 @media screen and (max-width: 853px) {
-	div.navbar-left {
-		margin-top: 70px;
-	}
+    div.navbar-left {
+        margin-top: 70px;
+    }
 }
 
 @media screen and (max-width: 767px) {
-	div.navbar-left {
-		margin-top: -20px;
-	}
+    div.navbar-left {
+        margin-top: -20px;
+    }
 }
 
 div.navbar-left ul li {
-	list-style-type: none;
-	padding-top: 15px;
+    list-style-type: none;
+    padding-top: 15px;
 }
 
 div.navbar-left ul li:hover {
-	color: white;
-	cursor: pointer;
+    color: white;
+    cursor: pointer;
 }
 
 .mousePointer {
-	cursor: pointer!important;
+    cursor: pointer !important;
 }
 
 div#view {
-	margin-top:15px;
-	margin-left: 200px;
-	width: 1450px!important;
+    margin-top: 15px;
+    position: relative;
+    alignment: center;
+    width: 1450px !important;
 }
 
 @media screen and (max-width: 1219px) {
-	div#view {
-		margin-top: 50px;
-		width: 1000px!important;
-	}
+    div#view {
+        margin-top: 50px;
+        width: 1000px !important;
+    }
 }
 
 @media screen and (max-width: 853px) {
-	div#view {
-		margin-top: 90px;
-		width: 600px!important;
-	}
+    div#view {
+        margin-top: 90px;
+        width: 600px !important;
+    }
 }
 
 @media screen and (max-width: 767px) {
-	div#view {
-		margin-top: 35px;
-		width: 500px!important;
-	}
+    div#view {
+        margin-top: 35px;
+        width: 500px !important;
+    }
 }
 
 h1, h2 {
-	color: #3e648d;
-	text-align: center;
-	font-weight: bold;
+    color: #3e648d;
+    text-align: center;
+    font-weight: bold;
 }
 
 table#overview, h2#headingOverview {
-	margin-left: -100px;
+    margin-left: 10px;
 }
 
 table#overview th, td {
-	width: 12.5%!important;
+    width: 12.5% !important;
 }
 
 table tr.graphs td {
-	height: 500px;
-	vertical-align: middle;
-	text-align: center;
+    height: 500px;
+    vertical-align: middle;
+    text-align: center;
 }
 
 div#dashboardChart {
-	display: block;
-	width: 50%!important;
-	height: 350px;
-	margin-left: -25px;
-	float: left;
+    display: block;
+    width: 50% !important;
+    height: 350px;
+    margin-left: -25px;
+    float: left;
 }
 
 div#timelineChart {
-	background-color: transparent!important;
-	display: block;
-	width: 50%!important;
-	height: 350px;
-	margin-left: 650px;
+    background-color: transparent !important;
+    display: block;
+    width: 50% !important;
+    height: 350px;
+    margin-left: 650px;
 }
 
 div#tests {
-	background-color: transparent!important;
-	vertical-align: middle;
-	display: block;
-	width: 80%!important;
-	height: 350px;
+    background-color: transparent !important;
+    vertical-align: middle;
+    display: block;
+    width: 80% !important;
+    height: 350px;
 }
 
 div#testOverview#errorOverview#overallTests {
-	align-content: center;
-	width: 100%;
-	height: 350px;
+    align-content: center;
+    width: 100%;
+    height: 350px;
 }
 
 ul#loadDates li a {
-	color: black;
-	text-align: center;
+    color: black;
+    text-align: center;
 }
 
 div#navLeft {
-	display: none;
+    display: none;
 }
 
 
 body, html {
-	width: 100%;
-	height: 100%;
+    width: 100%;
+    height: 100%;
 }
 
-.full { height: 100%;}
+.full {
+    height: 100%;
+}
 
 
-.overCur{
-	cursor:pointer;
+.overCur {
+    cursor: pointer;
+}
+
+ul.dropdown-menu.show{
+    width: auto;
+    text-align-all: center;
+}
+dopdonw-menu.show.li{
+    border: 3px;
+    border: black;
+    width:80px;
 }

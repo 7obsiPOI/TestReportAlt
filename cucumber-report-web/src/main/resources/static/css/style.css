@@ -167,7 +167,8 @@ div.navbar-left ul li:hover {
 
 div#view {
     margin-top: 15px;
-    margin-left: 200px;
+    position: relative;
+    alignment: center;
     width: 1450px !important;
 }
 
@@ -199,7 +200,7 @@ h1, h2 {
 }
 
 table#overview, h2#headingOverview {
-    margin-left: -100px;
+    margin-left: 10px;
 }
 
 table#overview th, td {
@@ -264,4 +265,14 @@ body, html {
 
 .overCur {
     cursor: pointer;
+}
+
+ul.dropdown-menu.show{
+    width: auto;
+    text-align-all: center;
+}
+dopdonw-menu.show.li{
+    border: 3px;
+    border: black;
+    width:80px;
 }

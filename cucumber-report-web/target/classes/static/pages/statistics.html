@@ -1,4 +1,7 @@
 <!-- Topbar -->
+
+
+
 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
 	<!-- Sidebar Toggle (Topbar) -->
@@ -69,7 +72,7 @@
 		<span class="caret"></span>
 	</button>
 	<ul class="dropdown-menu" role="menu">
-		<li ng-class="{active:$routeParams.limit==10}"><a href="" ng-click="openChart($routeParams.product, $routeParams.type, 10)">10</a></li>
+		<li ng-class="{'active':$routeParams.limit==10}"><a href="" ng-click="openChart($routeParams.product, $routeParams.type, 10)">10</a></li>
 		<li ng-class="{'active':$routeParams.limit==30}"><a href="" ng-click="openChart($routeParams.product, $routeParams.type, 30)">30</a></li>
 		<li ng-class="{'active':$routeParams.limit==50}"><a href="" ng-click="openChart($routeParams.product, $routeParams.type, 50)">50</a></li>
 		<li class="divider"></li>

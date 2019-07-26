@@ -11,7 +11,7 @@
 
     <title>SB Admin 2 - Dashboard</title>
 
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.css"/>
 
 
     <!-- Custom fonts for this template-->
@@ -20,8 +20,6 @@
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
-
-
 
 
 </head>
@@ -136,27 +134,25 @@
     <!-- End of Sidebar -->
 
 
-
-        <!-- Main Content -->
-        <div id="content">
+    <!-- Main Content -->
 
 
-            <div id="view" class="container">
-                <div ng-show="showJSONFileError" class="alert alert-danger" style="display: none;">
-                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                    <strong>Oh snap!</strong> Unable to load local JSON file. (configured report file name: <a href="" id="ReportFileNameLink"><strong><span
-                        id="ReportFileName"></span></strong></a>) <br/>You can set the report file name in the configuration file (<a href="./js/config.js">/js/config.js</a>)
-                </div>
-                <div ng-show="showDBError" class="alert alert-danger" style="display: none;">
-                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                    <strong>Oh snap!</strong> Unable to load DB data using the REST API. (configured server URL: <a href="" id="ServerURLLink"><strong><span id="ServerURL"></span></strong></a>)
-                    <br/>You can set the server URL in the configuration file (<a href="./js/config.js">/js/config.js</a>)
-                </div>
-
-                <ng-view></ng-view>
-            </div>
+    <div id="view" class="container">
+        <div ng-show="showJSONFileError" class="alert alert-danger" style="display: none;">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            <strong>Oh snap!</strong> Unable to load local JSON file. (configured report file name: <a href="" id="ReportFileNameLink"><strong><span
+                id="ReportFileName"></span></strong></a>) <br/>You can set the report file name in the configuration file (<a href="./js/config.js">/js/config.js</a>)
         </div>
-        <!-- End of Content Wrapper -->
+        <div ng-show="showDBError" class="alert alert-danger" style="display: none;">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            <strong>Oh snap!</strong> Unable to load DB data using the REST API. (configured server URL: <a href="" id="ServerURLLink"><strong><span id="ServerURL"></span></strong></a>)
+            <br/>You can set the server URL in the configuration file (<a href="./js/config.js">/js/config.js</a>)
+        </div>
+
+        <ng-view></ng-view>
+    </div>
+
+    <!-- End of Content Wrapper -->
 
     <!-- End of Page Wrapper -->
 
