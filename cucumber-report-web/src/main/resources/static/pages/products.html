@@ -1,51 +1,29 @@
-<!-- Old Design:
-<ol class="breadcrumb">
-  <li><a href="#">Home</a></li>
-  <li class="active">Products</li>
-</ol>
-
-<table ng-repeat="category in categories" class="table table-striped table-hover table-bordered">
-	<thead>
-		<tr>
-			<th width="60%" class="firstTD">{{category.length == 0 ? 'Product / Version' : category+' Tests'}}</th>
-			<th>Statistics</th>
-			<th ng-show="deletionMode">Bulk Deletion</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr ng-repeat="product in filteredProducts | filter:productCondition |  filter:productFilter(category) | filter:searchText | filter:category | orderBy:'':true">
-			<td class="firstTD"><button ng-click="reportsOverview(product)" class="btn btn-primary btn-sm">{{product.replace(category, '')}}</button></td>
-			<td>
-				<button ng-click="openChart(product)" class="btn btn-primary btn-sm">Charts</button>
-				<button ng-click="openRanking(product)" class="btn btn-primary btn-sm">Rankings</button>
-			</td>
-			<td  ng-show="deletionMode">
-				<button ng-click="bulkDelete(product)" class="btn btn-danger btn-sm" ng-show="deletionMode">Delete</button>
-			</td>
-		</tr>
-	</tbody>
-</table>
--->
-
-
-
 <h2>Overview</h2>
 
 <h3>19.4-SNAPSHOT</h3>
-<table class="table table-hover" class="overview">
+<table class="table table-hover overview">
 	<tr>
-		<th>Acceptance Tests</th>
-		<th>Integration Tests</th>
-		<th>Webclient Tests</th>
-		<th>Webservice Tests</th>
+		<th ng-click="goToDashboard('NADIN_19.4-SNAPSHOT Acceptance')">Acceptance Tests</th>
+		<th ng-click="goToDashboard('NADIN_19.4-SNAPSHOT Integration')">Integration Tests</th>
+		<th ng-click="goToDashboard('NADIN_19.4-SNAPSHOT Webclient')">Webclient Tests</th>
+		<th ng-click="goToDashboard('NADIN_19.4-SNAPSHOT Webservice')">Webservice Tests</th>
 	</tr>
 
 	<tr class="graphs">
-		<td>[Graph]</td><!-- TODO: ng-reapeat -->
+		<td>
+			<div class="lastTestErrors"></div>
+			<div class="lastTestResult"></div>
+		</td>
 
-		<td>[Graph]</td>
+		<td>
+			<div class="lastTestErrors"></div>
+			<div class="lastTestResult"></div>
+		</td>
 
-		<td>[Graph]</td>
+		<td>
+			<div class="lastTestErrors"></div>
+			<div class="lastTestResult"></div>
+		</td>
 
 		<td>
 			<div class="lastTestErrors"></div>
@@ -55,20 +33,29 @@
 </table>
 
 <h3>19.3-SNAPSHOT</h3>
-<table class="table table-hover" class="overview">
+<table class="table table-hover overview">
 	<tr>
-		<th>Acceptance Tests</th>
-		<th>Integration Tests</th>
-		<th>Webclient Tests</th>
-		<th>Webservice Tests</th>
+		<th ng-click="goToDashboard('NADIN_19.3-SNAPSHOT Acceptance')">Acceptance Tests</th>
+		<th ng-click="goToDashboard('NADIN_19.3-SNAPSHOT Integration')">Integration Tests</th>
+		<th ng-click="goToDashboard('NADIN_19.3-SNAPSHOT Webclient')">Webclient Tests</th>
+		<th ng-click="goToDashboard('NADIN_19.3-SNAPSHOT Webservice')">Webservice Tests</th>
 	</tr>
 
 	<tr class="graphs">
-		<td>[Graph]</td><!-- TODO: ng-reapeat -->
+		<td>
+			<div class="lastTestErrors"></div>
+			<div class="lastTestResult"></div>
+		</td>
 
-		<td>[Graph]</td>
+		<td>
+			<div class="lastTestErrors"></div>
+			<div class="lastTestResult"></div>
+		</td>
 
-		<td>[Graph]</td>
+		<td>
+			<div class="lastTestErrors"></div>
+			<div class="lastTestResult"></div>
+		</td>
 
 		<td>
 			<div class="lastTestErrors"></div>
@@ -76,5 +63,3 @@
 		</td>
 	</tr>
 </table>
-
-<script type="text/javascript" src="../js/colChart.js"></script>

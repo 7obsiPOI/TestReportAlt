@@ -282,3 +282,23 @@ dopdonw-menu.show.li{
     border: black;
     width:80px;
 }
+
+ul#loadDates {
+    width: 250px!important;
+}
+
+ul#loadDates li {
+    margin: 2.5px;
+}
+
+ul#loadDates li:hover {
+    background: lightgray;
+}
+
+a.active {
+    color: darkgray!important;
+}
+
+#accordionSidebar, #topNav a, table.overview th {
+    cursor: pointer;
+}

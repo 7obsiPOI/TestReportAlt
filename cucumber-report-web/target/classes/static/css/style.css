@@ -215,18 +215,25 @@ table tr.graphs td {
 
 div#dashboardChart {
     display: block;
+    width: 50% !important;
+    height: 350px;
+    margin-left: -25px;
     float: left;
 }
 
 div#timelineChart {
+    background-color: transparent !important;
     display: block;
-    padding-left: 500px;
+    width: 50% !important;
+    height: 350px;
+    margin-left: 650px;
 }
 
 div#tests {
+    background-color: transparent !important;
     vertical-align: middle;
     display: block;
-    width: 80%!important;
+    width: 80% !important;
     height: 350px;
 }
 
@@ -240,6 +247,10 @@ div#testOverview#errorOverview#overallTests {
     text-align: center;
 }
 
+#testHeading {
+    text-align: center;
+}
+
 a:hover{
     cursor: pointer;
 }
@@ -247,11 +258,6 @@ a:hover{
 ul#loadDates li a {
     color: black;
     text-align: center;
-}
-
-div.lastTestErrors {
-    float: right;
-    padding-top: 95px;
 }
 
 div#navLeft {

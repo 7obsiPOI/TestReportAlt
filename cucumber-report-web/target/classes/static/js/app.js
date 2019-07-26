@@ -374,31 +374,24 @@ function setName(name) {
 		$scope.orderReverse = true;
 		$rootScope.searchText = "";
 
-		var url = queryBaseUrl  + 'NADIN_19.4-SNAPSHOT Webservice/'; //TODO: for all tests!!!
-
-		$http.get(url).success(function(reportData) {
-			drawChartLastTestResults(reportData, 0);
-		});
-
-		url = queryBaseUrl  + 'NADIN_19.3-SNAPSHOT Webservice/'; //TODO: for all tests!!!
-
-		$http.get(url).success(function(reportData) {
-			drawChartLastTestResults(reportData, 1);
-		});
-
-		$scope.productFilter = function (category) {
-			return function (product) {
-				if (category === '') {
-					for (var i in $scope.categories) {
-						var cat = $scope.categories[i];
-						if (cat !== '' && product.indexOf(cat) >= 0) {
-							return false;
-						}
-					}
-				}
-				return true;
-			}
+		var getGraphs = function(snapshot, test, count) {
+			$http.get((queryBaseUrl+snapshot+test+'/')).success(function(reportData) { //if $http.get needed in loop -> definition in another function
+				drawChartLastTestResults(reportData, count);
+			});
 		};
+
+		var SNAPSHOT = [];
+		SNAPSHOT.push(['NADIN_19.4-SNAPSHOT '], ['NADIN_19.3-SNAPSHOT ']);
+		var testArray = [];
+		testArray.push(['Acceptance'], ['Integration'], ['Webclient'], ['Webservice']);
+		var count = 0;
+
+		for(var i=0; i<2; i++) {
+			for(var j=0; j<4; j++) {
+				getGraphs(SNAPSHOT[i], testArray[j], count);
+				count++;
+			}
+		}
 
 		// if a local report.json file was found: load the data from the filesystem
 		loadJsonFromFilesystem().success(function() {
@@ -740,7 +733,7 @@ function setName(name) {
 				vAxis: {title: 'Scenarios',  titleTextStyle: {color: 'black'}},
 				hAxis: {title: 'Date',  titleTextStyle: {color: 'black'}},
 				isStacked:true,
-				colors:['#64ff64','#ffff64','#6464FF','#ff5050']
+				colors: ['#007502', '#d18f00', '#003ec4', '#940000']
 			};
 
 
