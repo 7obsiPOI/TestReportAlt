@@ -15,9 +15,16 @@
             <!-- Nav Item - Alerts -->
         <li class="nav-item dropdown no-arrow mx-1" ng-click="goToDashboard($routeParams.product)" id="dashboard">
             <a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-envelope fa-fw"></i>
-                DASHBOARD
-                <!-- Counter - Alerts -->
+                <table class="myNavTable">
+                    <tr>
+                        <th>
+                            <img src="images/dashboard.png">
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>DASHBOARD</td>
+                    </tr>
+                </table>
                 <!-- <span class="badge badge-danger badge-counter">3+</span> -->
             </a>
         </li>
@@ -26,8 +33,17 @@
         <!-- Nav Item - Messages -->
         <li class="nav-item dropdown no-arrow mx-1" ng-click="">
             <a class="nav-link dropdown-toggle" id="loadDates" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-envelope fa-fw"></i>
-                FEATURES
+                <table class="myNavTable">
+                    <tr>
+                        <th>
+                            <img src="images/features.png">
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>FEATURES</td>
+                        <span class="badge badge-danger badge-counter">not yet</span>
+                    </tr>
+                </table>
                 <!-- Counter - Messages -->
             </a>
         </li>
@@ -36,23 +52,57 @@
         <!-- Nav Item - Messages -->
         <li class="nav-item dropdown no-arrow mx-1" ng-click="openChart($routeParams.product, $routeParams.type, $routeParams.limit)">
             <a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-envelope fa-fw"></i>
-                CHARTS
-                <!-- Counter - Messages -->
+                <table class="myNavTable">
+                    <tr>
+                        <th>
+                            <img src="images/charts.png">
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>CHARTS</td>
+                    </tr>
+                </table>
             </a>
         </li>
 
         <!-- Nav Item - Messages -->
         <li class="nav-item dropdown no-arrow mx-1" ng-click="openRanking($routeParams.product)">
-            <a class="nav-link dropdown-toggle"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-envelope fa-fw"></i>
-                RANKINGS
-                <!-- Counter - Messages -->
+            <a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <table class="myNavTable">
+                    <tr>
+                        <th>
+                            <img src="images/rankings.png">
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>RANKINGS</td>
+                    </tr>
+                </table>
             </a>
         </li>
+
+        <!-- Nav Item - Messages -->
+        <li class="nav-item dropdown no-arrow mx-1" ng-click="openRanking($routeParams.product)">
+            <a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <table class="myNavTable">
+                    <tr>
+                        <th>
+                            <img src="images/history.png">
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>HISTORY</td>
+                        <span class="badge badge-danger badge-counter">not yet</span>
+                    </tr>
+                </table>
+            </a>
+        </li>
+
+
     </ul>
 </nav>
 <!-- End of Topbar -->
+
 
 <h1>{{$routeParams.product}}</h1>
 
