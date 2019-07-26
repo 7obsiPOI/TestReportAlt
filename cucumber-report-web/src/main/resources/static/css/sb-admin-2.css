@@ -7208,7 +7208,7 @@ button.bg-dark:focus {
 
 @media (min-width: 768px) {
   .d-md-none {
-    display: none !important;
+    display: none !important; /* none */
   }
   .d-md-inline {
     display: inline !important;

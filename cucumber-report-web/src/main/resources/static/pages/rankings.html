@@ -1,5 +1,5 @@
 <!-- Topbar -->
-<nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow" id="topNav">
+<nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
 	<!-- Sidebar Toggle (Topbar) -->
 	<button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
@@ -13,7 +13,7 @@
 		<li class="nav-item dropdown no-arrow d-sm-none">
 
 			<!-- Nav Item - Alerts -->
-		<li class="nav-item dropdown no-arrow mx-1 overCur" ng-click="goToDashboard($routeParams.product)" id="dashboard">
+		<li class="nav-item dropdown no-arrow mx-1 overCur" ng-click="goToDashboard($routeParams.product, $routeParams.limit)" id="dashboard">
 			<a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				<i class="fas fa-envelope fa-fw"></i>
 				DASHBOARD
@@ -28,7 +28,6 @@
 			<a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				<i class="fas fa-envelope fa-fw"></i>
 				FEATURES
-				<ul class="dropdown-menu" id="loadDates"></ul>
 				<!-- Counter - Messages -->
 			</a>
 		</li>
@@ -44,7 +43,7 @@
 
 		<!-- Nav Item - Messages -->
 		<li class="nav-item dropdown no-arrow mx-1 overCur" ng-click="openRanking($routeParams.product)">
-			<a class="nav-link dropdown-toggle active"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			<a class="nav-link dropdown-toggle"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				<i class="fas fa-envelope fa-fw"></i>
 				RANKINGS
 				<!-- Counter - Messages -->
@@ -64,14 +63,13 @@
 </nav>
 <!-- End of Topbar -->
 
-<!--
+
+
 <ol class="breadcrumb">
   <li><a href="#">Home</a></li>
   <li><a href="#/products/">Products</a></li>
   <li class="active">Rankings</li>
 </ol>
--->
-
 <h2>Steps Ranking of {{product}}</h2>
 <h3><a ng-click="showAll_Failed = ! showAll_Failed" style="cursor: pointer" title="Show All/Top5"><b>Most Failed</b> <i ng-show="!showAll_Failed && selectedStep===null">- Top 5</i><i ng-show="showAll_Failed && selectedStep===null">- Complete List</i><i ng-show=selectedStep!=null>- Selected Step</i></a></h3>
 
@@ -152,5 +150,3 @@
 		</tr>
 	</tbody>
 </table>
-
-<script type="text/javascript" src="../js/app.js"></script>
