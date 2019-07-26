@@ -32,7 +32,7 @@
 <div class="navbar navbar-inverse navbar-left" role="navigation"> <!-- show only if a Test & version was selected & not on home -->
     <div class="containter">
         <ul class="nav navbar-nav">
-            <li ng-click="goToDashboard($routeParams.product, $routeParams.limit)" id="dashboard">Dashboard</li> <br />
+            <li ng-click="goToDashboard($routeParams.product)" id="dashboard">Dashboard</li> <br />
             <li ng-click="openChart($routeParams.product, $routeParams.type, $routeParams.limit)">Charts</li> <br />
             <li ng-click="">Features</li> <br />
             <li ng-click="">Error History</li> <br />
@@ -51,7 +51,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/#/products/" id="home">Test Report</a>
+            <a class="navbar-brand" href="/index.html#/products/" id="home">Test Report</a>
         </div>
         <div class="navbar-collapse collapse">
 
@@ -156,8 +156,6 @@
 <script type="text/javascript" src="js/utils.js"></script>
 <script type="text/javascript" src="js/overallTestChart.js"></script>
 <script type="text/javascript" src="js/errorOverview.js"></script>
-<script type="text/javascript" src="js/barChart.js"></script>
-<script type="text/javascript" src="js/colChart.js"></script>
 
 </body>
 </html>

@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="cucumber-mongodb-rest" />
         <module name="cucumber-report-web" />
+        <module name="maven-archiver (4)" />
         <module name="silk-bdd-result-plugin" />
         <module name="maven-archiver (1)" />
         <module name="cucumber-formatter" />

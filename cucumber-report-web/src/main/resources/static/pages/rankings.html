@@ -13,7 +13,7 @@
 		<li class="nav-item dropdown no-arrow d-sm-none">
 
 			<!-- Nav Item - Alerts -->
-		<li class="nav-item dropdown no-arrow mx-1 overCur" ng-click="goToDashboard($routeParams.product, $routeParams.limit)" id="dashboard">
+		<li class="nav-item dropdown no-arrow mx-1 overCur" ng-click="goToDashboard($routeParams.product)" id="dashboard">
 			<a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				<i class="fas fa-envelope fa-fw"></i>
 				DASHBOARD
@@ -28,6 +28,7 @@
 			<a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				<i class="fas fa-envelope fa-fw"></i>
 				FEATURES
+				<ul class="dropdown-menu" id="loadDates"></ul>
 				<!-- Counter - Messages -->
 			</a>
 		</li>
@@ -150,3 +151,5 @@
 		</tr>
 	</tbody>
 </table>
+
+<script type="text/javascript" src="../js/app.js"></script>
