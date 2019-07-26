@@ -1,7 +1,4 @@
 <!-- Topbar -->
-
-
-
 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
 	<!-- Sidebar Toggle (Topbar) -->
@@ -38,7 +35,7 @@
 
 		<!-- Nav Item - Messages -->
 		<li class="nav-item dropdown no-arrow mx-1" ng-click="openChart($routeParams.product, $routeParams.type, $routeParams.limit)">
-			<a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			<a class="nav-link dropdown-toggle active" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				<i class="fas fa-envelope fa-fw"></i>
 				CHARTS
 				<!-- Counter - Messages -->
@@ -73,7 +70,7 @@
 		<span class="caret"></span>
 	</button>
 	<ul class="dropdown-menu" role="menu">
-		<li ng-class="{'active':$routeParams.limit==10}"><a href="" ng-click="openChart($routeParams.product, $routeParams.type, 10)">10</a></li>
+		<li ng-class="{active:$routeParams.limit==10}"><a href="" ng-click="openChart($routeParams.product, $routeParams.type, 10)">10</a></li>
 		<li ng-class="{'active':$routeParams.limit==30}"><a href="" ng-click="openChart($routeParams.product, $routeParams.type, 30)">30</a></li>
 		<li ng-class="{'active':$routeParams.limit==50}"><a href="" ng-click="openChart($routeParams.product, $routeParams.type, 50)">50</a></li>
 		<li class="divider"></li>
