@@ -33,8 +33,8 @@ function drawChartOverallTests(reportData) {
     var options = {
         title: 'Overall Results (' + sum + ' Tests/Scenarios)',
         legend: 'none',
-        height: 350,
-        width: 750,
+        height: 450,
+        width: 600,
         /*
         hAxis: {
             viewWindow: {

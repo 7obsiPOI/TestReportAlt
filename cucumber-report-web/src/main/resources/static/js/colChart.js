@@ -1,6 +1,3 @@
-google.charts.load('current', {'packages':['corechart'], callback: drawColChart});
-
-
 //to load all charts when you go to a page the functions have to be named differently!!!
 
 function drawColChart() {

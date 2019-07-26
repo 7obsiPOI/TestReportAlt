@@ -157,12 +157,12 @@ function setName(name) {
 				controller : 'HelpCtrl',
 				resolve : loader
 			})
-			.when('/statistics/:product/:type/:limit', {
+			.when('/statistics/:product/:type/:limit/', {
 				templateUrl : 'pages/statistics.html',
 				controller : 'StatisticsCtrl',
 				resolve : loader
 			})
-			.when('/statistics/rankings/:product', {
+			.when('/rankings/:product/', {
 				templateUrl : 'pages/rankings.html',
 				controller : 'RankingsCtrl',
 				resolve : loader
@@ -177,12 +177,7 @@ function setName(name) {
 				controller : 'ProductListCtrl',
 				resolve : loader
 			})
-			.when('/reports/:product', {
-				templateUrl : 'pages/dashboard.html',
-				controller : 'DashboardCtrl',
-				resolve : loader
-			})
-			.when('/reports/:colName/features/:date', {
+			.when('/:colName/features/:date/', {
 				templateUrl : 'pages/features.html',
 				controller : 'FeatureListCtrl',
 				resolve : loader
@@ -218,48 +213,41 @@ function setName(name) {
 			$rootScope.deletionMode = !$rootScope.deletionMode;
 		};
 
-		//TODO: functions for charts on Home/Overview
-
 		$rootScope.openChart = function(product, type, limit) {
-			product = testName;
-			if(typeof type === 'undefined'){
-				type = localStorageService.get("chartsType");
-				if(type === null){
-					type = "ColumnChart";
+			if(testName !== '') {
+				product = testName;
+			}
+			if(product !== undefined || product !== '') {
+				if(typeof type === 'undefined'){
+					type = localStorageService.get("chartsType");
+					if(type === null){
+						type = "ColumnChart";
+					}
 				}
-			}
-			if(typeof limit === 'undefined'){
-				limit = localStorageService.get("chartsLimit");
-				if(limit === null){
-					limit = 10;
+				if(typeof limit === 'undefined'){
+					limit = localStorageService.get("chartsLimit");
+					if(limit === null){
+						limit = 10;
+					}
 				}
-			}
-			localStorageService.add("chartsType", type);
-			localStorageService.add("chartsLimit", limit);
-			$location.path('/statistics/' + product + '/' + type + '/' + limit);
-		};
-
-		$rootScope.openRanking = function(product){
-			product = testName;
-			if(testName === '') {
-				alert('No Test was picked.');
-			}
-			else {
-				$location.path('/statistics/rankings/' + product);
+				localStorageService.add("chartsType", type);
+				localStorageService.add("chartsLimit", limit);
+				$location.path('/statistics/' + product + '/' + type + '/' + limit + '/');
 			}
 		};
 
-		$rootScope.goToDashboard = function(product, limit) {
-			product = testName;
-			if(typeof limit === 'undefined'){
-				limit = localStorageService.get("chartsLimit");
-				if(limit === null){
-					limit = 10;
-				}
+		$rootScope.openRanking = function(product) {
+			if(testName !== '') {
+				product = testName;
 			}
+			if(product !== undefined || product !== '') {
+				$location.path('/rankings/' + product + '/');
+			}
+		};
 
-			localStorageService.add("chartsLimit", limit);
-			$location.path('/' + product + '/dashboard/')
+		$rootScope.goToDashboard = function(product) {
+			if(testName !== '') { product = testName; }
+			if(product !== undefined || product !== '') { $location.path('/' + product + '/dashboard/'); }
 		};
 
 		$rootScope.bulkDelete = function(product){
@@ -380,11 +368,23 @@ function setName(name) {
 	/**
 	 * ProductList Controller (see products.html)
 	 */
-	app.controller('ProductListCtrl', function($rootScope, $routeParams, $scope, $location, $filter, restApiQueryRequest, loadJsonFromFilesystem) {
+	app.controller('ProductListCtrl', function($rootScope, $routeParams, $scope, $location, $filter, $http, restApiQueryRequest, loadJsonFromFilesystem) {
 		$scope.searchArrayName = 'filteredProducts';
 		$scope.orderPredicate = "";
 		$scope.orderReverse = true;
 		$rootScope.searchText = "";
+
+		var url = queryBaseUrl  + 'NADIN_19.4-SNAPSHOT Webservice/'; //TODO: for all tests!!!
+
+		$http.get(url).success(function(reportData) {
+			drawChartLastTestResults(reportData, 0);
+		});
+
+		url = queryBaseUrl  + 'NADIN_19.3-SNAPSHOT Webservice/'; //TODO: for all tests!!!
+
+		$http.get(url).success(function(reportData) {
+			drawChartLastTestResults(reportData, 1);
+		});
 
 		$scope.productFilter = function (category) {
 			return function (product) {
@@ -405,7 +405,6 @@ function setName(name) {
 			$rootScope.databaseMode = false;
 			$rootScope.showDBError = false;
 			$rootScope.showJSONFileError = false;
-			$location.path('/reports/features/');
 		})
 		// else: load the data from the mongo database
 			.error(function() {
@@ -416,9 +415,6 @@ function setName(name) {
 						return input;
 					}
 					return false;
-				};
-				$scope.reportsOverview = function(product) {
-					$location.path('/reports/' + product);
 				};
 
 				restApiQueryRequest(categoriesUrl).success(function (res) {
@@ -452,7 +448,7 @@ function setName(name) {
 		$scope.$routeParams = $routeParams;
 
 		$scope.featuresOverview = function(date) {
-			$location.path('/reports/' + $routeParams.colName + '/features/' + date);
+			$location.path('/' + $routeParams.colName + '/features/' + date + '/');
 		};
 		$scope.deleteDocument = function (id) {
 			$http.delete(queryBaseUrl + $routeParams.colName + '/' + id);
@@ -514,7 +510,6 @@ function setName(name) {
 						.error(function ()
 						{
 							$rootScope.loading = false;
-							testName = '';
 							$location.path('/products/');
 						});
 
@@ -522,7 +517,6 @@ function setName(name) {
 				.error(function ()
 				{
 					$rootScope.loading = false;
-					testName = '';
 					$location.path('/products/');
 				});
 		}
@@ -532,8 +526,7 @@ function setName(name) {
 	/**
 	 * FeatureList Controller (see features.html)
 	 */
-	app.controller('FeatureListCtrl', function($rootScope, $routeParams, $scope, $location, $filter, restApiQueryRequest, loadJsonFromFilesystem) {
-
+	app.controller('FeatureListCtrl', function($rootScope, $routeParams, $scope, $location, $filter, $http, restApiQueryRequest, loadJsonFromFilesystem) {
 		$scope.colName = $routeParams.colName;
 		// if a local report.json file was found: load the data from the filesystem
 		loadJsonFromFilesystem().success(function(data) {
@@ -549,29 +542,64 @@ function setName(name) {
 					.success(function (data) {
 						if(!data.length){
 							$rootScope.loading = false;
-							testName = '';
-							$location.path('/products/');
+							//$location.path('/products/');
 							return;
 						}
 						prepareReport(data[0], $rootScope, $scope, $routeParams, $filter, $location);
 					})
 					.error(function() {
 						$rootScope.loading = false;
-						testName = '';
-						$location.path('/products/');
+						//$location.path('/products/');
 					});
+
+				var url = queryBaseUrl + $routeParams.colName + '/';
+
+				$http.get(url).success(function(reportData) {
+
+					reportData.forEach(function(report) {
+						let li = document.createElement('li');
+						let date = report.date.$date;
+						let a = document.createElement('a');
+						let content = document.createTextNode(date);
+
+						a.href = '/#/' + $routeParams.colName + '/features/' + date + '/';
+						a.appendChild(content);
+						a.onclick = function() {
+							$location.path('/' + $routeParams.colName + '/features/' + date + '/');
+						};
+						li.appendChild(a);
+
+						document.getElementById("loadDates").appendChild(li);
+					});
+				});
+
 			});
 	});
 
-	/*
-	* TODO: Dashboard Controller anlegen
-	* */
-	app.controller('DashboardCtrl', ['$scope', '$routeParams', '$http', function($scope, $routeParams, $http) {
+	app.controller('DashboardCtrl', ['$scope', '$routeParams', '$http', '$location', function($scope, $routeParams, $http, $location) {
 
 		var url = queryBaseUrl + $routeParams.product + '/';
 
 		$http.get(url).success(function(reportData) {
 			drawChartOverallTests(reportData);
+			drawChartErrorOverview(reportData);
+			drawChartTestOverview(reportData, $routeParams.product);
+
+			reportData.forEach(function(report) {
+				let li = document.createElement('li');
+				let date = report.date.$date;
+				let a = document.createElement('a');
+				let content = document.createTextNode(date);
+
+				a.href = '/#/' + $routeParams.product + '/features/' + date + '/';
+				a.appendChild(content);
+				a.onclick = function() {
+					$location.path('/' + $routeParams.product + '/features/' + date + '/');
+				};
+				li.appendChild(a);
+
+				document.getElementById("loadDates").appendChild(li);
+			});
 		});
 	}]);
 
@@ -603,7 +631,6 @@ function setName(name) {
 					.success(function (data) {
 						if(!data.length){
 							$rootScope.loading = false;
-							testName = '';
 							$location.path('/products/');
 							return;
 						}
@@ -616,7 +643,6 @@ function setName(name) {
 					})
 					.error(function() {
 						$rootScope.loading = false;
-						testName = '';
 						$location.path('/products/');
 					});
 
@@ -704,8 +730,6 @@ function setName(name) {
 	 * Statistics Controller (see statistics.html)
 	 */
 	app.controller('StatisticsCtrl', function($rootScope, $scope, $http, $location, $routeParams){
-		$rootScope.loading = true;
-
 		var url = queryBaseUrl + $routeParams.product + '/';
 		if($routeParams.limit !== '0') {
 			url += '?last=' + $routeParams.limit;
@@ -719,12 +743,26 @@ function setName(name) {
 				colors:['#64ff64','#ffff64','#6464FF','#ff5050']
 			};
 
-			console.log(reportData);
 
 			var googleChart = new google.visualization[$routeParams.type](document.getElementById('chart'));
 			googleChart.draw(google.visualization.arrayToDataTable(getResults(reportData)), options);
 
-			$rootScope.loading = false;
+
+			reportData.forEach(function(report) {
+				let li = document.createElement('li');
+				let date = report.date.$date;
+				let a = document.createElement('a');
+				let content = document.createTextNode(date);
+
+				a.href = '/#/' + $routeParams.product + '/features/' + date + '/';
+				a.appendChild(content);
+				a.onclick = function() {
+					$location.path('/' + $routeParams.product + '/features/' + date + '/');
+				};
+				li.appendChild(a);
+
+				document.getElementById("loadDates").appendChild(li);
+			});
 		});
 	});
 
@@ -777,6 +815,28 @@ function setName(name) {
 	 */
 	app.controller('RankingsCtrl', function ($rootScope, $scope, $http, $location, $routeParams)
 	{
+		var url = queryBaseUrl + $routeParams.product + '/';
+
+		$http.get(url).success(function(reportData) {
+
+			reportData.forEach(function(report) {
+				let li = document.createElement('li');
+				let date = report.date.$date;
+				let a = document.createElement('a');
+				let content = document.createTextNode(date);
+
+				a.href = '/#/' + $routeParams.product + '/features/' + date + '/';
+				a.appendChild(content);
+				a.onclick = function() {
+					$location.path('/' + $routeParams.product + '/features/' + date + '/');
+				};
+				li.appendChild(a);
+
+				document.getElementById("loadDates").appendChild(li);
+			});
+		});
+
+
 		$rootScope.loading = true;
 		$scope.durationInMS=durationInMS;
 		$scope.product=$routeParams.product;

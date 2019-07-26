@@ -1,5 +1,3 @@
-google.charts.load('current', {'packages':['line']});
-
 function drawChartTestOverview(reportData, test) {
 
     var result = [];
@@ -60,10 +58,9 @@ function drawChartTestOverview(reportData, test) {
 
             if(selectedDate === compareDate.toString('dd.MM.yyyy (HH:mm:ss)')) {
                 selectedDate = report.date.$date;
+                location.href = '/#/' + test + '/features/' + selectedDate + '/';
             }
         });
-
-        location.href = '/#/' + test + '/features/' + selectedDate + '/';
     }
 
     // Listen for the 'select' event, and call my function selectHandler() when

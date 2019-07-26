@@ -2,7 +2,7 @@ function drawChartOverallTests(reportData) {
 
     var result = [];
 
-    result.push(['Result', 'Sum', {role: 'style'}, {role: 'annotation'}]);
+    result.push(['Result', 'Sum', {role: 'style'}, {type: 'string', role: 'annotation', textAlign: 'left'}]);
 
     var failed = 0;
     var unknown = 0;
@@ -32,41 +32,23 @@ function drawChartOverallTests(reportData) {
 
     var options = {
         title: 'Overall Results (' + sum + ' Tests/Scenarios)',
-        legend: 'none'
+        legend: 'none',
+        height: 450,
+        width: 600,
+        /*
+        hAxis: {
+            viewWindow: {
+                max: (failed+10+passed/10)
+            }
+        },
+        annotations: {
+            textStyle: { color: 'black' },
+            alwaysOutside: true
+        },
+         */
+        backgroundColor: { fill: 'transparent' } //-> so it doesn't block view of other elements (e.g. dropdown menu)
     };
 
     var chart = new google.visualization.BarChart(document.getElementById('overallTests'));
     chart.draw(result, options);
-
-    //return result;
-
-
-
-    /*
-    var results = [];
-    results.push(['Date', 'Passed', 'Unknown', 'Failed']);
-    $.each( reportData, function( index, report ) {
-        var row=[];
-        var date = new Date(report.date.$date);
-
-        var failedScenariosSum = 0;
-        var unknownScenariosSum = 0;
-        var passedScenariosSum = 0;
-
-        $.each( report.features, function( index, feature) {
-            failedScenariosSum += getFailedScenarioCount(feature);
-            unknownScenariosSum += getUnknownScenarioCount(feature);
-            passedScenariosSum += getPassedScenarioCount(feature);
-        });
-
-        row.push(date.toString('dd.MM.yyyy HH:mm:ss'));
-        row.push();
-        row.push(passedScenariosSum);
-        row.push(unknownScenariosSum);
-        row.push(failedScenariosSum);
-        results.push(row);
-    });
-
-    return results;
-     */
 }

@@ -7,7 +7,6 @@ function drawChartLastTestErrors(reportData) {
 
     data.push(['Date', 'Failed']);
 
-    console.log(data);
     $.each(reportData, function(index, report) {
         var failed = 0;
         var date = new Date(report.date.$date);

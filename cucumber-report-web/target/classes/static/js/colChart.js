@@ -1,7 +1,3 @@
-google.charts.load('current', {'packages':['corechart', 'controls']});
-google.charts.setOnLoadCallback(drawColChart);
-
-
 //to load all charts when you go to a page the functions have to be named differently!!!
 
 function drawColChart() {
@@ -19,6 +15,6 @@ function drawColChart() {
         colors: ['#007502', '#d18f00', '#003ec4', '#940000']
     };
 
-    var chart = new google.visualization.ColumnChart(document.getElementById("colChart"));
-    chart.draw(data, options);
+    //var chart = new google.visualization.ColumnChart(document.getElementById("colChart"));
+    //chart.draw(data, options);
 }
