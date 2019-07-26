@@ -294,3 +294,7 @@ ul#loadDates li:hover {
 a.active {
     color: darkgray!important;
 }
+
+#accordionSidebar, #topNav a {
+    cursor: pointer;
+}
