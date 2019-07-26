@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>NADIN Test Report Tool</title>
+    <title>NADIN Test Report</title>
 
     <link rel="stylesheet" href="css/style.css"/>
 
@@ -36,9 +36,9 @@
         <!-- Sidebar - Brand -->
         <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
             <div class="sidebar-brand-icon rotate-n-15">
-                <i class="fas fa-laugh-wink"></i>
+                <i class="fas fa-layer-group"></i>
             </div>
-            <div class="sidebar-brand-text mx-3" href="/index.html#/products/">NADIN Test Report</div>
+            <div class="sidebar-brand-text mx-3" href="/#/products/">NADIN Test Report</div>
         </a>
 
         <!-- Divider -->
@@ -46,9 +46,10 @@
 
         <!-- Nav Item - Dashboard -->
         <li ng-show="databaseMode" ng-controller="Menu" class="nav-item">
-            <a href="/#/products" class="nav-link">
-                <i class="fas fa-fw fa-tachometer-alt"></i>
-                <span>Home</span></a>
+            <a class="nav-link" href="index.html">
+                <img src="images/home.png" height="40" width="40">
+                <span>Home</span>
+            </a>
         </li>
 
         <!-- Divider -->
@@ -62,14 +63,14 @@
         <!-- Nav Item - ACCEPTANCE -->
         <li ng-show="databaseMode" ng-controller="Menu" class="nav-item">
             <a href="" class="nav-link collapsed" data-toggle="collapse" data-target="#collapseAcceptance" aria-expanded="true" aria-controls="collapseAcceptance">
-                <img src="images/acceptance.png" height="20" width="20">
+                <img src="images/acceptance.png" height="40" width="40">
                 <span>Acceptance</span>
             </a>
             <div id="collapseAcceptance" class="collapse" aria-labelledby="headingAcceptance" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">header</h6>
-                    <a class="collapse-item" onclick="setName('NADIN_19.3-SNAPSHOT Acceptance')" ng-click="goToDashboard($routeParams.product)">SNAPSHOT_19.3</a>
-                    <a class="collapse-item" onclick="setName('NADIN_19.4-SNAPSHOT Acceptance')" ng-click="goToDashboard($routeParams.product)">SNAPSHOT_19.4</a>
+                    <a class="collapse-item" href="/#/reports/NADIN_19.3-SNAPSHOT Acceptance" onclick="setName('NADIN_19.3-SNAPSHOT Acceptance')">SNAPSHOT_19.3</a>
+                    <a class="collapse-item" href="/#/reports/NADIN_19.4-SNAPSHOT Acceptance" onclick="setName('NADIN_19.4-SNAPSHOT Acceptance')">SNAPSHOT_19.4</a>
                 </div>
             </div>
         </li>
@@ -77,15 +78,15 @@
         <!-- Nav Item - INTEGRATION -->
         <li ng-show="databaseMode" ng-controller="Menu" class="nav-item">
             <a href="" class="nav-link collapsed" data-toggle="collapse" data-target="#collapseIntegration" aria-expanded="true" aria-controls="collapseIntegration">
-                <img src="images/integration.png" height="20" width="20">
+                <img src="images/integration.png" height="40" width="40">
 
                 <span>Integration</span>
             </a>
             <div id="collapseIntegration" class="collapse" aria-labelledby="headingIntegration" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">header</h6>
-                    <a class="collapse-item" onclick="setName('NADIN_19.3-SNAPSHOT Integration')" ng-click="goToDashboard($routeParams.product)">SNAPSHOT_19.3</a>
-                    <a class="collapse-item" onclick="setName('NADIN_19.4-SNAPSHOT Integration')" ng-click="goToDashboard($routeParams.product)">SNAPSHOT_19.4</a>
+                    <a class="collapse-item" href="/#/reports/NADIN_19.3-SNAPSHOT Integration" onclick="setName('NADIN_19.3-SNAPSHOT Integration')">SNAPSHOT_19.3</a>
+                    <a class="collapse-item" href="/#/reports/NADIN_19.4-SNAPSHOT Integration" onclick="setName('NADIN_19.4-SNAPSHOT Integration')">SNAPSHOT_19.4</a>
                 </div>
             </div>
         </li>
@@ -93,15 +94,15 @@
         <!-- Nav Item - WEBCLIENT -->
         <li ng-show="databaseMode" ng-controller="Menu" class="nav-item">
             <a href="" class="nav-link collapsed" data-toggle="collapse" data-target="#collapseWebclient" aria-expanded="true" aria-controls="collapseWebclient">
-                <img src="images/webclient.png" height="20" width="20">
+                <img src="images/webclient.png" height="40" width="40">
 
                 <span>Webclient</span>
             </a>
             <div id="collapseWebclient" class="collapse" aria-labelledby="headingWebclient" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">header</h6>
-                    <a class="collapse-item" onclick="setName('NADIN_19.3-SNAPSHOT Webclient')" ng-click="goToDashboard($routeParams.product)">SNAPSHOT_19.3</a>
-                    <a class="collapse-item" onclick="setName('NADIN_19.4-SNAPSHOT Webclient')" ng-click="goToDashboard($routeParams.product)">SNAPSHOT_19.4</a>
+                    <a class="collapse-item" href="/#/reports/NADIN_19.3-SNAPSHOT Webclient" onclick="setName('NADIN_19.3-SNAPSHOT Webclient')">SNAPSHOT_19.3</a>
+                    <a class="collapse-item" href="/#/reports/NADIN_19.4-SNAPSHOT Webclient" onclick="setName('NADIN_19.4-SNAPSHOT Webclient')">SNAPSHOT_19.4</a>
                 </div>
             </div>
         </li>
@@ -110,20 +111,35 @@
         <!-- Nav Item - WEBSERVICE -->
         <li ng-show="databaseMode" ng-controller="Menu" class="nav-item">
             <a href="" class="nav-link collapsed" data-toggle="collapse" data-target="#collapseWebservice" aria-expanded="true" aria-controls="collapseWebservice">
-                <img src="images/webservice.png" height="20" width="20">
+                <img src="images/webservice.png" height="40" width="40">
                 <span>Webservice</span>
             </a>
             <div id="collapseWebservice" class="collapse" aria-labelledby="headingWebservice" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">header</h6>
-                    <a class="collapse-item" onclick="setName('NADIN_19.3-SNAPSHOT Webservice')" ng-click="goToDashboard($routeParams.product)">SNAPSHOT_19.3</a>
-                    <a class="collapse-item" onclick="setName('NADIN_19.4-SNAPSHOT Webservice')" ng-click="goToDashboard($routeParams.product)">SNAPSHOT_19.4</a>
+                    <a class="collapse-item" href="/#/reports/NADIN_19.3-SNAPSHOT Webservice" onclick="setName('NADIN_19.3-SNAPSHOT Webservice')">SNAPSHOT_19.3</a>
+                    <a class="collapse-item" href="/#/reports/NADIN_19.4-SNAPSHOT Webservice" onclick="setName('NADIN_19.4-SNAPSHOT Webservice')">SNAPSHOT_19.4</a>
                 </div>
             </div>
         </li>
 
         <!-- Divider -->
         <hr class="sidebar-divider d-none d-md-block">
+
+        <li ng-show="databaseMode" ng-controller="Menu" class="nav-item">
+            <a href="" class="nav-link collapsed" data-toggle="collapse" data-target="#collapseSettings" aria-expanded="true" aria-controls="collapseSettings">
+                <img src="images/settings.png" height="40" width="40">
+                <span>Settings</span>
+            </a>
+            <div id="collapseSettings" class="collapse" aria-labelledby="headingWebservice" data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <a class="collapse-item" href="#" ng-click="toggleDeletionMode()">Deletion Mode</a>\
+                    <a class="collapse-item" href="#" ng-click="clearCache()">Clear cache</a>
+                    <a class="collapse-item" href="/#/help">Help</a>
+                    \
+                </div>
+            </div>
+        </li>
 
         <!-- Sidebar Toggler (Sidebar) -->
         <div class="text-center d-none d-md-inline">
@@ -173,10 +189,9 @@
 <!-- Page level plugins -->
 <script src="vendor/chart.js/Chart.min.js"></script>
 
-<!-- Page level custom scripts
+<!-- Page level custom scripts -->
 <script src="js/demo/chart-area-demo.js"></script>
 <script src="js/demo/chart-pie-demo.js"></script>
--->
 
 <script src="//www.google.com/jsapi"></script>
 <script type="text/javascript" src="webjars/jquery/2.1.0/jquery.min.js"></script>
@@ -192,8 +207,8 @@
 <script type="text/javascript" src="js/utils.js"></script>
 <script type="text/javascript" src="js/overallTestChart.js"></script>
 <script type="text/javascript" src="js/errorOverview.js"></script>
-<script type="text/javascript" src="js/testOverview.js"></script>
-<script type="text/javascript" src="js/lastTestResults.js"></script>
+<script type="text/javascript" src="js/barChart.js"></script>
+<script type="text/javascript" src="js/colChart.js"></script>
 
 </body>
 
