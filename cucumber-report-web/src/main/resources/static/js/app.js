@@ -1,12 +1,6 @@
 /* global window, document */
 /* global serverUrl, fileBaseUrl, queryBaseUrl, collectionBaseUrl, reportFileName */
 
-var testName = '';
-
-function setName(name) {
-	testName = name;
-}
-
 (function (angular, google, $, undefined) {
 	'use strict';
 
@@ -214,40 +208,29 @@ function setName(name) {
 		};
 
 		$rootScope.openChart = function(product, type, limit) {
-			if(testName !== '') {
-				product = testName;
-			}
-			if(product !== undefined || product !== '') {
-				if(typeof type === 'undefined'){
-					type = localStorageService.get("chartsType");
-					if(type === null){
-						type = "ColumnChart";
-					}
+			if(typeof type === 'undefined'){
+				type = localStorageService.get("chartsType");
+				if(type === null){
+					type = "ColumnChart";
 				}
-				if(typeof limit === 'undefined'){
-					limit = localStorageService.get("chartsLimit");
-					if(limit === null){
-						limit = 10;
-					}
-				}
-				localStorageService.add("chartsType", type);
-				localStorageService.add("chartsLimit", limit);
-				$location.path('/statistics/' + product + '/' + type + '/' + limit + '/');
 			}
+			if(typeof limit === 'undefined'){
+				limit = localStorageService.get("chartsLimit");
+				if(limit === null){
+					limit = 10;
+				}
+			}
+			localStorageService.add("chartsType", type);
+			localStorageService.add("chartsLimit", limit);
+			$location.path('/statistics/' + product + '/' + type + '/' + limit + '/');
 		};
 
 		$rootScope.openRanking = function(product) {
-			if(testName !== '') {
-				product = testName;
-			}
-			if(product !== undefined || product !== '') {
-				$location.path('/rankings/' + product + '/');
-			}
+			$location.path('/rankings/' + product + '/');
 		};
 
 		$rootScope.goToDashboard = function(product) {
-			if(testName !== '') { product = testName; }
-			if(product !== undefined || product !== '') { $location.path('/' + product + '/dashboard/'); }
+			$location.path('/' + product + '/dashboard/');
 		};
 
 		$rootScope.bulkDelete = function(product){
