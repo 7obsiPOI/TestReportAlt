@@ -12,8 +12,12 @@
         <!-- Nav Item - Search Dropdown (Visible Only XS) -->
         <li class="nav-item dropdown no-arrow d-sm-none">
 
+
+
+
+
             <!-- Nav Item - Alerts -->
-        <li class="nav-item dropdown no-arrow mx-1" ng-click="goToDashboard($routeParams.product)" id="dashboard">
+        <li class="nav-item dropdown no-arrow mx-1 overCur" ng-click="goToDashboard($routeParams.product)" id="dashboard">
             <a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <table class="myNavTable">
                     <tr>
@@ -31,7 +35,7 @@
 
 
         <!-- Nav Item - Messages -->
-        <li class="nav-item dropdown no-arrow mx-1" ng-click="">
+        <li class="nav-item dropdown no-arrow mx-1 overCur" ng-click="">
             <a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <table class="myNavTable">
                     <tr>
@@ -40,8 +44,10 @@
                         </th>
                     </tr>
                     <tr>
-                        <td>FEATURES</td>
-                        <span class="badge badge-danger badge-counter">not yet</span>
+                        <td>
+                            <del>FEATURES</del>
+                        </td>
+                        <!-- <span class="badge badge-danger badge-counter">not yet</span> -->
                     </tr>
                 </table>
                 <!-- Counter - Messages -->
@@ -50,7 +56,7 @@
 
 
         <!-- Nav Item - Messages -->
-        <li class="nav-item dropdown no-arrow mx-1" ng-click="openChart($routeParams.product, $routeParams.type, $routeParams.limit)">
+        <li class="nav-item dropdown no-arrow mx-1 overCur" ng-click="openChart($routeParams.product, $routeParams.type, $routeParams.limit)">
             <a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <table class="myNavTable">
                     <tr>
@@ -66,7 +72,7 @@
         </li>
 
         <!-- Nav Item - Messages -->
-        <li class="nav-item dropdown no-arrow mx-1" ng-click="openRanking($routeParams.product)">
+        <li class="nav-item dropdown no-arrow mx-1 overCur" ng-click="openRanking($routeParams.product)">
             <a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <table class="myNavTable">
                     <tr>
@@ -82,7 +88,7 @@
         </li>
 
         <!-- Nav Item - Messages -->
-        <li class="nav-item dropdown no-arrow mx-1" ng-click="openRanking($routeParams.product)">
+        <li class="nav-item dropdown no-arrow mx-1 overCur" ng-click="">
             <a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <table class="myNavTable">
                     <tr>
@@ -91,26 +97,42 @@
                         </th>
                     </tr>
                     <tr>
-                        <td>HISTORY</td>
-                        <span class="badge badge-danger badge-counter">not yet</span>
+                        <td>
+                            <del> HISTORY</del>
+                        </td>
+                        <!--<span class="badge badge-danger badge-counter">not yet</span> -->
                     </tr>
                 </table>
             </a>
         </li>
-
-
     </ul>
 </nav>
-<!-- End of Topbar -->
 
+
+<div class="row">
+
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-primary shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">DASHBOARD</div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">$40,000</div>
+                    </div>
+                    <div class="col-auto">
+                        <img src="images/dashboard.png" class="myTopMenuImg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <h1>{{$routeParams.product}}</h1>
 
 <div class="container" id="dashboardChart">
     <div id="overallTests"></div>
 </div>
-
-
 
 <div class="container" id="timelineChart">
     <div id="errorOverview"></div>
@@ -140,3 +162,4 @@
 <!-- Page level custom scripts -->
 <script src="js/demo/chart-area-demo.js"></script>
 <script src="js/demo/chart-pie-demo.js"></script>
+

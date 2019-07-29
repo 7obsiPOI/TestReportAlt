@@ -374,6 +374,9 @@ function setName(name) {
 		$scope.orderReverse = true;
 		$rootScope.searchText = "";
 
+		document.getElementById("topMenu").style.display = "none";
+
+
 		var getGraphs = function(snapshot, test, count) {
 			$http.get((queryBaseUrl+snapshot+test+'/')).success(function(reportData) { //if $http.get needed in loop -> definition in another function
 				drawChartLastTestResults(reportData, count);
@@ -568,6 +571,7 @@ function setName(name) {
 
 			});
 	});
+
 
 	app.controller('DashboardCtrl', ['$scope', '$routeParams', '$http', '$location', function($scope, $routeParams, $http, $location) {
 
@@ -896,3 +900,13 @@ function setName(name) {
 	$('#ServerURLLink').attr('href',collectionBaseUrl);
 
 }(window.angular, window.google, window.jQuery));
+
+
+
+
+
+
+
+
+
+

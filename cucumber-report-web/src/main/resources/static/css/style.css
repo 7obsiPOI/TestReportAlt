@@ -31,6 +31,7 @@ body {
 
 .container {
     width: 100% !important;
+    height: 80px;
 }
 
 .uri {
@@ -283,4 +284,28 @@ body, html {
     height:50px;
     width:50px;
     align: center;
+}
+
+
+@keyframes show-startpage-navigation {
+    from {
+        top: -45px;
+    }
+    to {
+        top: 0;
+    }
+}
+@keyframes hide-startpage-navigation {
+    from {
+        top: 0;
+    }
+    to {
+        top: -45px;
+    }
+}
+.startpage-navigation {
+    animation: hide-startpage-navigation 1s ease forwards;
+}
+.startpage-navigation:hover {
+    animation: show-startpage-navigation 1s ease forwards;
 }

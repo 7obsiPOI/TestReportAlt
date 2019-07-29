@@ -3,7 +3,7 @@
 }
 
 .affix {
-    width: 200px;
+    width: 0px;
 }
 
 body {
@@ -30,7 +30,8 @@ body {
 }
 
 .container {
-    width: 95% !important;
+    width: 100% !important;
+    height: 80px;
 }
 
 .uri {
@@ -167,8 +168,7 @@ div.navbar-left ul li:hover {
 
 div#view {
     margin-top: 15px;
-    position: relative;
-    alignment: center;
+    margin-left: 20px;
     width: 1450px !important;
 }
 
@@ -195,12 +195,12 @@ div#view {
 
 h1, h2 {
     color: #3e648d;
-    text-align: center;
+    text-align: left;
     font-weight: bold;
 }
 
 table#overview, h2#headingOverview {
-    margin-left: 10px;
+    margin-left: -100px;
 }
 
 table#overview th, td {
@@ -215,18 +215,25 @@ table tr.graphs td {
 
 div#dashboardChart {
     display: block;
+    width: 50% !important;
+    height: 350px;
+    margin-left: -25px;
     float: left;
 }
 
 div#timelineChart {
+    background-color: transparent !important;
     display: block;
-    padding-left: 500px;
+    width: 50% !important;
+    height: 350px;
+    margin-left: 650px;
 }
 
 div#tests {
+    background-color: transparent !important;
     vertical-align: middle;
     display: block;
-    width: 80%!important;
+    width: 80% !important;
     height: 350px;
 }
 
@@ -236,18 +243,9 @@ div#testOverview#errorOverview#overallTests {
     height: 350px;
 }
 
-#testHeading {
-    text-align: center;
-}
-
 ul#loadDates li a {
     color: black;
     text-align: center;
-}
-
-div.lastTestErrors {
-    float: right;
-    padding-top: 95px;
 }
 
 div#navLeft {
@@ -269,32 +267,45 @@ body, html {
     cursor: pointer;
 }
 
-ul.dropdown-menu.show{
-    width: auto;
-    text-align-all: center;
-}
-dopdonw-menu.show.li{
-    border: 3px;
-    border: black;
-    width:80px;
+
+.myNavTable{
+    align-content: center;
+    table-layout: fixed;
+    width: 80%;
+    white-space: nowrap;
 }
 
-ul#loadDates {
-    width: 250px!important;
+.myNavTable tr{
+    text-align: center;
 }
 
-ul#loadDates li {
-    margin: 2.5px;
+
+.myTopMenuImg{
+    height:50px;
+    width:50px;
+    align: center;
 }
 
-ul#loadDates li:hover {
-    background: lightgray;
-}
 
-a.active {
-    color: darkgray!important;
+@keyframes show-startpage-navigation {
+    from {
+        top: -45px;
+    }
+    to {
+        top: 0;
+    }
 }
-
-#accordionSidebar, #topNav a {
-    cursor: pointer;
+@keyframes hide-startpage-navigation {
+    from {
+        top: 0;
+    }
+    to {
+        top: -45px;
+    }
+}
+.startpage-navigation {
+    animation: hide-startpage-navigation 1s ease forwards;
+}
+.startpage-navigation:hover {
+    animation: show-startpage-navigation 1s ease forwards;
 }
