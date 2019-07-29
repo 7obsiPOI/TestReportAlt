@@ -536,6 +536,7 @@ $(window).resize(function() {
 
 				$http.get(url).success(function(reportData) {
 
+					document.getElementById("loadDates").innerHTML = '';
 					reportData.forEach(function(report) {
 						let li = document.createElement('li');
 						let date = report.date.$date;
@@ -565,6 +566,7 @@ $(window).resize(function() {
 			drawChartErrorOverview(reportData);
 			drawChartTestOverview(reportData, $routeParams.product);
 
+			document.getElementById("loadDates").innerHTML = '';
 			reportData.forEach(function(report) {
 				let li = document.createElement('li');
 				let date = report.date.$date;
@@ -724,7 +726,7 @@ $(window).resize(function() {
 			var googleChart = new google.visualization[$routeParams.type](document.getElementById('chart'));
 			googleChart.draw(google.visualization.arrayToDataTable(getResults(reportData)), options);
 
-
+			document.getElementById("loadDates").innerHTML = '';
 			reportData.forEach(function(report) {
 				let li = document.createElement('li');
 				let date = report.date.$date;
@@ -796,6 +798,7 @@ $(window).resize(function() {
 
 		$http.get(url).success(function(reportData) {
 
+			document.getElementById("loadDates").innerHTML = '';
 			reportData.forEach(function(report) {
 				let li = document.createElement('li');
 				let date = report.date.$date;

@@ -1,6 +1,10 @@
 /* global window, document */
 /* global serverUrl, fileBaseUrl, queryBaseUrl, collectionBaseUrl, reportFileName */
 
+$(window).resize(function() {
+	location.reload();
+});
+
 (function (angular, google, $, undefined) {
 	'use strict';
 
@@ -532,6 +536,7 @@
 
 				$http.get(url).success(function(reportData) {
 
+					document.getElementById("loadDates").innerHTML = '';
 					reportData.forEach(function(report) {
 						let li = document.createElement('li');
 						let date = report.date.$date;
@@ -561,6 +566,7 @@
 			drawChartErrorOverview(reportData);
 			drawChartTestOverview(reportData, $routeParams.product);
 
+			document.getElementById("loadDates").innerHTML = '';
 			reportData.forEach(function(report) {
 				let li = document.createElement('li');
 				let date = report.date.$date;
@@ -720,7 +726,7 @@
 			var googleChart = new google.visualization[$routeParams.type](document.getElementById('chart'));
 			googleChart.draw(google.visualization.arrayToDataTable(getResults(reportData)), options);
 
-
+			document.getElementById("loadDates").innerHTML = '';
 			reportData.forEach(function(report) {
 				let li = document.createElement('li');
 				let date = report.date.$date;
@@ -792,6 +798,7 @@
 
 		$http.get(url).success(function(reportData) {
 
+			document.getElementById("loadDates").innerHTML = '';
 			reportData.forEach(function(report) {
 				let li = document.createElement('li');
 				let date = report.date.$date;
