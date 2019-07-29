@@ -1,128 +1,114 @@
-<!-- Old Design:
-<ol class="breadcrumb">
-  <li><a href="#">Home</a></li>
-  <li class="active">Products</li>
-</ol>
+<h2 class="h1 text-primary">Overview</h2>
 
-<table ng-repeat="category in categories" class="table table-striped table-hover table-bordered">
-	<thead>
-		<tr>
-			<th width="60%" class="firstTD">{{category.length == 0 ? 'Product / Version' : category+' Tests'}}</th>
-			<th>Statistics</th>
-			<th ng-show="deletionMode">Bulk Deletion</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr ng-repeat="product in filteredProducts | filter:productCondition |  filter:productFilter(category) | filter:searchText | filter:category | orderBy:'':true">
-			<td class="firstTD"><button ng-click="reportsOverview(product)" class="btn btn-primary btn-sm">{{product.replace(category, '')}}</button></td>
-			<td>
-				<button ng-click="openChart(product)" class="btn btn-primary btn-sm">Charts</button>
-				<button ng-click="openRanking(product)" class="btn btn-primary btn-sm">Rankings</button>
-			</td>
-			<td  ng-show="deletionMode">
-				<button ng-click="bulkDelete(product)" class="btn btn-danger btn-sm" ng-show="deletionMode">Delete</button>
-			</td>
-		</tr>
-	</tbody>
-</table>
--->
-
-
-<!-- Topbar -->
-<nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-
-    <!-- Sidebar Toggle (Topbar) -->
-    <button id="sidebarToggleTop" class="btn btn-link d-md-inline rounded-circle mr-3">
-        <i class="fa fa-bars"></i>
-    </button>
-
-    <!-- Topbar Navbar -->
-    <ul class="navbar-nav">
-
-    </ul>
-</nav>
-
-
-
-<!-- Main Content -->
-<div id="content">
-    <!-- Begin Page Content -->
-    <div class="container-fluid">
-
-        <!-- Page Heading -->
-        <h1 class="h3 mb-2 text-gray-800">Overview</h1>
-        <p class="mb-4">Chart.js is a third party plugin that is used to generate the charts in this theme. The charts below have been customized - for further customization
-            options, please visit the <a target="_blank" href="https://www.chartjs.org/docs/latest/">official Chart.js documentation</a>.</p>
-
-        <!-- Content Row -->
-        <div class="row">
-
-            <div class="col-xl-3 col-lg-7">
-                <!--Test1 -->
-                <div class="card shadow mb-4">
-                    <div class="card-header py-3">
-                        <h6 class="m-0 font-weight-bold text-primary">Area Chart</h6>
-                    </div>
-                    <div class="card-body">
-                        <div class="chart-area">
-                            <canvas id="myAreaChart"></canvas>
-                        </div>
-                        <hr>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-    <!-- /.container-fluid -->
-
+<h3 class="mb-0 text-gray-800">19.4-SNAPSHOT</h3>
+<div class="row justify-content-md-center">
+	<div class="col-lg-3 col-md-6 col-sm-12">
+		<div class="card shadow mb-4">
+			<div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+				<h6 ng-click="goToDashboard('NADIN_19.4-SNAPSHOT Acceptance')" class="m-0 font-weight-bold text-primary mousePointer">Acceptance Tests</h6>
+			</div>
+			<div class="card-body">
+				<div class="chart-area">
+					<div class="lastTestResult"></div>
+				</div>
+				<p class="lastTestErrors"></p>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-3 col-md-6 col-sm-12">
+		<div class="card shadow mb-4">
+			<div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+				<h6 ng-click="goToDashboard('NADIN_19.4-SNAPSHOT Integration')" class="m-0 font-weight-bold text-primary mousePointer">Integration Tests</h6>
+			</div>
+			<div class="card-body">
+				<div class="chart-area">
+					<div class="lastTestResult"></div>
+				</div>
+				<p class="lastTestErrors"></p>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-3 col-md-6 col-sm-12">
+		<div class="card shadow">
+			<div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+				<h6 ng-click="goToDashboard('NADIN_19.4-SNAPSHOT Webclient')" class="m-0 font-weight-bold text-primary mousePointer">Webclient Tests</h6>
+			</div>
+			<div class="card-body">
+				<div class="chart-area">
+					<div class="lastTestResult"></div>
+				</div>
+				<p class="lastTestErrors"></p>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-3 col-md-6 col-sm-12">
+		<div class="card shadow mb-4">
+			<div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+				<h6 ng-click="goToDashboard('NADIN_19.4-SNAPSHOT Webservice')" class="m-0 font-weight-bold text-primary mousePointer">Webservice Tests</h6>
+			</div>
+			<div class="card-body">
+				<div class="chart-area">
+					<div class="lastTestResult"></div>
+				</div>
+				<p class="lastTestErrors"></p>
+			</div>
+		</div>
+	</div>
 </div>
-<!-- End of Main Content -->
 
-<!--
-<h2 id="headingOverview">Overview</h2>
+<h3 class="mb-2 text-gray-800">19.3-SNAPSHOT</h3>
 
-
-<table class="table table-hover" id="overview">
-    <tr>
-        <th colspan="2">Acceptance Tests</th>
-        <th colspan="2">Integration Tests</th>
-        <th colspan="2">Webclient Tests</th>
-        <th colspan="2">Webservice Tests</th>
-    </tr>
-
-    <tr class="graphs">
-        <td>[Graph]</td>
-        <td>[Graph]</td>
-
-        <td>[Graph]</td>
-        <td>[Graph]</td>
-
-        <td>[Graph]</td>
-        <td>[Graph]</td>
-
-        <td>
-            <div id="lastTestResult"></div>
-        </td>
-        <td>
-            <div id="lastTestErrors"></div>
-        </td>
-    </tr>
-</table>
-
-
-<script type="text/javascript" src="../js/colChart.js"></script>
--->
-
-<!-- Bootstrap core JavaScript-->
-<script src="vendor/jquery/jquery.min.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-<!-- Core plugin JavaScript-->
-<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-<!-- Custom scripts for all pages-->
-<script src="js/sb-admin-2.min.js"></script>
-
+<div class="row justify-content-md-center">
+	<div class="col-lg-3 col-md-6 col-sm-12">
+		<div class="card shadow mb-4">
+			<div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+				<h6 ng-click="goToDashboard('NADIN_19.3-SNAPSHOT Acceptance')" class="m-0 font-weight-bold text-primary mousePointer">Acceptance Tests</h6>
+			</div>
+			<div class="card-body">
+				<div class="chart-area">
+					<div class="lastTestResult"></div>
+				</div>
+				<p class="lastTestErrors"></p>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-3 col-md-6 col-sm-12">
+		<div class="card shadow mb-4">
+			<div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+				<h6 ng-click="goToDashboard('NADIN_19.3-SNAPSHOT Integration')" class="m-0 font-weight-bold text-primary mousePointer">Integration Tests</h6>
+			</div>
+			<div class="card-body">
+				<div class="chart-area">
+					<div class="lastTestResult"></div>
+				</div>
+				<p class="lastTestErrors"></p>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-3 col-md-6 col-sm-12">
+		<div class="card shadow">
+			<div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+				<h6 ng-click="goToDashboard('NADIN_19.3-SNAPSHOT Webclient')" class="m-0 font-weight-bold text-primary mousePointer">Webclient Tests</h6>
+			</div>
+			<div class="card-body">
+				<div class="chart-area">
+					<div class="lastTestResult"></div>
+				</div>
+				<p class="lastTestErrors"></p>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-3 col-md-6 col-sm-12">
+		<div class="card shadow mb-4">
+			<div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+				<h6 ng-click="goToDashboard('NADIN_19.3-SNAPSHOT Webservice')" class="m-0 font-weight-bold text-primary mousePointer">Webservice Tests</h6>
+			</div>
+			<div class="card-body">
+				<div class="chart-area">
+					<div class="lastTestResult"></div>
+				</div>
+				<p class="lastTestErrors"></p>
+			</div>
+		</div>
+	</div>
+</div>

@@ -37,8 +37,6 @@ function drawChartTestOverview(reportData, test) {
     result = google.visualization.arrayToDataTable(result);
 
     var options = {
-        height: 350,
-        width: 1000,
         legend: { position: 'top', maxLines: 4 },
         bar: { groupWidth: '80%' },
         isStacked: true,

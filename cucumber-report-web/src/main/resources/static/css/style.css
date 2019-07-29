@@ -3,7 +3,7 @@
 }
 
 .affix {
-    width: 0px;
+    width: 200px;
 }
 
 body {
@@ -30,8 +30,7 @@ body {
 }
 
 .container {
-    width: 100% !important;
-    height: 80px;
+    width: 95% !important;
 }
 
 .uri {
@@ -168,7 +167,8 @@ div.navbar-left ul li:hover {
 
 div#view {
     margin-top: 15px;
-    margin-left: 20px;
+    position: relative;
+    alignment: center;
     width: 1450px !important;
 }
 
@@ -195,7 +195,7 @@ div#view {
 
 h1, h2 {
     color: #3e648d;
-    text-align: left;
+    text-align: center;
     font-weight: bold;
 }
 
@@ -210,7 +210,17 @@ table#overview th, td {
 table tr.graphs td {
     height: 500px;
     vertical-align: middle;
+h5 {
+    color: #5c5c5c;
     text-align: center;
+}
+
+#testHeading {
+    text-align: center;
+}
+
+a:hover{
+    cursor: pointer;
 }
 
 div#dashboardChart {
@@ -248,6 +258,11 @@ ul#loadDates li a {
     text-align: center;
 }
 
+div.lastTestErrors {
+    float: right;
+    padding-top: 95px;
+}
+
 div#navLeft {
     display: none;
 }
@@ -260,6 +275,21 @@ body, html {
 
 .full {
     height: 100%;
+}
+
+.lastTestResult {
+    height: 300px;
+}
+
+@media screen and (max-width: 767px) {
+    .lastTestResult {
+        height: 150px!important;
+    }
+}
+
+.lastTestErrors {
+    color: black;
+    font-weight: bold;
 }
 
 
@@ -308,4 +338,41 @@ body, html {
 }
 .startpage-navigation:hover {
     animation: show-startpage-navigation 1s ease forwards;
+ul.dropdown-menu.show{
+    width: auto;
+    text-align-all: center;
+}
+
+dopdonw-menu.show.li{
+    border: 3px;
+    border: black;
+    width:80px;
+}
+
+ul#loadDates {
+    width: 250px!important;
+}
+
+ul#loadDates li {
+    margin: 2.5px;
+}
+
+ul#loadDates li:hover {
+    background: lightgray;
+}
+
+a.active {
+    color: darkgray!important;
+}
+
+#accordionSidebar, #topNav a {
+    cursor: pointer;
+}
+
+div#overallTests, div#errorOverview {
+    height: 350px;
+}
+
+div#testOverview {
+    height: 425px;
 }

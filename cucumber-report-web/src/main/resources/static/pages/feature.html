@@ -1,3 +1,4 @@
+<!--
 <ol class="breadcrumb">
   <li><a href="#">Home</a></li>
   <li><a href="#/products/">Products</a></li>
@@ -5,6 +6,8 @@
   <li><a href="#/reports/{{colName}}/features/{{reportDate}}" title="{{colName}} / {{reportDate}}">Features</a></li>
   <li class="active">Feature</li>
 </ol>
+-->
+
 <h2>Feature: {{ feature.name }}</h2>
 <div ng-show="feature.tags.length">
 	<span ng-repeat="tag in feature.tags" class="label label-default">{{ tag.name }}</span>

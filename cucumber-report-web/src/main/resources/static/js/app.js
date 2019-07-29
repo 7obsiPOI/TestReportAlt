@@ -1,11 +1,9 @@
 /* global window, document */
 /* global serverUrl, fileBaseUrl, queryBaseUrl, collectionBaseUrl, reportFileName */
 
-var testName = '';
-
-function setName(name) {
-	testName = name;
-}
+$(window).resize(function() {
+	location.reload();
+});
 
 (function (angular, google, $, undefined) {
 	'use strict';
@@ -214,40 +212,29 @@ function setName(name) {
 		};
 
 		$rootScope.openChart = function(product, type, limit) {
-			if(testName !== '') {
-				product = testName;
-			}
-			if(product !== undefined || product !== '') {
-				if(typeof type === 'undefined'){
-					type = localStorageService.get("chartsType");
-					if(type === null){
-						type = "ColumnChart";
-					}
+			if(typeof type === 'undefined'){
+				type = localStorageService.get("chartsType");
+				if(type === null){
+					type = "ColumnChart";
 				}
-				if(typeof limit === 'undefined'){
-					limit = localStorageService.get("chartsLimit");
-					if(limit === null){
-						limit = 10;
-					}
-				}
-				localStorageService.add("chartsType", type);
-				localStorageService.add("chartsLimit", limit);
-				$location.path('/statistics/' + product + '/' + type + '/' + limit + '/');
 			}
+			if(typeof limit === 'undefined'){
+				limit = localStorageService.get("chartsLimit");
+				if(limit === null){
+					limit = 10;
+				}
+			}
+			localStorageService.add("chartsType", type);
+			localStorageService.add("chartsLimit", limit);
+			$location.path('/statistics/' + product + '/' + type + '/' + limit + '/');
 		};
 
 		$rootScope.openRanking = function(product) {
-			if(testName !== '') {
-				product = testName;
-			}
-			if(product !== undefined || product !== '') {
-				$location.path('/rankings/' + product + '/');
-			}
+			$location.path('/rankings/' + product + '/');
 		};
 
 		$rootScope.goToDashboard = function(product) {
-			if(testName !== '') { product = testName; }
-			if(product !== undefined || product !== '') { $location.path('/' + product + '/dashboard/'); }
+			$location.path('/' + product + '/dashboard/');
 		};
 
 		$rootScope.bulkDelete = function(product){
@@ -378,7 +365,7 @@ function setName(name) {
 
 
 		var getGraphs = function(snapshot, test, count) {
-			$http.get((queryBaseUrl+snapshot+test+'/')).success(function(reportData) { //if $http.get needed in loop -> definition in another function
+			$http.get((queryBaseUrl+snapshot+test+'/')).success(function(reportData) { //if $http.get() needed in loop -> definition in another function
 				drawChartLastTestResults(reportData, count);
 			});
 		};
@@ -552,6 +539,7 @@ function setName(name) {
 
 				$http.get(url).success(function(reportData) {
 
+					document.getElementById("loadDates").innerHTML = '';
 					reportData.forEach(function(report) {
 						let li = document.createElement('li');
 						let date = report.date.$date;
@@ -582,6 +570,7 @@ function setName(name) {
 			drawChartErrorOverview(reportData);
 			drawChartTestOverview(reportData, $routeParams.product);
 
+			document.getElementById("loadDates").innerHTML = '';
 			reportData.forEach(function(report) {
 				let li = document.createElement('li');
 				let date = report.date.$date;
@@ -718,9 +707,6 @@ function setName(name) {
 				scope : scope
 			});
 		};
-
-
-
 	});
 
 	/**
@@ -744,7 +730,7 @@ function setName(name) {
 			var googleChart = new google.visualization[$routeParams.type](document.getElementById('chart'));
 			googleChart.draw(google.visualization.arrayToDataTable(getResults(reportData)), options);
 
-
+			document.getElementById("loadDates").innerHTML = '';
 			reportData.forEach(function(report) {
 				let li = document.createElement('li');
 				let date = report.date.$date;
@@ -816,6 +802,7 @@ function setName(name) {
 
 		$http.get(url).success(function(reportData) {
 
+			document.getElementById("loadDates").innerHTML = '';
 			reportData.forEach(function(report) {
 				let li = document.createElement('li');
 				let date = report.date.$date;
