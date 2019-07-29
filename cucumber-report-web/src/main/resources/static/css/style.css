@@ -3,7 +3,7 @@
 }
 
 .affix {
-    width: 200px;
+    width: 0px;
 }
 
 body {
@@ -30,7 +30,7 @@ body {
 }
 
 .container {
-    width: 95% !important;
+    width: 100% !important;
 }
 
 .uri {
@@ -167,7 +167,7 @@ div.navbar-left ul li:hover {
 
 div#view {
     margin-top: 15px;
-    margin-left: 200px;
+    margin-left: 20px;
     width: 1450px !important;
 }
 
@@ -194,7 +194,7 @@ div#view {
 
 h1, h2 {
     color: #3e648d;
-    text-align: center;
+    text-align: left;
     font-weight: bold;
 }
 
@@ -268,5 +268,19 @@ body, html {
 
 
 .myNavTable{
+    align-content: center;
+    table-layout: fixed;
+    width: 80%;
+    white-space: nowrap;
+}
 
+.myNavTable tr{
+    text-align: center;
+}
+
+
+.myTopMenuImg{
+    height:50px;
+    width:50px;
+    align: center;
 }
