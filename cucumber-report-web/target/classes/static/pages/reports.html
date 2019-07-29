@@ -1,10 +1,111 @@
+<!-- Topbar -->
+<nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+    <!-- Sidebar Toggle (Topbar) -->
+    <button id="sidebarToggleTop" class="btn btn-link d-md-block rounded-circle mr-3">
+        <i class="fa fa-bars"></i>
+    </button>
 
 
-<ol class="breadcrumb">
-    <li><a href="#">Home</a></li>
-    <li><a href="#/products/">Products</a></li>
-    <li class="active">Reports</li>
-</ol>
+    <!-- Topbar Navbar -->
+    <ul class="navbar-nav">
+
+        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+        <li class="nav-item dropdown no-arrow d-sm-none">
+
+
+            <!-- Nav Item - Alerts -->
+        <li class="nav-item dropdown no-arrow mx-1 overCur" ng-click="goToDashboard($routeParams.product)" id="dashboard">
+            <a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <table class="myNavTable">
+                    <tr>
+                        <th>
+                            <img src="images/dashboard.png" class="myTopMenuImg">
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>DASHBOARD</td>
+                    </tr>
+                </table>
+                <!-- <span class="badge badge-danger badge-counter">3+</span> -->
+            </a>
+        </li>
+
+
+        <!-- Nav Item - Messages -->
+        <li class="nav-item dropdown no-arrow mx-1 overCur" ng-click="">
+            <a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <table class="myNavTable">
+                    <tr>
+                        <th>
+                            <img src="images/features.png" class="myTopMenuImg">
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <del>FEATURES</del>
+                        </td>
+                        <!-- <span class="badge badge-danger badge-counter">not yet</span> -->
+                    </tr>
+                </table>
+                <!-- Counter - Messages -->
+            </a>
+        </li>
+
+
+        <!-- Nav Item - Messages -->
+        <li class="nav-item dropdown no-arrow mx-1 overCur" ng-click="openChart($routeParams.product, $routeParams.type, $routeParams.limit)">
+            <a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <table class="myNavTable">
+                    <tr>
+                        <th>
+                            <img src="images/charts.png" class="myTopMenuImg">
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>CHARTS</td>
+                    </tr>
+                </table>
+            </a>
+        </li>
+
+        <!-- Nav Item - Messages -->
+        <li class="nav-item dropdown no-arrow mx-1 overCur" ng-click="openRanking($routeParams.product)">
+            <a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <table class="myNavTable">
+                    <tr>
+                        <th>
+                            <img src="images/rankings.png" class="myTopMenuImg">
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>RANKINGS</td>
+                    </tr>
+                </table>
+            </a>
+        </li>
+
+        <!-- Nav Item - Messages -->
+        <li class="nav-item dropdown no-arrow mx-1 overCur" ng-click="">
+            <a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <table class="myNavTable">
+                    <tr>
+                        <th>
+                            <img src="images/history.png" class="myTopMenuImg">
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <del> HISTORY</del>
+                        </td>
+                        <!--<span class="badge badge-danger badge-counter">not yet</span> -->
+                    </tr>
+                </table>
+            </a>
+        </li>
+    </ul>
+</nav>
+<!-- End of Topbar -->
 
 
 <table class="table table-striped table-hover table-bordered">
