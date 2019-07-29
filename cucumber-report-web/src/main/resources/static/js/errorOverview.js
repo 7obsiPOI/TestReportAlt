@@ -33,10 +33,8 @@ function drawChartErrorOverview(reportData) {
     result = google.visualization.arrayToDataTable(result);
 
     var options = {
-        title: 'Error Overview (' + sum +' Tests)',
+        title: sum + ' Tests',
         colors: ['#940000'],
-        width: 600,
-        height: 450,
         legend: 'none',
         vAxis: {
             viewWindow: { max: maxFailed+10 }

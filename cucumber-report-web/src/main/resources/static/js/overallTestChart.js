@@ -31,10 +31,8 @@ function drawChartOverallTests(reportData) {
     result = google.visualization.arrayToDataTable(result);
 
     var options = {
-        title: 'Overall Results (' + sum + ' Tests/Scenarios)',
+        title: sum + ' Tests/Scenarios',
         legend: 'none',
-        height: 450,
-        width: 600,
         backgroundColor: { fill: 'transparent' } //-> so it doesn't block view of other elements (e.g. dropdown menu)
     };
 
