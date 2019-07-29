@@ -552,7 +552,7 @@ $(window).resize(function() {
 						};
 						li.appendChild(a);
 
-						document.getElementById("loadDates").appendChild(li); //TODO: load in TopMenu
+						document.getElementById("loadDates").appendChild(li);
 					});
 				});
 
@@ -584,7 +584,7 @@ $(window).resize(function() {
 				li.appendChild(a);
 				console.log(li);
 
-				document.getElementById("loadDates").appendChild(li); //TODO: load in TopMenu
+				document.getElementById("loadDates").appendChild(li);
 			});
 		});
 	}]);
@@ -744,7 +744,7 @@ $(window).resize(function() {
 				};
 				li.appendChild(a);
 
-				document.getElementById("loadDates").appendChild(li); //TODO: load in TopMenu
+				document.getElementById("loadDates").appendChild(li);
 			});
 		});
 	});
@@ -816,7 +816,7 @@ $(window).resize(function() {
 				};
 				li.appendChild(a);
 
-				document.getElementById("loadDates").appendChild(li); //TODO: load in TopMenu
+				document.getElementById("loadDates").appendChild(li);
 			});
 		});
 
