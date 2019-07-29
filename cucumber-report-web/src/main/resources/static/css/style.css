@@ -256,7 +256,7 @@ ul.dropdown-menu.show{
     text-align-all: center;
 }
 
-dopdonw-menu.show.li{
+.dopdonw-menu.show.li{
     border: 3px;
     border: black;
     width:80px;
@@ -275,7 +275,7 @@ ul#loadDates li:hover {
 }
 
 a.active {
-    color: darkgray!important;
+    color: #5c5c5c!important;
 }
 
 #accordionSidebar, #topNav a {

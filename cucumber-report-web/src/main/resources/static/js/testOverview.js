@@ -1,7 +1,6 @@
 function drawChartTestOverview(reportData, test) {
 
     var result = [];
-    var sum = 0;
 
     result.push(['Date', 'Passed', 'Skipped', 'Unknown', 'Failed']);
 
@@ -30,14 +29,13 @@ function drawChartTestOverview(reportData, test) {
         row.push(failed);
 
         result.push(row);
-
-        sum += passed + failed + unknown + skipped;
     });
 
     result = google.visualization.arrayToDataTable(result);
 
     var options = {
-        legend: { position: 'top', maxLines: 4 },
+        title: 'Overview',
+        legend: { position: 'bottom', maxLines: 4 },
         bar: { groupWidth: '80%' },
         isStacked: true,
         colors: ['#007502', '#d18f00', '#003ec4', '#940000'],
