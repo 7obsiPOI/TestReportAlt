@@ -31,8 +31,7 @@ body {
 
 .container {
     width: 95% !important;
-
-
+    margin-top: 15px;
 }
 
 .uri {
@@ -84,6 +83,12 @@ body {
     font-size: 16px;
 }
 
+.panelBody img {
+    max-width: 100%;
+    cursor: pointer;
+    cursor: -webkit-zoom-in;
+    cursor: -moz-zoom-in;
+}
 
 .sortToggle span {
     cursor: pointer;
@@ -256,11 +261,6 @@ ul#loadDates li a {
     text-align: center;
 }
 
-div.lastTestErrors {
-    float: right;
-    padding-top: 95px;
-}
-
 div#navLeft {
     display: none;
 }
@@ -281,7 +281,7 @@ body, html {
 
 @media screen and (max-width: 767px) {
     .lastTestResult {
-        height: 150px !important;
+        height: 150px!important;
     }
 }
 
@@ -350,7 +350,7 @@ ul.dropdown-menu.show {
     text-align-all: center;
 }
 
-dopdonw-menu.show.li {
+.dopdonw-menu.show.li{
     border: 3px;
     border: black;
     width: 80px;
@@ -369,6 +369,7 @@ ul#loadDates li:hover {
 }
 
 a.active {
+    color: #5c5c5c!important;
     color: darkgray !important;
 }
 

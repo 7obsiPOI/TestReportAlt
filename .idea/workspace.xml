@@ -3,15 +3,21 @@
   <component name="ChangeListManager">
     <list default="true" id="441806f7-34e0-4bd5-a110-982a3a82c569" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/css/sb-admin-2.css" beforeDir="false" afterPath="$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/css/sb-admin-2.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/indexanders.html" beforeDir="false" afterPath="$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/indexanders.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/pages/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/pages/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/pages/feature.html" beforeDir="false" afterPath="$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/pages/feature.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/pages/features.html" beforeDir="false" afterPath="$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/pages/features.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/pages/rankings.html" beforeDir="false" afterPath="$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/pages/rankings.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/pages/reports.html" beforeDir="false" afterPath="$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/pages/reports.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/pages/statistics.html" beforeDir="false" afterPath="$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/pages/statistics.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cucumber-report-web/target/classes/static/css/sb-admin-2.css" beforeDir="false" afterPath="$PROJECT_DIR$/cucumber-report-web/target/classes/static/css/sb-admin-2.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cucumber-report-web/target/classes/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/cucumber-report-web/target/classes/static/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cucumber-report-web/target/classes/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/cucumber-report-web/target/classes/static/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cucumber-report-web/target/classes/static/indexanders.html" beforeDir="false" afterPath="$PROJECT_DIR$/cucumber-report-web/target/classes/static/indexanders.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cucumber-report-web/target/classes/static/pages/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/cucumber-report-web/target/classes/static/pages/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cucumber-report-web/target/classes/static/pages/features.html" beforeDir="false" afterPath="$PROJECT_DIR$/cucumber-report-web/target/classes/static/pages/features.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/cucumber-formatter/target/" />
@@ -31,17 +37,102 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/index.html">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/css/sb-admin-2.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="45" column="66" lean-forward="true" selection-start-line="45" selection-start-column="66" selection-end-line="45" selection-end-column="66" />
+            <state relative-caret-position="246">
+              <caret line="8352" lean-forward="true" selection-start-line="8352" selection-end-line="8352" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#7028#7035#1" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#7550#7557#1" expanded="true" />
+                <element signature="e#104170#104400#2" expanded="true" />
+                <element signature="e#105412#105648#2" expanded="true" />
+                <element signature="e#144637#144814#2" expanded="true" />
+                <element signature="e#144869#145046#2" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/pages/dashboard.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="103" column="16" lean-forward="true" selection-end-line="108" />
+              <folding>
+                <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/pages/feature.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="622">
+              <caret line="108" selection-start-line="108" selection-end-line="108" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/pages/reports.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="622">
+              <caret line="108" selection-start-line="108" selection-end-line="108" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/pages/statistics.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="622">
+              <caret line="108" selection-start-line="108" selection-end-line="108" />
+              <folding>
+                <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/pages/features.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="622">
+              <caret line="108" selection-start-line="108" selection-end-line="108" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/pages/help.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-255" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/pages/navigation.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="645">
+              <caret line="71" column="24" selection-start-line="71" selection-start-column="24" selection-end-line="71" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/pages/products.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1921">
+              <caret line="113" column="6" selection-start-line="113" selection-start-column="6" selection-end-line="113" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/pages/rankings.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="110" selection-start-line="110" selection-end-line="110" />
             </state>
           </provider>
         </entry>
@@ -59,9 +150,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>featureList</find>
-      <find>testName</find>
-      <find>loadDates</find>
       <find>statistics</find>
       <find>features</find>
       <find>featurelist</find>
@@ -89,6 +177,9 @@
       <find>sidebar</find>
       <find>container</find>
       <find>home</find>
+      <find>shadow</find>
+      <find>acce</find>
+      <find>.shadow</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -122,21 +213,23 @@
         <option value="$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/js/testOverview.js" />
         <option value="$PROJECT_DIR$/cucumber-formatter/src/main/resources/pages/feature.html" />
         <option value="$PROJECT_DIR$/cucumber-report-web/target/classes/static/pages/dashboard.html" />
-        <option value="$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/pages/features.html" />
-        <option value="$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/pages/rankings.html" />
         <option value="$PROJECT_DIR$/cucumber-report-web/src/main/resources/help.html" />
-        <option value="$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/pages/reports.html" />
-        <option value="$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/pages/statistics.html" />
         <option value="$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/css/sb-admin-2.min.css" />
         <option value="$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/pages/navigation.html" />
         <option value="$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/js/navigation.js" />
         <option value="$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/js/overallTestChart.js" />
         <option value="$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/pages/products.html" />
         <option value="$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/js/app.js" />
-        <option value="$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/pages/dashboard.html" />
         <option value="$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/css/style.css" />
+        <option value="$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/css/sb-admin-2.css" />
         <option value="$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/indexanders.html" />
+        <option value="$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/pages/dashboard.html" />
         <option value="$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/index.html" />
+        <option value="$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/pages/feature.html" />
+        <option value="$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/pages/features.html" />
+        <option value="$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/pages/reports.html" />
+        <option value="$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/pages/statistics.html" />
+        <option value="$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/pages/rankings.html" />
       </list>
     </option>
   </component>
@@ -151,8 +244,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="499" />
-    <option name="y" value="-26" />
+    <option name="x" value="-71" />
+    <option name="y" value="-10" />
     <option name="width" value="1333" />
     <option name="height" value="1155" />
   </component>
@@ -211,37 +304,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TestReportAlt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TestReportAlt" type="462c0819:PsiDirectoryNode" />
-              <item name="cucumber-report-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-              <item name="sb-admin-2.css" type="620a8d5e:NestingTreeNode" />
-            </path>
-            <path>
-              <item name="TestReportAlt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TestReportAlt" type="462c0819:PsiDirectoryNode" />
-              <item name="cucumber-report-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TestReportAlt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TestReportAlt" type="462c0819:PsiDirectoryNode" />
-              <item name="cucumber-report-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -258,7 +320,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="editor.config.ad.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../second_Test" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -361,11 +423,18 @@
       <option name="project" value="LOCAL" />
       <updated>1564380526888</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="kleine Layout verbesserungen, home Seite noch nicht fertig">
+      <created>1564403510526</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1564403510526</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77884000" />
+    <option name="totallyTimeSpent" value="81398000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -380,7 +449,7 @@
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.23852721" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15688367" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -389,8 +458,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32922733" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49573106" weight="0.3237272" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32853025" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49573106" visible="true" weight="0.3237272" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39961576" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -509,13 +578,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/cucumber-mongodb-rest/src/main/java/at/porscheinformatik/cucumber/mongodb/rest/controller/dto/ResultDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cucumber-mongodb-rest/src/main/java/at/porscheinformatik/cucumber/mongodb/rest/DatabaseConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-79">
@@ -622,22 +684,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/pages/feature.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-858" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cucumber-report-web/target/classes/static/pages/dashboard.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="461">
           <caret line="107" selection-start-line="107" selection-end-line="107" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/pages/features.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="135" column="59" selection-start-line="135" selection-start-column="59" selection-end-line="135" selection-end-column="59" />
         </state>
       </provider>
     </entry>
@@ -683,64 +733,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/pages/reports.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/pages/statistics.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="30" column="66" selection-start-line="30" selection-start-column="66" selection-end-line="30" selection-end-column="66" />
-          <folding>
-            <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/pages/rankings.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="58" selection-start-line="15" selection-start-column="51" selection-end-line="15" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/js/navigation.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/css/sb-admin-2.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="5113" column="10" selection-start-line="5113" selection-start-column="1" selection-end-line="5113" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/pages/products.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="537">
-          <caret line="113" column="6" selection-start-line="113" selection-start-column="6" selection-end-line="113" selection-end-column="6" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/js/overallTestChart.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="680">
           <caret line="40" column="1" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/pages/dashboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="127" lean-forward="true" selection-start-line="127" selection-end-line="127" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/pages/navigation.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1207">
-          <caret line="71" column="24" selection-start-line="71" selection-start-column="24" selection-end-line="71" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -758,30 +757,106 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/indexanders.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/indexanders.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="554">
-          <caret line="113" selection-start-line="113" selection-end-line="113" />
+        <state relative-caret-position="232">
+          <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="45" column="66" lean-forward="true" selection-start-line="45" selection-start-column="66" selection-end-line="45" selection-end-column="66" />
+        <state relative-caret-position="414">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#7028#7035#1" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#7550#7557#1" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#7124#7131#1" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#7666#7673#1" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/css/sb-admin-2.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="8352" lean-forward="true" selection-start-line="8352" selection-end-line="8352" />
+          <folding>
+            <element signature="e#104170#104400#2" expanded="true" />
+            <element signature="e#105412#105648#2" expanded="true" />
+            <element signature="e#144637#144814#2" expanded="true" />
+            <element signature="e#144869#145046#2" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/pages/feature.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="622">
+          <caret line="108" selection-start-line="108" selection-end-line="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/pages/features.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="622">
+          <caret line="108" selection-start-line="108" selection-end-line="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/pages/help.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-255" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/pages/navigation.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="71" column="24" selection-start-line="71" selection-start-column="24" selection-end-line="71" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/pages/products.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1921">
+          <caret line="113" column="6" selection-start-line="113" selection-start-column="6" selection-end-line="113" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/pages/reports.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="622">
+          <caret line="108" selection-start-line="108" selection-end-line="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/pages/dashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="103" column="16" lean-forward="true" selection-end-line="108" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/pages/statistics.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="622">
+          <caret line="108" selection-start-line="108" selection-end-line="108" />
+          <folding>
+            <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/pages/rankings.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="110" selection-start-line="110" selection-end-line="110" />
         </state>
       </provider>
     </entry>
