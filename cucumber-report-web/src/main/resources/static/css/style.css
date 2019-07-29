@@ -31,6 +31,8 @@ body {
 
 .container {
     width: 95% !important;
+
+
 }
 
 .uri {
@@ -82,12 +84,6 @@ body {
     font-size: 16px;
 }
 
-.panelBody img {
-    max-width: 100%;
-    cursor: pointer;
-    cursor: -webkit-zoom-in;
-    cursor: -moz-zoom-in;
-}
 
 .sortToggle span {
     cursor: pointer;
@@ -210,6 +206,8 @@ table#overview th, td {
 table tr.graphs td {
     height: 500px;
     vertical-align: middle;
+}
+
 h5 {
     color: #5c5c5c;
     text-align: center;
@@ -219,7 +217,7 @@ h5 {
     text-align: center;
 }
 
-a:hover{
+a:hover {
     cursor: pointer;
 }
 
@@ -283,7 +281,7 @@ body, html {
 
 @media screen and (max-width: 767px) {
     .lastTestResult {
-        height: 150px!important;
+        height: 150px !important;
     }
 }
 
@@ -298,23 +296,27 @@ body, html {
 }
 
 
-.myNavTable{
+.myNavTable {
     align-content: center;
     table-layout: fixed;
     width: 80%;
     white-space: nowrap;
 }
 
-.myNavTable tr{
+.myNavTable tr {
     text-align: center;
 }
 
 
-.myTopMenuImg{
-    height:50px;
-    width:50px;
+.myTopMenuImg {
+    height: 50px;
+    width: 50px;
     align: center;
+    filter: blur(20px);
+    -webkit-filter: brightness(400%); /* Safari 6.0 - 9.0 */
+    filter: invert();
 }
+
 
 
 @keyframes show-startpage-navigation {
@@ -325,6 +327,7 @@ body, html {
         top: 0;
     }
 }
+
 @keyframes hide-startpage-navigation {
     from {
         top: 0;
@@ -333,24 +336,28 @@ body, html {
         top: -45px;
     }
 }
+
 .startpage-navigation {
     animation: hide-startpage-navigation 1s ease forwards;
 }
+
 .startpage-navigation:hover {
     animation: show-startpage-navigation 1s ease forwards;
-ul.dropdown-menu.show{
+}
+
+ul.dropdown-menu.show {
     width: auto;
     text-align-all: center;
 }
 
-dopdonw-menu.show.li{
+dopdonw-menu.show.li {
     border: 3px;
     border: black;
-    width:80px;
+    width: 80px;
 }
 
 ul#loadDates {
-    width: 250px!important;
+    width: 250px !important;
 }
 
 ul#loadDates li {
@@ -362,7 +369,7 @@ ul#loadDates li:hover {
 }
 
 a.active {
-    color: darkgray!important;
+    color: darkgray !important;
 }
 
 #accordionSidebar, #topNav a {
