@@ -11,13 +11,16 @@
 
     <title>NADIN Test Report Tool</title>
 
+    <link rel="stylesheet" href="css/style.css"/>
+
+
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css"/>
+
 
 </head>
 
@@ -26,6 +29,7 @@
 
 <!-- Page Wrapper -->
 <div id="wrapper">
+
     <!-- Sidebar -->
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
@@ -34,7 +38,7 @@
             <div class="sidebar-brand-icon rotate-n-15">
                 <i class="fas fa-layer-group"></i>
             </div>
-            <div class="sidebar-brand-text mx-3">Test Report<sup>NADIN</sup></div>
+            <div class="sidebar-brand-text mx-3">NADIN Test Report</div>
         </a>
 
         <!-- Divider -->
@@ -44,7 +48,7 @@
         <li ng-show="databaseMode" ng-controller="Menu" class="nav-item">
             <a href="/#/products" class="nav-link">
                 <img src="images/home.png" height="40" width="40">
-              <!-- <img src="images/home.png" height="40" width="40"> -->
+                <!-- <img src="images/home.png" height="40" width="40"> -->
                 <span>Home</span></a>
         </li>
 
@@ -62,7 +66,7 @@
                 <img src="images/acceptance.png" height="40" width="40">
                 <span>Acceptance</span>
             </a>
-            <div id="collapseTwo" class="collapse" aria-labelledby="headingAcceptance" data-parent="#accordionSidebar">
+            <div id="collapseAcceptance" class="collapse" aria-labelledby="headingAcceptance" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">header</h6>
                     <a class="collapse-item overCur" ng-click="goToDashboard('NADIN_19.3-SNAPSHOT Acceptance')">SNAPSHOT_19.3</a>
