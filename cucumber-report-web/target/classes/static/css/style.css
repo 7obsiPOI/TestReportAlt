@@ -259,6 +259,7 @@ div#testOverview#errorOverview#overallTests {
 ul#loadDates li a {
     color: black;
     text-align: center;
+    text-decoration: none;
 }
 
 div#navLeft {
@@ -310,6 +311,7 @@ body, html {
 
 .myTopMenuImg {
     height: 50px;
+    padding-top: 5px;
     width: 50px;
     align: center;
     filter: blur(20px);
@@ -368,9 +370,8 @@ ul#loadDates li:hover {
     background: lightgray;
 }
 
-a.active {
+.active {
     color: #5c5c5c!important;
-    color: darkgray !important;
 }
 
 #accordionSidebar, #topNav a {
@@ -383,4 +384,8 @@ div#overallTests, div#errorOverview {
 
 div#testOverview {
     height: 425px;
+}
+
+nav {
+    padding-top: 10px!important;
 }
