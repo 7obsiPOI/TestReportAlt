@@ -255,6 +255,7 @@ ul.dropdown-menu.show{
     width: auto;
     text-align-all: center;
 }
+
 dopdonw-menu.show.li{
     border: 3px;
     border: black;
@@ -277,7 +278,7 @@ a.active {
     color: darkgray!important;
 }
 
-#accordionSidebar, #topNav a, div.card-header h6 {
+#accordionSidebar, #topNav a {
     cursor: pointer;
 }
 

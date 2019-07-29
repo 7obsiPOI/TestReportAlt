@@ -1,6 +1,10 @@
 /* global window, document */
 /* global serverUrl, fileBaseUrl, queryBaseUrl, collectionBaseUrl, reportFileName */
 
+$(window).resize(function() {
+	location.reload();
+});
+
 (function (angular, google, $, undefined) {
 	'use strict';
 

@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="441806f7-34e0-4bd5-a110-982a3a82c569" name="Default Changelist" comment="Dashboard, Funktionen">
+    <list default="true" id="441806f7-34e0-4bd5-a110-982a3a82c569" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/js/errorOverview.js" beforeDir="false" afterPath="$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/js/errorOverview.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/js/lastTestResults.js" beforeDir="false" afterPath="$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/js/lastTestResults.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/js/overallTestChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/js/overallTestChart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/js/testOverview.js" beforeDir="false" afterPath="$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/js/testOverview.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/pages/products.html" beforeDir="false" afterPath="$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/pages/products.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cucumber-report-web/target/classes/static/js/overallTestChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/cucumber-report-web/target/classes/static/js/overallTestChart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cucumber-report-web/target/classes/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/cucumber-report-web/target/classes/static/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cucumber-report-web/target/classes/static/pages/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/cucumber-report-web/target/classes/static/pages/dashboard.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cucumber-report-web/target/classes/static/pages/products.html" beforeDir="false" afterPath="$PROJECT_DIR$/cucumber-report-web/target/classes/static/pages/products.html" afterDir="false" />
     </list>
@@ -39,11 +36,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6090">
-              <caret line="406" column="18" selection-start-line="406" selection-start-column="18" selection-end-line="406" selection-end-column="18" />
+            <state relative-caret-position="60">
+              <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -51,8 +48,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cucumber-report-web/target/classes/static/pages/dashboard.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="94" column="52" selection-start-line="94" selection-start-column="52" selection-end-line="94" selection-end-column="52" />
+            <state relative-caret-position="225">
+              <caret line="78" column="34" selection-start-line="78" selection-start-column="34" selection-end-line="78" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -60,8 +57,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="461">
-              <caret line="239" column="32" selection-start-line="239" selection-start-column="32" selection-end-line="239" selection-end-column="32" />
+            <state relative-caret-position="71">
+              <caret line="163" column="13" selection-start-line="163" selection-start-column="1" selection-end-line="163" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -69,8 +66,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/js/testOverview.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="40" column="30" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
+            <state relative-caret-position="-4">
+              <caret line="38" column="9" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -84,11 +81,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/pages/products.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1290">
-              <caret line="86" column="10" lean-forward="true" selection-start-line="86" selection-start-column="10" selection-end-line="86" selection-end-column="10" />
+            <state relative-caret-position="341">
+              <caret line="106" column="40" selection-start-line="106" selection-start-column="40" selection-end-line="106" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -189,14 +186,14 @@
         <option value="$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/pages/feature.html" />
         <option value="$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/pages/features.html" />
         <option value="$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/pages/statistics.html" />
-        <option value="$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/js/app.js" />
         <option value="$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/js/overallTestChart.js" />
         <option value="$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/js/errorOverview.js" />
-        <option value="$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/js/testOverview.js" />
-        <option value="$PROJECT_DIR$/cucumber-report-web/target/classes/static/pages/dashboard.html" />
         <option value="$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/js/lastTestResults.js" />
         <option value="$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/css/style.css" />
         <option value="$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/pages/products.html" />
+        <option value="$PROJECT_DIR$/cucumber-report-web/target/classes/static/pages/dashboard.html" />
+        <option value="$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/js/testOverview.js" />
+        <option value="$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/js/app.js" />
       </list>
     </option>
   </component>
@@ -341,7 +338,7 @@
       <workItem from="1563869158225" duration="17150000" />
       <workItem from="1563949496729" duration="12282000" />
       <workItem from="1564123629161" duration="14148000" />
-      <workItem from="1564381434951" duration="7285000" />
+      <workItem from="1564381434951" duration="8462000" />
     </task>
     <task id="LOCAL-00001" summary="Overview/Menü">
       <created>1563794747237</created>
@@ -413,11 +410,18 @@
       <option name="project" value="LOCAL" />
       <updated>1564143364410</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Startseite Graphen">
+      <created>1564393979522</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1564393979522</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75154000" />
+    <option name="totallyTimeSpent" value="76331000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -430,6 +434,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2591687" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -479,7 +484,8 @@
     <MESSAGE value="Design" />
     <MESSAGE value="Änderung Funktionen um zwischen den Seiten zu wechseln" />
     <MESSAGE value="Überarbeitungen" />
-    <option name="LAST_COMMIT_MESSAGE" value="Überarbeitungen" />
+    <MESSAGE value="Startseite Graphen" />
+    <option name="LAST_COMMIT_MESSAGE" value="Startseite Graphen" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -720,13 +726,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6090">
-          <caret line="406" column="18" selection-start-line="406" selection-start-column="18" selection-end-line="406" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/js/overallTestChart.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="341">
@@ -734,24 +733,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/js/testOverview.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="40" column="30" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/js/lastTestResults.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="431">
           <caret line="60" column="101" selection-start-line="60" selection-start-column="101" selection-end-line="60" selection-end-column="101" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cucumber-report-web/target/classes/static/pages/dashboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="94" column="52" selection-start-line="94" selection-start-column="52" selection-end-line="94" selection-end-column="52" />
         </state>
       </provider>
     </entry>
@@ -764,15 +749,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="239" column="32" selection-start-line="239" selection-start-column="32" selection-end-line="239" selection-end-column="32" />
+        <state relative-caret-position="71">
+          <caret line="163" column="13" selection-start-line="163" selection-start-column="1" selection-end-line="163" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/pages/products.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1290">
-          <caret line="86" column="10" lean-forward="true" selection-start-line="86" selection-start-column="10" selection-end-line="86" selection-end-column="10" />
+        <state relative-caret-position="341">
+          <caret line="106" column="40" selection-start-line="106" selection-start-column="40" selection-end-line="106" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cucumber-report-web/target/classes/static/pages/dashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="78" column="34" selection-start-line="78" selection-start-column="34" selection-end-line="78" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/js/testOverview.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4">
+          <caret line="38" column="9" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cucumber-report-web/src/main/resources/static/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
         </state>
       </provider>
     </entry>

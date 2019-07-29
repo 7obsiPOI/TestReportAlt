@@ -193,7 +193,7 @@ div#view {
     }
 }
 
-h1, h2 {
+h2 {
     color: #3e648d;
     text-align: center;
     font-weight: bold;
@@ -202,43 +202,6 @@ h1, h2 {
 h5 {
     color: #5c5c5c;
     text-align: center;
-}
-
-table#overview, h2#headingOverview {
-    margin-left: 10px;
-}
-
-table#overview th, td {
-    width: 12.5% !important;
-}
-
-table tr.graphs td {
-    height: 500px;
-    vertical-align: middle;
-    text-align: center;
-}
-
-div#dashboardChart {
-    display: block;
-    float: left;
-}
-
-div#timelineChart {
-    display: block;
-    padding-left: 500px;
-}
-
-div#tests {
-    vertical-align: middle;
-    display: block;
-    width: 80%!important;
-    height: 350px;
-}
-
-div#testOverview#errorOverview#overallTests {
-    align-content: center;
-    width: 100%;
-    height: 350px;
 }
 
 #testHeading {
@@ -252,11 +215,6 @@ a:hover{
 ul#loadDates li a {
     color: black;
     text-align: center;
-}
-
-div.lastTestErrors {
-    float: right;
-    padding-top: 95px;
 }
 
 div#navLeft {
@@ -273,6 +231,21 @@ body, html {
     height: 100%;
 }
 
+.lastTestResult {
+    height: 300px;
+}
+
+@media screen and (max-width: 767px) {
+    .lastTestResult {
+        height: 150px!important;
+    }
+}
+
+.lastTestErrors {
+    color: black;
+    font-weight: bold;
+}
+
 
 .overCur {
     cursor: pointer;
@@ -282,6 +255,7 @@ ul.dropdown-menu.show{
     width: auto;
     text-align-all: center;
 }
+
 dopdonw-menu.show.li{
     border: 3px;
     border: black;
@@ -304,6 +278,14 @@ a.active {
     color: darkgray!important;
 }
 
-#accordionSidebar, #topNav a, table.overview th {
+#accordionSidebar, #topNav a {
     cursor: pointer;
+}
+
+div#overallTests, div#errorOverview {
+    height: 350px;
+}
+
+div#testOverview {
+    height: 425px;
 }
