@@ -361,8 +361,7 @@ $(window).resize(function() {
 		$scope.orderReverse = true;
 		$rootScope.searchText = "";
 
-		document.getElementById("topMenu").style.display = "none";
-
+		//document.getElementById("topMenu").style.display = "none";
 
 		var getGraphs = function(snapshot, test, count) {
 			$http.get((queryBaseUrl+snapshot+test+'/')).success(function(reportData) { //if $http.get() needed in loop -> definition in another function
@@ -583,6 +582,7 @@ $(window).resize(function() {
 					$location.path('/' + $routeParams.product + '/features/' + date + '/');
 				};
 				li.appendChild(a);
+				console.log(li);
 
 				document.getElementById("loadDates").appendChild(li);
 			});

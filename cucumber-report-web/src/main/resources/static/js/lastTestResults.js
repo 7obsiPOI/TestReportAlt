@@ -48,13 +48,6 @@ function drawChartLastTestResults(reportData, count) {
         backgroundColor: { fill: 'transparent' }
     };
 
-    var options2 = {
-        title: 'Error(s)\n(' + sum + ' Tests)',
-        colors: ['#940000'],
-        legend: 'none',
-        backgroundColor: { fill: 'transparent' }
-    };
-
     var chart = new google.visualization.ColumnChart(document.getElementsByClassName("lastTestResult")[count]);
     chart.draw(data, options);
 

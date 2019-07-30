@@ -14,7 +14,7 @@ body {
 }
 
 .table .firstTD {
-    text-align: center !important;
+    text-align: left !important;
 }
 
 .table .noWrap {
@@ -259,6 +259,7 @@ div#testOverview#errorOverview#overallTests {
 ul#loadDates li a {
     color: black;
     text-align: center;
+    text-decoration: none;
 }
 
 div#navLeft {
@@ -379,6 +380,10 @@ div#overallTests, div#errorOverview {
 
 div#testOverview {
     height: 425px;
+}
+
+nav {
+    padding-top: 10px!important;
 }
 
 

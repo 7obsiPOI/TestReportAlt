@@ -15,7 +15,7 @@
 
 
 			<!-- Nav Item - Alerts -->
-		<li class="nav-item dropdown no-arrow mx-1 overCur" ng-click="goToDashboard($routeParams.product)" id="dashboard">
+		<li class="nav-item dropdown no-arrow mx-1 overCur" ng-click="goToDashboard($routeParams.colName)" id="dashboard">
 			<a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				<table class="myNavTable">
 					<tr>
@@ -42,19 +42,20 @@
 						</th>
 					</tr>
 					<tr>
-						<td>
+						<td class="active">
 							<del>FEATURES</del>
 						</td>
 						<!-- <span class="badge badge-danger badge-counter">not yet</span> -->
 					</tr>
 				</table>
+				<ul class="dropdown-menu" id="loadDates"></ul>
 				<!-- Counter - Messages -->
 			</a>
 		</li>
 
 
 		<!-- Nav Item - Messages -->
-		<li class="nav-item dropdown no-arrow mx-1 overCur" ng-click="openChart($routeParams.product, $routeParams.type, $routeParams.limit)">
+		<li class="nav-item dropdown no-arrow mx-1 overCur" ng-click="openChart($routeParams.colName, $routeParams.type, $routeParams.limit)">
 			<a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				<table class="myNavTable">
 					<tr>
@@ -70,7 +71,7 @@
 		</li>
 
 		<!-- Nav Item - Messages -->
-		<li class="nav-item dropdown no-arrow mx-1 overCur" ng-click="openRanking($routeParams.product)">
+		<li class="nav-item dropdown no-arrow mx-1 overCur" ng-click="openRanking($routeParams.colName)">
 			<a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				<table class="myNavTable">
 					<tr>

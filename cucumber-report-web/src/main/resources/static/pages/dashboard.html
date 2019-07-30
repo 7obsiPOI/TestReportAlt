@@ -1,6 +1,4 @@
 <!-- Topbar -->
-
-
 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
     <!-- Sidebar Toggle (Topbar) -->
@@ -26,7 +24,7 @@
                         </th>
                     </tr>
                     <tr>
-                        <td>DASHBOARD</td>
+                        <td class="active">DASHBOARD</td>
                     </tr>
                 </table>
                 <!-- <span class="badge badge-danger badge-counter">3+</span> -->
@@ -50,6 +48,7 @@
                         <!-- <span class="badge badge-danger badge-counter">not yet</span> -->
                     </tr>
                 </table>
+                <ul class="dropdown-menu" id="loadDates"></ul>
                 <!-- Counter - Messages -->
             </a>
         </li>
@@ -87,7 +86,6 @@
             </a>
         </li>
 
-
         <!-- Nav Item - Messages -->
         <li class="nav-item dropdown no-arrow mx-1 overCur" ng-click="">
             <a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -108,26 +106,40 @@
         </li>
     </ul>
 </nav>
-
 <!-- End of Topbar -->
 
+<h1>{{$routeParams.product}}</h1>
 
-<div style="align: center">
-    <h1>{{$routeParams.product}}</h1>
-
-    <div class="container" id="dashboardChart">
-        <div id="overallTests"></div>
+<div class="row">
+    <div class="col-lg-6 col-md-12">
+        <div class="card shadow mb-4">
+            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                <h6 class="m-0 font-weight-bold text-primary">Results</h6>
+            </div>
+            <div class="card-body chart" id="overallTests">
+            </div>
+        </div>
     </div>
-
-    <div class="container" id="timelineChart">
-        <div id="errorOverview"></div>
+    <div class="col-lg-6 col-md-12">
+        <div class="card shadow mb-4">
+            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                <h6 class="m-0 font-weight-bold text-primary">Error Overview</h6>
+            </div>
+            <div class="card-body chart" id="errorOverview">
+            </div>
+        </div>
     </div>
-
-    <div class="container" id="tests">
-        <h2>Tests</h2>
-        <div id="testOverview"></div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <div class="card shadow mb-4">
+            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                <h6 class="m-0 font-weight-bold text-primary">Tests</h6>
+            </div>
+            <div class="card-body chart" id="testOverview">
+            </div>
+        </div>
     </div>
-
 </div>
 
 <!-- Custom scripts for all pages-->
